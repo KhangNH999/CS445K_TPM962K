@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "projectUniqueName": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
       "projectName": "WinFormsApp_Coffee",
-      "projectPath": "E:\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "projectPath": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
       "packagesPath": "C:\\Users\\PC-NHAT\\.nuget\\packages\\",
-      "outputPath": "E:\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+      "outputPath": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC-NHAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
