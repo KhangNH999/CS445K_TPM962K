@@ -15,14 +15,10 @@ namespace WinFormsApp_Coffee
             InitializeComponent();
         }
 
-        private void txtSocmnd_TextChanged(object sender, EventArgs e)
+        private void btnSqdotkm_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            frmDotkhuyenmai f = new frmDotkhuyenmai();
+            f.ShowDialog();
         }
     }
 }

@@ -37,6 +37,7 @@ namespace WinFormsApp_Coffee
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbbTrangthai = new System.Windows.Forms.ComboBox();
             this.btnGiaapdung = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@ namespace WinFormsApp_Coffee
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbTrangthai = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).BeginInit();
@@ -146,6 +146,14 @@ namespace WinFormsApp_Coffee
             this.panel3.Size = new System.Drawing.Size(314, 534);
             this.panel3.TabIndex = 3;
             // 
+            // cbbTrangthai
+            // 
+            this.cbbTrangthai.FormattingEnabled = true;
+            this.cbbTrangthai.Location = new System.Drawing.Point(5, 351);
+            this.cbbTrangthai.Name = "cbbTrangthai";
+            this.cbbTrangthai.Size = new System.Drawing.Size(307, 28);
+            this.cbbTrangthai.TabIndex = 20;
+            // 
             // btnGiaapdung
             // 
             this.btnGiaapdung.Location = new System.Drawing.Point(4, 492);
@@ -166,7 +174,7 @@ namespace WinFormsApp_Coffee
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(302, 155);
             this.pictureBox1.TabIndex = 0;
@@ -262,14 +270,6 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 0;
             this.label1.Text = "ID danh mục";
             // 
-            // cbbTrangthai
-            // 
-            this.cbbTrangthai.FormattingEnabled = true;
-            this.cbbTrangthai.Location = new System.Drawing.Point(5, 351);
-            this.cbbTrangthai.Name = "cbbTrangthai";
-            this.cbbTrangthai.Size = new System.Drawing.Size(307, 28);
-            this.cbbTrangthai.TabIndex = 20;
-            // 
             // frmDouong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -278,7 +278,9 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDouong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDouong";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

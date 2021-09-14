@@ -73,6 +73,7 @@ namespace WinFormsApp_Coffee
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel3
             // 

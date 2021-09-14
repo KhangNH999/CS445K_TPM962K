@@ -36,14 +36,14 @@ namespace WinFormsApp_Coffee
             this.dgvDotkhuyenmai = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.cbChondanhmuc = new System.Windows.Forms.ComboBox();
+            this.cbChonsanpham = new System.Windows.Forms.ComboBox();
             this.cbChondot = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbChonsanpham = new System.Windows.Forms.ComboBox();
-            this.cbChondanhmuc = new System.Windows.Forms.ComboBox();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).BeginInit();
             this.panel1.SuspendLayout();
@@ -122,6 +122,42 @@ namespace WinFormsApp_Coffee
             this.panel3.Size = new System.Drawing.Size(314, 494);
             this.panel3.TabIndex = 7;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(162, 242);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(93, 38);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(42, 242);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(93, 38);
+            this.btnLuu.TabIndex = 3;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // cbChondanhmuc
+            // 
+            this.cbChondanhmuc.FormattingEnabled = true;
+            this.cbChondanhmuc.Location = new System.Drawing.Point(2, 30);
+            this.cbChondanhmuc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbChondanhmuc.Name = "cbChondanhmuc";
+            this.cbChondanhmuc.Size = new System.Drawing.Size(307, 28);
+            this.cbChondanhmuc.TabIndex = 8;
+            // 
+            // cbChonsanpham
+            // 
+            this.cbChonsanpham.FormattingEnabled = true;
+            this.cbChonsanpham.Location = new System.Drawing.Point(4, 99);
+            this.cbChonsanpham.Margin = new System.Windows.Forms.Padding(2);
+            this.cbChonsanpham.Name = "cbChonsanpham";
+            this.cbChonsanpham.Size = new System.Drawing.Size(307, 28);
+            this.cbChonsanpham.TabIndex = 7;
+            // 
             // cbChondot
             // 
             this.cbChondot.FormattingEnabled = true;
@@ -158,42 +194,6 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn danh mục";
             // 
-            // cbChonsanpham
-            // 
-            this.cbChonsanpham.FormattingEnabled = true;
-            this.cbChonsanpham.Location = new System.Drawing.Point(4, 99);
-            this.cbChonsanpham.Margin = new System.Windows.Forms.Padding(2);
-            this.cbChonsanpham.Name = "cbChonsanpham";
-            this.cbChonsanpham.Size = new System.Drawing.Size(307, 28);
-            this.cbChonsanpham.TabIndex = 7;
-            // 
-            // cbChondanhmuc
-            // 
-            this.cbChondanhmuc.FormattingEnabled = true;
-            this.cbChondanhmuc.Location = new System.Drawing.Point(2, 30);
-            this.cbChondanhmuc.Margin = new System.Windows.Forms.Padding(2);
-            this.cbChondanhmuc.Name = "cbChondanhmuc";
-            this.cbChondanhmuc.Size = new System.Drawing.Size(307, 28);
-            this.cbChondanhmuc.TabIndex = 8;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(42, 242);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(93, 38);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(162, 242);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(93, 38);
-            this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
             // frmDotkhuyenmai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -202,7 +202,9 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDotkhuyenmai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDotkhuyenmai";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).EndInit();

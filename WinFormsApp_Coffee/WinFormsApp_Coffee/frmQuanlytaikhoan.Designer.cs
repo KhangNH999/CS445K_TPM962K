@@ -65,7 +65,7 @@ namespace WinFormsApp_Coffee
             // 
             this.dgvQuanlytaikhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuanlytaikhoan.Location = new System.Drawing.Point(5, 2);
-            this.dgvQuanlytaikhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvQuanlytaikhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQuanlytaikhoan.Name = "dgvQuanlytaikhoan";
             this.dgvQuanlytaikhoan.RowHeadersWidth = 62;
             this.dgvQuanlytaikhoan.RowTemplate.Height = 33;
@@ -113,7 +113,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.dgvQuanlytaikhoan);
             this.panel2.Location = new System.Drawing.Point(10, 90);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(541, 633);
             this.panel2.TabIndex = 6;
@@ -171,7 +171,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Location = new System.Drawing.Point(2, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(313, 177);
             this.panel4.TabIndex = 8;
@@ -179,7 +179,7 @@ namespace WinFormsApp_Coffee
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 171);
             this.pictureBox1.TabIndex = 0;
@@ -189,7 +189,7 @@ namespace WinFormsApp_Coffee
             // 
             this.cbTThai.FormattingEnabled = true;
             this.cbTThai.Location = new System.Drawing.Point(6, 591);
-            this.cbTThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTThai.Margin = new System.Windows.Forms.Padding(2);
             this.cbTThai.Name = "cbTThai";
             this.cbTThai.Size = new System.Drawing.Size(306, 28);
             this.cbTThai.TabIndex = 14;
@@ -207,7 +207,7 @@ namespace WinFormsApp_Coffee
             // 
             this.cbLoaitk.FormattingEnabled = true;
             this.cbLoaitk.Location = new System.Drawing.Point(7, 515);
-            this.cbLoaitk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaitk.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaitk.Name = "cbLoaitk";
             this.cbLoaitk.Size = new System.Drawing.Size(306, 28);
             this.cbLoaitk.TabIndex = 12;
@@ -293,8 +293,10 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanlytaikhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanlytaikhoan)).EndInit();
             this.panel2.ResumeLayout(false);

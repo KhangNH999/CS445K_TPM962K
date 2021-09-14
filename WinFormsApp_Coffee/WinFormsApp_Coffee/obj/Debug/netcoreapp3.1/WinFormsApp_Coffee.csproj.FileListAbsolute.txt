@@ -69,3 +69,10 @@ C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\Win
 C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
 C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
 C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDmdouong.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDotkhuyenmai.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDouong.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyban.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
+E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.FrmThongke.resources

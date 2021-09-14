@@ -105,7 +105,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.dgvQuanlyban);
             this.panel2.Location = new System.Drawing.Point(10, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(541, 494);
             this.panel2.TabIndex = 3;
@@ -115,7 +115,7 @@ namespace WinFormsApp_Coffee
             // 
             this.dgvQuanlyban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuanlyban.Location = new System.Drawing.Point(5, 2);
-            this.dgvQuanlyban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvQuanlyban.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQuanlyban.Name = "dgvQuanlyban";
             this.dgvQuanlyban.RowHeadersWidth = 62;
             this.dgvQuanlyban.RowTemplate.Height = 33;
@@ -157,7 +157,7 @@ namespace WinFormsApp_Coffee
             // 
             this.cbtrangthai.FormattingEnabled = true;
             this.cbtrangthai.Location = new System.Drawing.Point(4, 173);
-            this.cbtrangthai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbtrangthai.Margin = new System.Windows.Forms.Padding(2);
             this.cbtrangthai.Name = "cbtrangthai";
             this.cbtrangthai.Size = new System.Drawing.Size(307, 28);
             this.cbtrangthai.TabIndex = 6;
@@ -201,8 +201,10 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanlyban";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý bàn";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

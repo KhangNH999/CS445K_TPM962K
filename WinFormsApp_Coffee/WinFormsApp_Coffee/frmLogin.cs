@@ -41,6 +41,13 @@ namespace WinFormsApp_Coffee
                 e.Cancel = true;
             }
         }
-       
+        //Button Đăng nhập
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmMain f = new frmMain();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
