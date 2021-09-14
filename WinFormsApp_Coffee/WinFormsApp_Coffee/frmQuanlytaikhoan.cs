@@ -14,5 +14,10 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
         }
+
+        private void btnThemdouong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

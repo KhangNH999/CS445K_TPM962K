@@ -39,10 +39,10 @@ namespace WinFormsApp_Coffee
             this.txtIDban = new System.Windows.Forms.TextBox();
             this.txttenban = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbtrangthai = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbtrangthai = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanlyban)).BeginInit();
@@ -51,43 +51,43 @@ namespace WinFormsApp_Coffee
             // 
             // btnKhoadouong
             // 
-            this.btnKhoadouong.Location = new System.Drawing.Point(496, 5);
-            this.btnKhoadouong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKhoadouong.Location = new System.Drawing.Point(397, 4);
             this.btnKhoadouong.Name = "btnKhoadouong";
-            this.btnKhoadouong.Size = new System.Drawing.Size(156, 79);
+            this.btnKhoadouong.Size = new System.Drawing.Size(125, 63);
             this.btnKhoadouong.TabIndex = 3;
             this.btnKhoadouong.Text = "Khóa bàn";
             this.btnKhoadouong.UseVisualStyleBackColor = true;
+            this.btnKhoadouong.Click += new System.EventHandler(this.btnKhoadouong_Click);
             // 
             // btnXoadouong
             // 
-            this.btnXoadouong.Location = new System.Drawing.Point(332, 4);
-            this.btnXoadouong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoadouong.Location = new System.Drawing.Point(266, 3);
             this.btnXoadouong.Name = "btnXoadouong";
-            this.btnXoadouong.Size = new System.Drawing.Size(156, 79);
+            this.btnXoadouong.Size = new System.Drawing.Size(125, 63);
             this.btnXoadouong.TabIndex = 2;
             this.btnXoadouong.Text = "Xóa bàn";
             this.btnXoadouong.UseVisualStyleBackColor = true;
+            this.btnXoadouong.Click += new System.EventHandler(this.btnXoadouong_Click);
             // 
             // btnSuadouong
             // 
-            this.btnSuadouong.Location = new System.Drawing.Point(169, 5);
-            this.btnSuadouong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuadouong.Location = new System.Drawing.Point(135, 4);
             this.btnSuadouong.Name = "btnSuadouong";
-            this.btnSuadouong.Size = new System.Drawing.Size(156, 79);
+            this.btnSuadouong.Size = new System.Drawing.Size(125, 63);
             this.btnSuadouong.TabIndex = 1;
             this.btnSuadouong.Text = "Sửa bàn";
             this.btnSuadouong.UseVisualStyleBackColor = true;
+            this.btnSuadouong.Click += new System.EventHandler(this.btnSuadouong_Click);
             // 
             // btnThemdouong
             // 
-            this.btnThemdouong.Location = new System.Drawing.Point(5, 4);
-            this.btnThemdouong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemdouong.Location = new System.Drawing.Point(4, 3);
             this.btnThemdouong.Name = "btnThemdouong";
-            this.btnThemdouong.Size = new System.Drawing.Size(156, 79);
+            this.btnThemdouong.Size = new System.Drawing.Size(125, 63);
             this.btnThemdouong.TabIndex = 0;
             this.btnThemdouong.Text = "Thêm bàn";
             this.btnThemdouong.UseVisualStyleBackColor = true;
+            this.btnThemdouong.Click += new System.EventHandler(this.btnThemdouong_Click);
             // 
             // panel1
             // 
@@ -95,45 +95,49 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnXoadouong);
             this.panel1.Controls.Add(this.btnSuadouong);
             this.panel1.Controls.Add(this.btnThemdouong);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 88);
+            this.panel1.Size = new System.Drawing.Size(525, 70);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvQuanlyban);
-            this.panel2.Location = new System.Drawing.Point(12, 108);
+            this.panel2.Location = new System.Drawing.Point(10, 86);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(676, 618);
+            this.panel2.Size = new System.Drawing.Size(541, 494);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dgvQuanlyban
             // 
             this.dgvQuanlyban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuanlyban.Location = new System.Drawing.Point(6, 3);
+            this.dgvQuanlyban.Location = new System.Drawing.Point(5, 2);
+            this.dgvQuanlyban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvQuanlyban.Name = "dgvQuanlyban";
             this.dgvQuanlyban.RowHeadersWidth = 62;
             this.dgvQuanlyban.RowTemplate.Height = 33;
-            this.dgvQuanlyban.Size = new System.Drawing.Size(665, 611);
+            this.dgvQuanlyban.Size = new System.Drawing.Size(532, 489);
             this.dgvQuanlyban.TabIndex = 0;
+            this.dgvQuanlyban.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanlyban_CellContentClick);
             // 
             // txtIDban
             // 
-            this.txtIDban.Location = new System.Drawing.Point(5, 40);
-            this.txtIDban.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDban.Location = new System.Drawing.Point(4, 32);
             this.txtIDban.Name = "txtIDban";
-            this.txtIDban.Size = new System.Drawing.Size(383, 31);
+            this.txtIDban.Size = new System.Drawing.Size(307, 27);
             this.txtIDban.TabIndex = 4;
+            this.txtIDban.TextChanged += new System.EventHandler(this.txtIDban_TextChanged);
             // 
             // txttenban
             // 
-            this.txttenban.Location = new System.Drawing.Point(5, 126);
-            this.txttenban.Margin = new System.Windows.Forms.Padding(4);
+            this.txttenban.Location = new System.Drawing.Point(4, 101);
             this.txttenban.Name = "txttenban";
-            this.txttenban.Size = new System.Drawing.Size(383, 31);
+            this.txttenban.Size = new System.Drawing.Size(307, 27);
             this.txttenban.TabIndex = 3;
+            this.txttenban.TextChanged += new System.EventHandler(this.txttenban_TextChanged);
             // 
             // panel3
             // 
@@ -143,58 +147,61 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.txttenban);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(701, 108);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(561, 86);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 618);
+            this.panel3.Size = new System.Drawing.Size(314, 494);
             this.panel3.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 177);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Trạng thái";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 96);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên bàn";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // cbtrangthai
             // 
             this.cbtrangthai.FormattingEnabled = true;
-            this.cbtrangthai.Location = new System.Drawing.Point(5, 216);
+            this.cbtrangthai.Location = new System.Drawing.Point(4, 173);
+            this.cbtrangthai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbtrangthai.Name = "cbtrangthai";
-            this.cbtrangthai.Size = new System.Drawing.Size(383, 33);
+            this.cbtrangthai.Size = new System.Drawing.Size(307, 28);
             this.cbtrangthai.TabIndex = 6;
+            this.cbtrangthai.SelectedIndexChanged += new System.EventHandler(this.cbtrangthai_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Trạng thái";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên bàn";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmQuanlyban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 748);
+            this.ClientSize = new System.Drawing.Size(885, 598);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmQuanlyban";
             this.Text = "Quản lý bàn";
             this.panel1.ResumeLayout(false);

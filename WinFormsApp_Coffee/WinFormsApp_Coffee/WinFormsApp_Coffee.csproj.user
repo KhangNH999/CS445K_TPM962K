@@ -4,6 +4,9 @@
     <Compile Update="frmDmdouong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmDotkhuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmDouong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanlyban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQuanlykhuyenmai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanlytaikhoan.cs">
