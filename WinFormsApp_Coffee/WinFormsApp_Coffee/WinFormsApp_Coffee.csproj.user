@@ -25,5 +25,8 @@
     <Compile Update="frmQuanlytaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQuanlythongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

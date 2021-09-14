@@ -45,3 +45,27 @@ E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netco
 E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
 E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
 E:\1Git\CS445K_ThapTamMuoi\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.exe
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.deps.json
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.json
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.dev.json
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDmdouong.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDotkhuyenmai.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDouong.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmLogin.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmMain.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyban.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfoInputs.cache
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfo.cs
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\ASUS\OneDrive\Máy tính\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
