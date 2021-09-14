@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\PC-NHAT\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
       "projectName": "WinFormsApp_Coffee",
-      "projectPath": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
-      "packagesPath": "C:\\Users\\PC-NHAT\\.nuget\\packages\\",
-      "outputPath": "E:\\1Git\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC-NHAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

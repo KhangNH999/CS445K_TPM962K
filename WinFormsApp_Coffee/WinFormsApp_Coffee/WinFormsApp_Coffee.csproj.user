@@ -19,6 +19,9 @@
     <Compile Update="frmQuanlyban.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQuanlyhoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanlykhuyenmai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanlythongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQuanlytaikhoancanhan.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

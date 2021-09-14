@@ -50,5 +50,17 @@ namespace WinFormsApp_Coffee
             frmQuanlykhuyenmai f = new frmQuanlykhuyenmai();
             f.ShowDialog();
         }
+
+        private void quảnLýTàiKhoảnCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanlytaikhoancanhan f = new frmQuanlytaikhoancanhan();
+            f.ShowDialog();
+        }
+
+        private void quảnLýHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanlyhoadon f = new frmQuanlyhoadon();
+            f.ShowDialog();
+        }
     }
 }
