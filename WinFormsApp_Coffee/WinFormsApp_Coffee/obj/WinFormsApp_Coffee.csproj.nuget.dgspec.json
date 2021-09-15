@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\Git_TPM962K\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\Git_TPM962K\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\Git_TPM962K\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
         "projectName": "WinFormsApp_Coffee",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\GitReborn\\CS445K_ThapTamMuoi\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\Git_TPM962K\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\Git_TPM962K\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +42,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
