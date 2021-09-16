@@ -80,21 +80,14 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng click chuột vào bàn bạn muốn sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (TableManagerDAO.Instance.checkExistTable(txttenban.Text)) //Kiểm tra bàn tồn tại
+            if (TableManagerDAO.Instance.editTable(Int32.Parse(txtId.Text), txttenban.Text, Int32.Parse(txtTang.Text), this.cbtrangthai.SelectedItem.ToString()))
             {
-                MessageBox.Show("" + txttenban.Text + " đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sửa thông tin bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loadTable();
             }
             else
             {
-                if (TableManagerDAO.Instance.editTable(Int32.Parse(txtId.Text), txttenban.Text, Int32.Parse(txtTang.Text), this.cbtrangthai.SelectedItem.ToString()))
-                {
-                    MessageBox.Show("Sửa thông tin bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadTable();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show("Sửa thông tin bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         //Tạo sự kiện xóa bàn
