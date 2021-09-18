@@ -36,8 +36,6 @@ namespace WinFormsApp_Coffee
             this.dgvDotkhuyenmai = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.cbChondanhmuc = new System.Windows.Forms.ComboBox();
             this.cbChonsanpham = new System.Windows.Forms.ComboBox();
             this.cbChondot = new System.Windows.Forms.ComboBox();
@@ -109,8 +107,6 @@ namespace WinFormsApp_Coffee
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnHuy);
-            this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Controls.Add(this.cbChondanhmuc);
             this.panel3.Controls.Add(this.cbChonsanpham);
             this.panel3.Controls.Add(this.cbChondot);
@@ -121,24 +117,6 @@ namespace WinFormsApp_Coffee
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(314, 494);
             this.panel3.TabIndex = 7;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(162, 242);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(93, 38);
-            this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(42, 242);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(93, 38);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // cbChondanhmuc
             // 
@@ -230,7 +208,5 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbChondanhmuc;
         private System.Windows.Forms.ComboBox cbChonsanpham;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLuu;
     }
 }

@@ -57,9 +57,21 @@ namespace WinFormsApp_Coffee
             f.ShowDialog();
         }
 
-        private void quảnLýHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmThanhToan f = new frmThanhToan();
+            f.ShowDialog();
+        }
+
+        private void quảnLýHóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmQuanlyhoadon f = new frmQuanlyhoadon();
+            f.ShowDialog();
+        }
+
+        private void quảnLýHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmXemhoadon f = new frmXemhoadon();
             f.ShowDialog();
         }
     }

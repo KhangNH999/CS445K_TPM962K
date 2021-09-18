@@ -8,17 +8,11 @@ using System.Windows.Forms;
 
 namespace WinFormsApp_Coffee
 {
-    public partial class frmQuanlykhuyenmai : Form
+    public partial class frmXemhoadon : Form
     {
-        public frmQuanlykhuyenmai()
+        public frmXemhoadon()
         {
             InitializeComponent();
-        }
-
-        private void btnThemdotkhuyenmai_Click(object sender, EventArgs e)
-        {
-            frmDotkhuyenmai f = new frmDotkhuyenmai();
-            f.ShowDialog();
         }
     }
 }
