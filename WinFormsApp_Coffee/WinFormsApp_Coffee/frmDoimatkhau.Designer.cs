@@ -30,15 +30,15 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnXacnhan = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnXacnhan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,32 +56,26 @@ namespace WinFormsApp_Coffee
             this.panel1.Size = new System.Drawing.Size(482, 143);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // textBox3
             // 
-            this.panel2.Controls.Add(this.btnHuy);
-            this.panel2.Controls.Add(this.btnXacnhan);
-            this.panel2.Location = new System.Drawing.Point(12, 162);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(482, 48);
-            this.panel2.TabIndex = 1;
+            this.textBox3.Location = new System.Drawing.Point(151, 104);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(328, 27);
+            this.textBox3.TabIndex = 5;
             // 
-            // label1
+            // textBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mật khẩu hiện tại:";
+            this.textBox2.Location = new System.Drawing.Point(151, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(328, 27);
+            this.textBox2.TabIndex = 4;
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu mới:";
+            this.textBox1.Location = new System.Drawing.Point(151, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 27);
+            this.textBox1.TabIndex = 3;
             // 
             // label3
             // 
@@ -92,35 +86,32 @@ namespace WinFormsApp_Coffee
             this.label3.TabIndex = 2;
             this.label3.Text = "Nhập lại mật khẩu:";
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 27);
-            this.textBox1.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mật khẩu mới:";
             // 
-            // textBox2
+            // label1
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 27);
-            this.textBox2.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mật khẩu hiện tại:";
             // 
-            // textBox3
+            // panel2
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 27);
-            this.textBox3.TabIndex = 5;
-            // 
-            // btnXacnhan
-            // 
-            this.btnXacnhan.Location = new System.Drawing.Point(285, 3);
-            this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(94, 42);
-            this.btnXacnhan.TabIndex = 0;
-            this.btnXacnhan.Text = "Xác nhận";
-            this.btnXacnhan.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnXacnhan);
+            this.panel2.Location = new System.Drawing.Point(12, 162);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(482, 48);
+            this.panel2.TabIndex = 1;
             // 
             // btnHuy
             // 
@@ -131,6 +122,15 @@ namespace WinFormsApp_Coffee
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
+            // btnXacnhan
+            // 
+            this.btnXacnhan.Location = new System.Drawing.Point(285, 3);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(94, 42);
+            this.btnXacnhan.TabIndex = 0;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.UseVisualStyleBackColor = true;
+            // 
             // frmDoimatkhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -139,7 +139,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDoimatkhau";
-            this.Text = "frmDoimatkhau";
+            this.Text = "Đổi mật khẩu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

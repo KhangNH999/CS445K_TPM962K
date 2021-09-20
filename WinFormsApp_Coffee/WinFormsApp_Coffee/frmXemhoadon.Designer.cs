@@ -32,10 +32,10 @@ namespace WinFormsApp_Coffee
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvChitiethoadon = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMahoadon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMataikhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMahoadon = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiethoadon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +70,13 @@ namespace WinFormsApp_Coffee
             this.panel2.Size = new System.Drawing.Size(863, 43);
             this.panel2.TabIndex = 1;
             // 
+            // txtMahoadon
+            // 
+            this.txtMahoadon.Location = new System.Drawing.Point(385, 8);
+            this.txtMahoadon.Name = "txtMahoadon";
+            this.txtMahoadon.Size = new System.Drawing.Size(179, 27);
+            this.txtMahoadon.TabIndex = 6;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -95,13 +102,6 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã tài khoản:";
             // 
-            // txtMahoadon
-            // 
-            this.txtMahoadon.Location = new System.Drawing.Point(385, 8);
-            this.txtMahoadon.Name = "txtMahoadon";
-            this.txtMahoadon.Size = new System.Drawing.Size(179, 27);
-            this.txtMahoadon.TabIndex = 6;
-            // 
             // frmXemhoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -110,7 +110,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmXemhoadon";
-            this.Text = "frmXemhoadon";
+            this.Text = "Xem hóa đơn";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiethoadon)).EndInit();
             this.panel2.ResumeLayout(false);

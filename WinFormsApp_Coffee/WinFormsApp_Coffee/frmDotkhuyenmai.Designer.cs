@@ -36,14 +36,14 @@ namespace WinFormsApp_Coffee
             this.dgvDotkhuyenmai = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMadotkm = new System.Windows.Forms.TextBox();
-            this.txtTilegiam = new System.Windows.Forms.TextBox();
-            this.cbbMadm = new System.Windows.Forms.ComboBox();
             this.cbbMadouong = new System.Windows.Forms.ComboBox();
+            this.cbbMadm = new System.Windows.Forms.ComboBox();
+            this.txtTilegiam = new System.Windows.Forms.TextBox();
+            this.txtMadotkm = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).BeginInit();
             this.panel1.SuspendLayout();
@@ -122,32 +122,35 @@ namespace WinFormsApp_Coffee
             this.panel3.Size = new System.Drawing.Size(319, 257);
             this.panel3.TabIndex = 7;
             // 
-            // label1
+            // cbbMadouong
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã đợt khuyến mãi:";
+            this.cbbMadouong.FormattingEnabled = true;
+            this.cbbMadouong.Location = new System.Drawing.Point(149, 119);
+            this.cbbMadouong.Name = "cbbMadouong";
+            this.cbbMadouong.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadouong.TabIndex = 7;
             // 
-            // label2
+            // cbbMadm
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã danh mục:";
+            this.cbbMadm.FormattingEnabled = true;
+            this.cbbMadm.Location = new System.Drawing.Point(149, 62);
+            this.cbbMadm.Name = "cbbMadm";
+            this.cbbMadm.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadm.TabIndex = 6;
             // 
-            // label3
+            // txtTilegiam
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã đồ uống:";
+            this.txtTilegiam.Location = new System.Drawing.Point(149, 174);
+            this.txtTilegiam.Name = "txtTilegiam";
+            this.txtTilegiam.Size = new System.Drawing.Size(167, 27);
+            this.txtTilegiam.TabIndex = 5;
+            // 
+            // txtMadotkm
+            // 
+            this.txtMadotkm.Location = new System.Drawing.Point(149, 11);
+            this.txtMadotkm.Name = "txtMadotkm";
+            this.txtMadotkm.Size = new System.Drawing.Size(167, 27);
+            this.txtMadotkm.TabIndex = 4;
             // 
             // label4
             // 
@@ -158,35 +161,32 @@ namespace WinFormsApp_Coffee
             this.label4.TabIndex = 3;
             this.label4.Text = "Tỉ lệ giảm giá:";
             // 
-            // txtMadotkm
+            // label3
             // 
-            this.txtMadotkm.Location = new System.Drawing.Point(149, 11);
-            this.txtMadotkm.Name = "txtMadotkm";
-            this.txtMadotkm.Size = new System.Drawing.Size(167, 27);
-            this.txtMadotkm.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mã đồ uống:";
             // 
-            // txtTilegiam
+            // label2
             // 
-            this.txtTilegiam.Location = new System.Drawing.Point(149, 174);
-            this.txtTilegiam.Name = "txtTilegiam";
-            this.txtTilegiam.Size = new System.Drawing.Size(167, 27);
-            this.txtTilegiam.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã danh mục:";
             // 
-            // cbbMadm
+            // label1
             // 
-            this.cbbMadm.FormattingEnabled = true;
-            this.cbbMadm.Location = new System.Drawing.Point(149, 62);
-            this.cbbMadm.Name = "cbbMadm";
-            this.cbbMadm.Size = new System.Drawing.Size(167, 28);
-            this.cbbMadm.TabIndex = 6;
-            // 
-            // cbbMadouong
-            // 
-            this.cbbMadouong.FormattingEnabled = true;
-            this.cbbMadouong.Location = new System.Drawing.Point(149, 119);
-            this.cbbMadouong.Name = "cbbMadouong";
-            this.cbbMadouong.Size = new System.Drawing.Size(167, 28);
-            this.cbbMadouong.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã đợt khuyến mãi:";
             // 
             // frmDotkhuyenmai
             // 
@@ -199,7 +199,7 @@ namespace WinFormsApp_Coffee
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDotkhuyenmai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDotkhuyenmai";
+            this.Text = "Đợt khuyến mãi";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).EndInit();
             this.panel1.ResumeLayout(false);

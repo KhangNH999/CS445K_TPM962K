@@ -352,7 +352,7 @@ namespace WinFormsApp_Coffee
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQuanlytaikhoancanhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quanlytaikhoancanhan";
+            this.Text = "Quản lý tài khoản cá nhân";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

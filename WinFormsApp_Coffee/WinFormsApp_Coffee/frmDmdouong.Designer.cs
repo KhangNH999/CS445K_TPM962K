@@ -155,7 +155,7 @@ namespace WinFormsApp_Coffee
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDmdouong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDmdouong";
+            this.Text = "Quản lý danh mục đồ uống";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).EndInit();
