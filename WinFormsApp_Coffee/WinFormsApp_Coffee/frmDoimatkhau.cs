@@ -8,17 +8,11 @@ using System.Windows.Forms;
 
 namespace WinFormsApp_Coffee
 {
-    public partial class frmDouong : Form
+    public partial class frmDoimatkhau : Form
     {
-        public frmDouong()
+        public frmDoimatkhau()
         {
             InitializeComponent();
-        }
-
-        private void btnGiaapdung_Click(object sender, EventArgs e)
-        {
-            frmGiaapdung f = new frmGiaapdung();
-            f.ShowDialog();        
         }
     }
 }

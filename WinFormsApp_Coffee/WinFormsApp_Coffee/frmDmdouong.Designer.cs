@@ -36,7 +36,7 @@ namespace WinFormsApp_Coffee
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtIDdanhmuc = new System.Windows.Forms.TextBox();
+            this.txtMadanhmuc = new System.Windows.Forms.TextBox();
             this.txtTendanhmuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnThemdm);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 70);
+            this.panel1.Size = new System.Drawing.Size(743, 70);
             this.panel1.TabIndex = 0;
             // 
             // btnXoadm
@@ -88,7 +88,7 @@ namespace WinFormsApp_Coffee
             this.panel2.Controls.Add(this.dgvDmdouong);
             this.panel2.Location = new System.Drawing.Point(13, 90);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(539, 496);
+            this.panel2.Size = new System.Drawing.Size(423, 230);
             this.panel2.TabIndex = 1;
             // 
             // dgvDmdouong
@@ -98,57 +98,57 @@ namespace WinFormsApp_Coffee
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
-            this.dgvDmdouong.Size = new System.Drawing.Size(532, 489);
+            this.dgvDmdouong.Size = new System.Drawing.Size(414, 221);
             this.dgvDmdouong.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtIDdanhmuc);
+            this.panel3.Controls.Add(this.txtMadanhmuc);
             this.panel3.Controls.Add(this.txtTendanhmuc);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(559, 90);
+            this.panel3.Location = new System.Drawing.Point(442, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 496);
+            this.panel3.Size = new System.Drawing.Size(314, 230);
             this.panel3.TabIndex = 2;
             // 
-            // txtIDdanhmuc
+            // txtMadanhmuc
             // 
-            this.txtIDdanhmuc.Location = new System.Drawing.Point(4, 32);
-            this.txtIDdanhmuc.Name = "txtIDdanhmuc";
-            this.txtIDdanhmuc.Size = new System.Drawing.Size(307, 27);
-            this.txtIDdanhmuc.TabIndex = 4;
+            this.txtMadanhmuc.Location = new System.Drawing.Point(111, 5);
+            this.txtMadanhmuc.Name = "txtMadanhmuc";
+            this.txtMadanhmuc.Size = new System.Drawing.Size(200, 27);
+            this.txtMadanhmuc.TabIndex = 4;
             // 
             // txtTendanhmuc
             // 
-            this.txtTendanhmuc.Location = new System.Drawing.Point(4, 101);
+            this.txtTendanhmuc.Location = new System.Drawing.Point(111, 58);
             this.txtTendanhmuc.Name = "txtTendanhmuc";
-            this.txtTendanhmuc.Size = new System.Drawing.Size(307, 27);
+            this.txtTendanhmuc.Size = new System.Drawing.Size(200, 27);
             this.txtTendanhmuc.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 77);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên danh mục";
+            this.label2.Text = "Tên danh mục:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID danh mục";
+            this.label1.Text = "Mã danh mục:";
             // 
             // frmDmdouong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 598);
+            this.ClientSize = new System.Drawing.Size(771, 335);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -177,6 +177,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.TextBox txtTendanhmuc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDdanhmuc;
+        private System.Windows.Forms.TextBox txtMadanhmuc;
     }
 }

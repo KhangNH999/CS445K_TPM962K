@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormsApp_Coffee
 {
-    partial class frmThongke
+    partial class frmQuanlythongke
     {
         /// <summary>
         /// Required designer variable.
@@ -50,19 +50,19 @@ namespace WinFormsApp_Coffee
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvQuanlythongke);
-            this.panel1.Location = new System.Drawing.Point(12, 156);
+            this.panel1.Location = new System.Drawing.Point(12, 161);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 430);
+            this.panel1.Size = new System.Drawing.Size(661, 425);
             this.panel1.TabIndex = 0;
             // 
             // dgvQuanlythongke
             // 
             this.dgvQuanlythongke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuanlythongke.Location = new System.Drawing.Point(3, 0);
+            this.dgvQuanlythongke.Location = new System.Drawing.Point(3, 3);
             this.dgvQuanlythongke.Name = "dgvQuanlythongke";
             this.dgvQuanlythongke.RowHeadersWidth = 51;
             this.dgvQuanlythongke.RowTemplate.Height = 29;
-            this.dgvQuanlythongke.Size = new System.Drawing.Size(852, 427);
+            this.dgvQuanlythongke.Size = new System.Drawing.Size(655, 419);
             this.dgvQuanlythongke.TabIndex = 0;
             this.dgvQuanlythongke.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -80,14 +80,14 @@ namespace WinFormsApp_Coffee
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 138);
+            this.panel2.Size = new System.Drawing.Size(661, 143);
             this.panel2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(723, 62);
+            this.button1.Location = new System.Drawing.Point(15, 103);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 49);
+            this.button1.Size = new System.Drawing.Size(309, 32);
             this.button1.TabIndex = 9;
             this.button1.Text = "Thống kê đồ uống bán chạy";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace WinFormsApp_Coffee
             // cbbtendouong
             // 
             this.cbbtendouong.FormattingEnabled = true;
-            this.cbbtendouong.Location = new System.Drawing.Point(517, 67);
+            this.cbbtendouong.Location = new System.Drawing.Point(493, 56);
             this.cbbtendouong.Name = "cbbtendouong";
             this.cbbtendouong.Size = new System.Drawing.Size(150, 28);
             this.cbbtendouong.TabIndex = 8;
@@ -104,81 +104,81 @@ namespace WinFormsApp_Coffee
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(344, 67);
+            this.label4.Location = new System.Drawing.Point(326, 59);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 20);
+            this.label4.Size = new System.Drawing.Size(164, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Tên danh mục đồ uống";
+            this.label4.Text = "Tên danh mục đồ uống:";
             // 
             // cbbtennhanvien
             // 
             this.cbbtennhanvien.FormattingEnabled = true;
-            this.cbbtennhanvien.Location = new System.Drawing.Point(153, 59);
+            this.cbbtennhanvien.Location = new System.Drawing.Point(123, 56);
             this.cbbtennhanvien.Name = "cbbtennhanvien";
-            this.cbbtennhanvien.Size = new System.Drawing.Size(155, 28);
+            this.cbbtennhanvien.Size = new System.Drawing.Size(177, 28);
             this.cbbtennhanvien.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 62);
+            this.label3.Location = new System.Drawing.Point(15, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Tên nhân viên";
+            this.label3.Text = "Tên nhân viên:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(344, 16);
+            this.label2.Location = new System.Drawing.Point(326, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 20);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Đến";
+            this.label2.Text = "Đến:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Từ";
+            this.label1.Text = "Từ:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // btnthongke
             // 
-            this.btnthongke.Location = new System.Drawing.Point(723, 11);
+            this.btnthongke.Location = new System.Drawing.Point(330, 103);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(110, 44);
+            this.btnthongke.Size = new System.Drawing.Size(313, 32);
             this.btnthongke.TabIndex = 2;
             this.btnthongke.Text = "Thống kê";
             this.btnthongke.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(426, 11);
+            this.dateTimePicker2.Location = new System.Drawing.Point(371, 7);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(241, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(272, 27);
             this.dateTimePicker2.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(58, 11);
+            this.dateTimePicker1.Location = new System.Drawing.Point(50, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // frmThongke
+            // frmQuanlythongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 598);
+            this.ClientSize = new System.Drawing.Size(685, 598);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmThongke";
+            this.Name = "frmQuanlythongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thống kê";
             this.panel1.ResumeLayout(false);

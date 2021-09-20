@@ -17,6 +17,11 @@ namespace WinFormsApp_Coffee
 
         private void btnThemdotkhuyenmai_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnXemdotkm_Click(object sender, EventArgs e)
+        {
             frmDotkhuyenmai f = new frmDotkhuyenmai();
             f.ShowDialog();
         }

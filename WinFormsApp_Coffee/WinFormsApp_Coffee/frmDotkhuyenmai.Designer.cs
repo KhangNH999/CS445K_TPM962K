@@ -30,18 +30,20 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             this.btnXoasanpham = new System.Windows.Forms.Button();
-            this.btnSuathongtin = new System.Windows.Forms.Button();
+            this.btnSuasanpham = new System.Windows.Forms.Button();
             this.btnThemsanpham = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDotkhuyenmai = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbChondanhmuc = new System.Windows.Forms.ComboBox();
-            this.cbChonsanpham = new System.Windows.Forms.ComboBox();
-            this.cbChondot = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMadotkm = new System.Windows.Forms.TextBox();
+            this.txtTilegiam = new System.Windows.Forms.TextBox();
+            this.cbbMadm = new System.Windows.Forms.ComboBox();
+            this.cbbMadouong = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,17 +56,17 @@ namespace WinFormsApp_Coffee
             this.btnXoasanpham.Name = "btnXoasanpham";
             this.btnXoasanpham.Size = new System.Drawing.Size(125, 63);
             this.btnXoasanpham.TabIndex = 2;
-            this.btnXoasanpham.Text = "Xóa ";
+            this.btnXoasanpham.Text = "Xóa sản phẩm";
             this.btnXoasanpham.UseVisualStyleBackColor = true;
             // 
-            // btnSuathongtin
+            // btnSuasanpham
             // 
-            this.btnSuathongtin.Location = new System.Drawing.Point(135, 4);
-            this.btnSuathongtin.Name = "btnSuathongtin";
-            this.btnSuathongtin.Size = new System.Drawing.Size(125, 63);
-            this.btnSuathongtin.TabIndex = 1;
-            this.btnSuathongtin.Text = "Sửa thông tin";
-            this.btnSuathongtin.UseVisualStyleBackColor = true;
+            this.btnSuasanpham.Location = new System.Drawing.Point(135, 4);
+            this.btnSuasanpham.Name = "btnSuasanpham";
+            this.btnSuasanpham.Size = new System.Drawing.Size(125, 63);
+            this.btnSuasanpham.TabIndex = 1;
+            this.btnSuasanpham.Text = "Sửa sản phẩm";
+            this.btnSuasanpham.UseVisualStyleBackColor = true;
             // 
             // btnThemsanpham
             // 
@@ -81,7 +83,7 @@ namespace WinFormsApp_Coffee
             this.panel2.Location = new System.Drawing.Point(10, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(541, 494);
+            this.panel2.Size = new System.Drawing.Size(541, 257);
             this.panel2.TabIndex = 6;
             // 
             // dgvDotkhuyenmai
@@ -92,13 +94,13 @@ namespace WinFormsApp_Coffee
             this.dgvDotkhuyenmai.Name = "dgvDotkhuyenmai";
             this.dgvDotkhuyenmai.RowHeadersWidth = 62;
             this.dgvDotkhuyenmai.RowTemplate.Height = 33;
-            this.dgvDotkhuyenmai.Size = new System.Drawing.Size(532, 489);
+            this.dgvDotkhuyenmai.Size = new System.Drawing.Size(532, 253);
             this.dgvDotkhuyenmai.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnXoasanpham);
-            this.panel1.Controls.Add(this.btnSuathongtin);
+            this.panel1.Controls.Add(this.btnSuasanpham);
             this.panel1.Controls.Add(this.btnThemsanpham);
             this.panel1.Location = new System.Drawing.Point(10, 14);
             this.panel1.Name = "panel1";
@@ -107,76 +109,90 @@ namespace WinFormsApp_Coffee
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cbChondanhmuc);
-            this.panel3.Controls.Add(this.cbChonsanpham);
-            this.panel3.Controls.Add(this.cbChondot);
+            this.panel3.Controls.Add(this.cbbMadouong);
+            this.panel3.Controls.Add(this.cbbMadm);
+            this.panel3.Controls.Add(this.txtTilegiam);
+            this.panel3.Controls.Add(this.txtMadotkm);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(561, 90);
+            this.panel3.Location = new System.Drawing.Point(556, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 494);
+            this.panel3.Size = new System.Drawing.Size(319, 257);
             this.panel3.TabIndex = 7;
-            // 
-            // cbChondanhmuc
-            // 
-            this.cbChondanhmuc.FormattingEnabled = true;
-            this.cbChondanhmuc.Location = new System.Drawing.Point(2, 30);
-            this.cbChondanhmuc.Margin = new System.Windows.Forms.Padding(2);
-            this.cbChondanhmuc.Name = "cbChondanhmuc";
-            this.cbChondanhmuc.Size = new System.Drawing.Size(307, 28);
-            this.cbChondanhmuc.TabIndex = 8;
-            // 
-            // cbChonsanpham
-            // 
-            this.cbChonsanpham.FormattingEnabled = true;
-            this.cbChonsanpham.Location = new System.Drawing.Point(4, 99);
-            this.cbChonsanpham.Margin = new System.Windows.Forms.Padding(2);
-            this.cbChonsanpham.Name = "cbChonsanpham";
-            this.cbChonsanpham.Size = new System.Drawing.Size(307, 28);
-            this.cbChonsanpham.TabIndex = 7;
-            // 
-            // cbChondot
-            // 
-            this.cbChondot.FormattingEnabled = true;
-            this.cbChondot.Location = new System.Drawing.Point(2, 171);
-            this.cbChondot.Margin = new System.Windows.Forms.Padding(2);
-            this.cbChondot.Name = "cbChondot";
-            this.cbChondot.Size = new System.Drawing.Size(307, 28);
-            this.cbChondot.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Chọn đợt";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Chọn sản phẩm";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Location = new System.Drawing.Point(4, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Chọn danh mục";
+            this.label1.Text = "Mã đợt khuyến mãi:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã danh mục:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mã đồ uống:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tỉ lệ giảm giá:";
+            // 
+            // txtMadotkm
+            // 
+            this.txtMadotkm.Location = new System.Drawing.Point(149, 11);
+            this.txtMadotkm.Name = "txtMadotkm";
+            this.txtMadotkm.Size = new System.Drawing.Size(167, 27);
+            this.txtMadotkm.TabIndex = 4;
+            // 
+            // txtTilegiam
+            // 
+            this.txtTilegiam.Location = new System.Drawing.Point(149, 174);
+            this.txtTilegiam.Name = "txtTilegiam";
+            this.txtTilegiam.Size = new System.Drawing.Size(167, 27);
+            this.txtTilegiam.TabIndex = 5;
+            // 
+            // cbbMadm
+            // 
+            this.cbbMadm.FormattingEnabled = true;
+            this.cbbMadm.Location = new System.Drawing.Point(149, 62);
+            this.cbbMadm.Name = "cbbMadm";
+            this.cbbMadm.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadm.TabIndex = 6;
+            // 
+            // cbbMadouong
+            // 
+            this.cbbMadouong.FormattingEnabled = true;
+            this.cbbMadouong.Location = new System.Drawing.Point(149, 119);
+            this.cbbMadouong.Name = "cbbMadouong";
+            this.cbbMadouong.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadouong.TabIndex = 7;
             // 
             // frmDotkhuyenmai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 598);
+            this.ClientSize = new System.Drawing.Size(885, 357);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -196,17 +212,19 @@ namespace WinFormsApp_Coffee
         #endregion
 
         private System.Windows.Forms.Button btnXoasanpham;
-        private System.Windows.Forms.Button btnSuathongtin;
+        private System.Windows.Forms.Button btnSuasanpham;
         private System.Windows.Forms.Button btnThemsanpham;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvDotkhuyenmai;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cbChondot;
+        private System.Windows.Forms.ComboBox cbbMadouong;
+        private System.Windows.Forms.ComboBox cbbMadm;
+        private System.Windows.Forms.TextBox txtTilegiam;
+        private System.Windows.Forms.TextBox txtMadotkm;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbChondanhmuc;
-        private System.Windows.Forms.ComboBox cbChonsanpham;
     }
 }

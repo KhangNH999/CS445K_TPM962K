@@ -31,8 +31,6 @@ namespace WinFormsApp_Coffee
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýDanhMụcBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýDanhMụcBànToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quảnLýTàiKhoảnCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.quảnLýHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,25 +83,12 @@ namespace WinFormsApp_Coffee
             // quảnLýDanhMụcBànToolStripMenuItem
             // 
             this.quảnLýDanhMụcBànToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýDanhMụcBànToolStripMenuItem1,
-            this.toolStripSeparator1,
             this.quảnLýTàiKhoảnCáNhânToolStripMenuItem,
             this.toolStripSeparator2,
             this.quảnLýHóaĐơnToolStripMenuItem});
             this.quảnLýDanhMụcBànToolStripMenuItem.Name = "quảnLýDanhMụcBànToolStripMenuItem";
-            this.quảnLýDanhMụcBànToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.quảnLýDanhMụcBànToolStripMenuItem.Text = "Công cụ";
-            // 
-            // quảnLýDanhMụcBànToolStripMenuItem1
-            // 
-            this.quảnLýDanhMụcBànToolStripMenuItem1.Name = "quảnLýDanhMụcBànToolStripMenuItem1";
-            this.quảnLýDanhMụcBànToolStripMenuItem1.Size = new System.Drawing.Size(262, 26);
-            this.quảnLýDanhMụcBànToolStripMenuItem1.Text = "Quản lý danh mục bàn";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(259, 6);
+            this.quảnLýDanhMụcBànToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.quảnLýDanhMụcBànToolStripMenuItem.Text = "Nhân viên";
             // 
             // quảnLýTàiKhoảnCáNhânToolStripMenuItem
             // 
@@ -208,7 +193,7 @@ namespace WinFormsApp_Coffee
             // 
             this.quảnLýKhuyễnMãiToolStripMenuItem.Name = "quảnLýKhuyễnMãiToolStripMenuItem";
             this.quảnLýKhuyễnMãiToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
-            this.quảnLýKhuyễnMãiToolStripMenuItem.Text = "Quản lý khuyễn mãi";
+            this.quảnLýKhuyễnMãiToolStripMenuItem.Text = "Quản lý khuyến mãi";
             this.quảnLýKhuyễnMãiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKhuyễnMãiToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
@@ -369,8 +354,6 @@ namespace WinFormsApp_Coffee
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýDanhMụcBànToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýDanhMụcBànToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem quảnLýHóaĐơnToolStripMenuItem;

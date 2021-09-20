@@ -35,7 +35,7 @@ namespace WinFormsApp_Coffee
 
         private void quảnLýThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongke f = new frmThongke();
+            frmQuanlythongke f = new frmQuanlythongke();
             f.ShowDialog();
         }
 

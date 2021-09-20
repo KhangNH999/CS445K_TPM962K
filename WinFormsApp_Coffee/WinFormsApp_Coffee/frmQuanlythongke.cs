@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp_Coffee
 {
-    public partial class frmThongke : Form
+    public partial class frmQuanlythongke : Form
     {
-        public frmThongke()
+        public frmQuanlythongke()
         {
             InitializeComponent();
         }

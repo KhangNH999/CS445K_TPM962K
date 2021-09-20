@@ -14,5 +14,11 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
         }
+
+        private void btnDoimatkhau_Click(object sender, EventArgs e)
+        {
+            frmDoimatkhau f = new frmDoimatkhau();
+            f.ShowDialog();
+        }
     }
 }

@@ -14,5 +14,11 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
         }
+
+        private void btnXemhd_Click(object sender, EventArgs e)
+        {
+            frmXemhoadon f = new frmXemhoadon();
+            f.ShowDialog();
+        }
     }
 }
