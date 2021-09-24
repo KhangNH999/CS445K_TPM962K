@@ -120,7 +120,6 @@ C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoancanhan.resources
-C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThongke.resources
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
 C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.GeneratedMSBuildEditorConfig.editorconfig
@@ -208,3 +207,8 @@ E:\1Git\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3
 E:\1Git\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
 E:\1Git\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
 E:\1Git\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
+C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDoimatkhau.resources
+C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
+C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
+C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThanhToan.resources
+C:\Users\ASUS\Desktop\Git_TPM962K\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
