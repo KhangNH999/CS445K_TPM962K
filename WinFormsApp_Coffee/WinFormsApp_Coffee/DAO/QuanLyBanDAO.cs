@@ -38,10 +38,22 @@ namespace WinFormsApp_Coffee.DAO
             return danhSachBan;
         }
         //Phương thức thêm bàn vào cơ sở dữ liệu
+        /*
+         Trước hết phải tạo thủ tục
+        CREATE PROC USP_ThemBan
+        @maban int,
+        @tenban nvarchar(100),
+        @soghe int,
+        @ngaybd datetime,
+        @trangthai int
+        AS
+            BEGIN
+                INSERT dbo.BAN (maban, tenban, soghe, ngaybdsudung, trangthaiban) VALUES ( @maban , @tenban , @soghe , @ngaybd , @trangthai)
+            END
+         */
         public bool themBan(int maban, string tenban, int soghe, DateTime ngaybd, int trangthai)
-        {
-            string query = string.Format("INSERT dbo.BAN (maban, tenban, soghe, ngaybdsudung, trangthaiban) VALUES ( {0} , N'{1}' , {2} , '{3}', {4})", maban, tenban, soghe, ngaybd, trangthai);
-            int result = clsDB.Instance.execNonQuery(query);
+        {            
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemBan @maban , @tenban , @soghe , @ngaybd , @trangthai",new object[] { maban , tenban , soghe , ngaybd , trangthai });
             return result > 0;
         }
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
