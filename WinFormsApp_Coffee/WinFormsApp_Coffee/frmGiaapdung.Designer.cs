@@ -29,13 +29,14 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnKhoadotgia = new System.Windows.Forms.Button();
             this.btnThemdotgia = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtTrangthaigia = new System.Windows.Forms.TextBox();
-            this.txtNgaybdapdung = new System.Windows.Forms.TextBox();
+            this.cbtrangthai = new System.Windows.Forms.ComboBox();
+            this.dateBD = new System.Windows.Forms.DateTimePicker();
             this.txtGiaban = new System.Windows.Forms.TextBox();
             this.txtMadotgia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +45,10 @@ namespace WinFormsApp_Coffee
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvGiaapdung = new System.Windows.Forms.DataGridView();
+            this.MaDotgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,11 +92,12 @@ namespace WinFormsApp_Coffee
             this.btnThemdotgia.TabIndex = 0;
             this.btnThemdotgia.Text = "Thêm đợt giá";
             this.btnThemdotgia.UseVisualStyleBackColor = true;
+            this.btnThemdotgia.Click += new System.EventHandler(this.btnThemdotgia_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtTrangthaigia);
-            this.panel3.Controls.Add(this.txtNgaybdapdung);
+            this.panel3.Controls.Add(this.cbtrangthai);
+            this.panel3.Controls.Add(this.dateBD);
             this.panel3.Controls.Add(this.txtGiaban);
             this.panel3.Controls.Add(this.txtMadotgia);
             this.panel3.Controls.Add(this.label4);
@@ -103,19 +109,25 @@ namespace WinFormsApp_Coffee
             this.panel3.Size = new System.Drawing.Size(308, 351);
             this.panel3.TabIndex = 1;
             // 
-            // txtTrangthaigia
+            // cbtrangthai
             // 
-            this.txtTrangthaigia.Location = new System.Drawing.Point(112, 162);
-            this.txtTrangthaigia.Name = "txtTrangthaigia";
-            this.txtTrangthaigia.Size = new System.Drawing.Size(193, 27);
-            this.txtTrangthaigia.TabIndex = 7;
+            this.cbtrangthai.FormattingEnabled = true;
+            this.cbtrangthai.Items.AddRange(new object[] {
+            "Chưa áp dụng",
+            "Đã áp dụng"});
+            this.cbtrangthai.Location = new System.Drawing.Point(112, 165);
+            this.cbtrangthai.Name = "cbtrangthai";
+            this.cbtrangthai.Size = new System.Drawing.Size(193, 28);
+            this.cbtrangthai.TabIndex = 7;
             // 
-            // txtNgaybdapdung
+            // dateBD
             // 
-            this.txtNgaybdapdung.Location = new System.Drawing.Point(112, 109);
-            this.txtNgaybdapdung.Name = "txtNgaybdapdung";
-            this.txtNgaybdapdung.Size = new System.Drawing.Size(193, 27);
-            this.txtNgaybdapdung.TabIndex = 6;
+            this.dateBD.CustomFormat = "dd/MM/yyyy";
+            this.dateBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBD.Location = new System.Drawing.Point(112, 105);
+            this.dateBD.Name = "dateBD";
+            this.dateBD.Size = new System.Drawing.Size(193, 27);
+            this.dateBD.TabIndex = 6;
             // 
             // txtGiaban
             // 
@@ -178,12 +190,56 @@ namespace WinFormsApp_Coffee
             // dgvGiaapdung
             // 
             this.dgvGiaapdung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGiaapdung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDotgia,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvGiaapdung.Location = new System.Drawing.Point(4, 4);
             this.dgvGiaapdung.Name = "dgvGiaapdung";
             this.dgvGiaapdung.RowHeadersWidth = 51;
             this.dgvGiaapdung.RowTemplate.Height = 29;
             this.dgvGiaapdung.Size = new System.Drawing.Size(446, 344);
             this.dgvGiaapdung.TabIndex = 0;
+            this.dgvGiaapdung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaapdung_CellClick);
+            // 
+            // MaDotgia
+            // 
+            this.MaDotgia.DataPropertyName = "MaDotgia";
+            this.MaDotgia.HeaderText = "Mã";
+            this.MaDotgia.MinimumWidth = 6;
+            this.MaDotgia.Name = "MaDotgia";
+            this.MaDotgia.ReadOnly = true;
+            this.MaDotgia.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "GiaBan";
+            this.Column2.HeaderText = "Giá Bán";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NgayBatDauAD";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column3.HeaderText = "Ngày Bắt Đầu";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "TrangThai";
+            this.Column4.HeaderText = "Trạng Thái";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // frmGiaapdung
             // 
@@ -210,8 +266,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnKhoadotgia;
         private System.Windows.Forms.Button btnThemdotgia;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtTrangthaigia;
-        private System.Windows.Forms.TextBox txtNgaybdapdung;
         private System.Windows.Forms.TextBox txtGiaban;
         private System.Windows.Forms.TextBox txtMadotgia;
         private System.Windows.Forms.Label label4;
@@ -220,5 +274,11 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvGiaapdung;
+        private System.Windows.Forms.ComboBox cbtrangthai;
+        private System.Windows.Forms.DateTimePicker dateBD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDotgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

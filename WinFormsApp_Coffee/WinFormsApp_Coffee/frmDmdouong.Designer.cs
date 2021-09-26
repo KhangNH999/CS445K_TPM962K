@@ -35,13 +35,13 @@ namespace WinFormsApp_Coffee
             this.btnThemdm = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMadanhmuc = new System.Windows.Forms.TextBox();
             this.txtTendanhmuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).BeginInit();
@@ -110,22 +110,6 @@ namespace WinFormsApp_Coffee
             this.dgvDmdouong.TabIndex = 0;
             this.dgvDmdouong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDmdouong_CellClick);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaDanhMuc";
-            this.Column1.HeaderText = "Mã danh mục";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 135;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "TenDanhMuc";
-            this.Column2.HeaderText = "Tên danh mục";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtMadanhmuc);
@@ -168,6 +152,24 @@ namespace WinFormsApp_Coffee
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã danh mục:";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaDanhMuc";
+            this.Column1.HeaderText = "Mã danh mục";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 135;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "TenDanhMuc";
+            this.Column2.HeaderText = "Tên danh mục";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // frmDmdouong
             // 
