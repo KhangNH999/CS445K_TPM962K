@@ -35,6 +35,8 @@ namespace WinFormsApp_Coffee
             this.btnThemdm = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMadanhmuc = new System.Windows.Forms.TextBox();
             this.txtTendanhmuc = new System.Windows.Forms.TextBox();
@@ -64,6 +66,7 @@ namespace WinFormsApp_Coffee
             this.btnXoadm.TabIndex = 2;
             this.btnXoadm.Text = "Xóa danh mục";
             this.btnXoadm.UseVisualStyleBackColor = true;
+            this.btnXoadm.Click += new System.EventHandler(this.btnXoadm_Click);
             // 
             // btnSuadm
             // 
@@ -73,6 +76,7 @@ namespace WinFormsApp_Coffee
             this.btnSuadm.TabIndex = 1;
             this.btnSuadm.Text = "Sửa danh mục";
             this.btnSuadm.UseVisualStyleBackColor = true;
+            this.btnSuadm.Click += new System.EventHandler(this.btnSuadm_Click);
             // 
             // btnThemdm
             // 
@@ -82,6 +86,7 @@ namespace WinFormsApp_Coffee
             this.btnThemdm.TabIndex = 0;
             this.btnThemdm.Text = "Thêm danh mục";
             this.btnThemdm.UseVisualStyleBackColor = true;
+            this.btnThemdm.Click += new System.EventHandler(this.btnThemdm_Click);
             // 
             // panel2
             // 
@@ -94,12 +99,32 @@ namespace WinFormsApp_Coffee
             // dgvDmdouong
             // 
             this.dgvDmdouong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDmdouong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.dgvDmdouong.Location = new System.Drawing.Point(4, 4);
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
             this.dgvDmdouong.Size = new System.Drawing.Size(414, 221);
             this.dgvDmdouong.TabIndex = 0;
+            this.dgvDmdouong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDmdouong_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaDanhMuc";
+            this.Column1.HeaderText = "Mã danh mục";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 135;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "TenDanhMuc";
+            this.Column2.HeaderText = "Tên danh mục";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // panel3
             // 
@@ -178,5 +203,7 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMadanhmuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
