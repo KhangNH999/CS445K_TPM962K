@@ -159,7 +159,6 @@ C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coff
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoancanhan.resources
-C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThongke.resources
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
 C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.GeneratedMSBuildEditorConfig.editorconfig
@@ -289,3 +288,120 @@ C:\Users\Admin\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\
 C:\Users\Admin\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Admin\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CopyComplete
 C:\Users\Admin\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.exe
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.deps.json
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.json
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.dev.json
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDmdouong.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDoimatkhau.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDotkhuyenmai.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDouong.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmLogin.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmMain.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyban.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyhoadon.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoancanhan.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThanhToan.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CopyComplete
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\DELL\Desktop\Git\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDmdouong.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDoimatkhau.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDotkhuyenmai.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDouong.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmLogin.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmMain.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyban.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyhoadon.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoancanhan.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThanhToan.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfo.cs
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.exe
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.deps.json
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.json
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.dev.json
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CopyComplete
+C:\Users\DELL\Desktop\New folder\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDoimatkhau.resources
+C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
+C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
+C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThanhToan.resources
+C:\Users\ASUS\Desktop\Git_Nhom8\SE447M_Nhom8\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.exe
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.deps.json
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.json
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDmdouong.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDoimatkhau.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDotkhuyenmai.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmDouong.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmGiaapdung.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmLogin.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmMain.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyban.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlyhoadon.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlykhuyenmai.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoan.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlytaikhoancanhan.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmQuanlythongke.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmThanhToan.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmXemhoadon.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.Properties.Resources.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.csproj.CopyComplete
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.dll
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
