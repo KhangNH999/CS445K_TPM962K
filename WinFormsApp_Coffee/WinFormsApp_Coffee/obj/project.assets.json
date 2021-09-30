@@ -451,23 +451,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS.LAPTOP-C9GA4AUF\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "projectUniqueName": "E:\\UsersASUS.LAPTOP-C9GA4AUFDesktop\\New folder\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
       "projectName": "WinFormsApp_Coffee",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+      "projectPath": "E:\\UsersASUS.LAPTOP-C9GA4AUFDesktop\\New folder\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "packagesPath": "C:\\Users\\ASUS.LAPTOP-C9GA4AUF\\.nuget\\packages\\",
+      "outputPath": "E:\\UsersASUS.LAPTOP-C9GA4AUFDesktop\\New folder\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS.LAPTOP-C9GA4AUF\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

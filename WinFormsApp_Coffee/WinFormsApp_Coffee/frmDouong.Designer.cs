@@ -36,6 +36,11 @@ namespace WinFormsApp_Coffee
             this.btnThemdouong = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGiaapdung = new System.Windows.Forms.Button();
             this.cbbMadotgia = new System.Windows.Forms.ComboBox();
@@ -84,6 +89,7 @@ namespace WinFormsApp_Coffee
             this.btnXoadouong.TabIndex = 2;
             this.btnXoadouong.Text = "Xóa đồ uống";
             this.btnXoadouong.UseVisualStyleBackColor = true;
+            this.btnXoadouong.Click += new System.EventHandler(this.btnXoadouong_Click);
             // 
             // btnSuadouong
             // 
@@ -93,6 +99,7 @@ namespace WinFormsApp_Coffee
             this.btnSuadouong.TabIndex = 1;
             this.btnSuadouong.Text = "Sửa đồ uống";
             this.btnSuadouong.UseVisualStyleBackColor = true;
+            this.btnSuadouong.Click += new System.EventHandler(this.btnSuadouong_Click);
             // 
             // btnThemdouong
             // 
@@ -102,6 +109,7 @@ namespace WinFormsApp_Coffee
             this.btnThemdouong.TabIndex = 0;
             this.btnThemdouong.Text = "Thêm đồ uống";
             this.btnThemdouong.UseVisualStyleBackColor = true;
+            this.btnThemdouong.Click += new System.EventHandler(this.btnThemdouong_Click);
             // 
             // panel2
             // 
@@ -114,12 +122,64 @@ namespace WinFormsApp_Coffee
             // dgvDmdouong
             // 
             this.dgvDmdouong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDmdouong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvDmdouong.Location = new System.Drawing.Point(3, 4);
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
             this.dgvDmdouong.Size = new System.Drawing.Size(532, 380);
             this.dgvDmdouong.TabIndex = 0;
+            this.dgvDmdouong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdouong_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaDoUong";
+            this.Column1.HeaderText = "Mã đò uống";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenDoUong";
+            this.Column2.HeaderText = "Tên đồ uống";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Giatien";
+            this.Column3.HeaderText = "Giá bán";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "TrangThai";
+            this.Column4.HeaderText = "Trạng thái";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Tendanhmuc";
+            this.Column5.HeaderText = "Tên danh mục";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // panel3
             // 
@@ -158,10 +218,14 @@ namespace WinFormsApp_Coffee
             this.cbbMadotgia.Name = "cbbMadotgia";
             this.cbbMadotgia.Size = new System.Drawing.Size(198, 28);
             this.cbbMadotgia.TabIndex = 21;
+            this.cbbMadotgia.SelectedIndexChanged += new System.EventHandler(this.cbbMadotgia_SelectedIndexChanged);
             // 
             // cbbTrangthai
             // 
             this.cbbTrangthai.FormattingEnabled = true;
+            this.cbbTrangthai.Items.AddRange(new object[] {
+            "Hết",
+            "Còn"});
             this.cbbTrangthai.Location = new System.Drawing.Point(111, 278);
             this.cbbTrangthai.Name = "cbbTrangthai";
             this.cbbTrangthai.Size = new System.Drawing.Size(198, 28);
@@ -169,8 +233,10 @@ namespace WinFormsApp_Coffee
             // 
             // txtGiaban
             // 
+            this.txtGiaban.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtGiaban.Location = new System.Drawing.Point(111, 226);
             this.txtGiaban.Name = "txtGiaban";
+            this.txtGiaban.ReadOnly = true;
             this.txtGiaban.Size = new System.Drawing.Size(198, 27);
             this.txtGiaban.TabIndex = 17;
             // 
@@ -294,5 +360,10 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.ComboBox cbbTrangthai;
         private System.Windows.Forms.ComboBox cbbMadotgia;
         private System.Windows.Forms.Button btnGiaapdung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
