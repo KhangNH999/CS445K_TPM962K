@@ -48,7 +48,7 @@ namespace WinFormsApp_Coffee
                 int soghe = Int32.Parse(txtSoghe.Text);
                 DateTime ngay = dateBD.Value;
                 int trangthai = cbTrangThai.SelectedIndex;
-                if (QuanLyBanDAO.Instance.kiemTraBanTonTai(ma)) //Kiểm tra bàn tồn tại
+                if (QuanLyBanDAO.Instance.kiemTraBanTonTai(ma,tenban)) //Kiểm tra bàn tồn tại
                 {
                     MessageBox.Show("Bàn này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

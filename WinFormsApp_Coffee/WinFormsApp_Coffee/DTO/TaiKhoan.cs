@@ -16,6 +16,7 @@ namespace WinFormsApp_Coffee.DTO
         private string cMnd;
         private string email;
         private string sdt;
+        private string loaitk;
         private string trangThaiTK;
         public int MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
@@ -27,18 +28,21 @@ namespace WinFormsApp_Coffee.DTO
         public string Email { get => email; set => email = value; }
         public string SDT { get => sdt; set => sdt = value; }
         public string TrangThaiTK { get => trangThaiTK; set => trangThaiTK = value; }
-        public TaiKhoan( int mataikhoan, string tendangnhap, string matkhau, string tennv, DateTime ngaysinh, string gioitinh, string cmnd, string email, string sdt, string trangthaitk)
+        public string Loaitk { get => loaitk; set => loaitk = value; }
+
+        public TaiKhoan( int mataikhoan, string tendangnhap, string matkhau, string tennv, DateTime ngaysinh, string gioitinh, string cmnd, string email, string sdt, string loaitk , string trangthaitk)
         {
-            this.maTaiKhoan = mataikhoan;
-            this.tenDangNhap = tendangnhap;
-            this.matKhau = matkhau;
-            this.tenNV = tennv;
-            this.ngaySinh = ngaysinh;
-            this.gioiTinh = gioitinh;
-            this.cMnd = cmnd;
-            this.email = email;
-            this.sdt = sdt;
-            this.trangThaiTK = trangthaitk;
+            this.MaTaiKhoan = mataikhoan;
+            this.TenDangNhap = tendangnhap;
+            this.MatKhau = matkhau;
+            this.TenNV = tennv;
+            this.NgaySinh = ngaysinh;
+            this.GioiTinh = gioitinh;
+            this.CMND = cmnd;
+            this.Email = email;
+            this.SDT = sdt;
+            this.Loaitk = loaitk;
+            this.TrangThaiTK = trangthaitk;
         }
         public TaiKhoan(DataRow row)
         {
@@ -51,6 +55,7 @@ namespace WinFormsApp_Coffee.DTO
             this.CMND = row["cmnd"].ToString();
             this.Email = row["email"].ToString();
             this.SDT = row["sdt"].ToString();
+            this.Loaitk = row["maloaitk"].ToString();
             this.TrangThaiTK = row["trangthaitk"].ToString();
         }
         

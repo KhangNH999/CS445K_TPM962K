@@ -40,7 +40,7 @@ namespace WinFormsApp_Coffee.DAO
             }
             return danhSachDoUong;
         }
-        //Phương thức thêm bàn vào cơ sở dữ liệu
+        //Phương thức thêm đồ uống vào cơ sở dữ liệu
         /*
          Trước hết phải tạo thủ tục
         CREATE PROC USP_ThemDoUong

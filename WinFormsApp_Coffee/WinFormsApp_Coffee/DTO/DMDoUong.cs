@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WinFormsApp_Coffee.DTO
 {
-    class DMDoUong
+    public class DMDoUong
     {
         private int maDanhMuc;
         private string tenDanhMuc;

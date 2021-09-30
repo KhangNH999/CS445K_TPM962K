@@ -15,10 +15,12 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
             loadTaiKhoan();
+            loadCbLoaiTK();
         }
         void loadTaiKhoan()
         {
             dgvQuanlytaikhoan.DataSource = QuanLyTaiKhoanDAO.Instance.loadDanhSachTaiKhoan();
+            ccbTrangthaitk.SelectedIndex = 0;
         }
         //phương thức xóa dữ liệu có trong textbox, dataTimePicker, Combobox
         void xoaDuLieu()
@@ -54,7 +56,7 @@ namespace WinFormsApp_Coffee
                 string cmnd = txtCmnd.Text;
                 string email = txtEmail.Text;
                 string sdt = txtSdt.Text;
-          
+                int loaitk = ccbLoaitk.SelectedIndex;
                 int trangthai = ccbTrangthaitk.SelectedIndex;
                 if(QuanLyTaiKhoanDAO.Instance.kiemTraTaiKhoanTonTai(mataikhoan))
                 {
@@ -62,7 +64,7 @@ namespace WinFormsApp_Coffee
                 }
                 else
                 {
-                    if(QuanLyTaiKhoanDAO.Instance.themTaiKhoan(mataikhoan, tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , trangthai))
+                    if(QuanLyTaiKhoanDAO.Instance.themTaiKhoan(mataikhoan, tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
                     {
                         MessageBox.Show("Thêm bàn tài khoản thành công!");
                         loadTaiKhoan();
@@ -72,9 +74,9 @@ namespace WinFormsApp_Coffee
                     {
                         MessageBox.Show("Thêm tài khoản thất bại");
                     }
-                }    
+                }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -96,9 +98,9 @@ namespace WinFormsApp_Coffee
                 string cmnd = txtCmnd.Text;
                 string email = txtEmail.Text;
                 string sdt = txtSdt.Text;
-         
+                int loaitk = ccbLoaitk.SelectedIndex;
                 int trangthai = ccbTrangthaitk.SelectedIndex;
-                if(QuanLyTaiKhoanDAO.Instance.suaThongTinTaiKhoan(mataikhoan, tendangnhap , matkhau , ten , ngaysinh , gioitinh , cmnd , email , sdt ,trangthai))
+                if(QuanLyTaiKhoanDAO.Instance.suaThongTinTaiKhoan(mataikhoan, tendangnhap , matkhau , ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
                 {
                     MessageBox.Show("Sửa thông tin tài khoản thành công");
                     loadTaiKhoan();
@@ -127,9 +129,8 @@ namespace WinFormsApp_Coffee
             txtCmnd.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[6].Value + "";
             txtEmail.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[7].Value + "";
             txtSdt.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[8].Value + "";
-      
-            ccbTrangthaitk.SelectedItem = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[9].Value + "";
-            
+            ccbLoaitk.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[10].Value + "";
+            ccbTrangthaitk.SelectedItem = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[9].Value + "";           
         }
 
         private void btnXoatk_Click(object sender, EventArgs e)
@@ -157,7 +158,13 @@ namespace WinFormsApp_Coffee
                 {
                     MessageBox.Show("Xóa tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
+            }          
+        }
+        //load combobox trang thai
+        void loadCbLoaiTK()
+        {
+            ccbLoaitk.DataSource = QuanLyTaiKhoanDAO.Instance.loadLoaiTK();
+            ccbLoaitk.DisplayMember = "tenloaitk";
         }
     }
 }
