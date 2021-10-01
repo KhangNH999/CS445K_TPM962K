@@ -12,14 +12,26 @@ namespace WinFormsApp_Coffee
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private TaiKhoanLogin dntaikhoan;
+        public TaiKhoanLogin DnTaiKhoan
+        {
+            get { return dntaikhoan; }
+            set { dntaikhoan = value; PhanQuyen(dntaikhoan.MaLoaiTK); }
+        }
+        private double total;
+        public frmMain(TaiKhoanLogin tk)
         {
             InitializeComponent();
+            this.DnTaiKhoan = tk;
             LoadBan();
             LoadCategory();
             LoadComboboxTable(cbChuyenBan);
         }
-        private double total;
+
+        void PhanQuyen(int maloaitk)
+        {
+            adminToolStripMenuItem.Visible = maloaitk == 0;
+        }
 
         private void quảnLýDanhMụcĐồUốngToolStripMenuItem_Click(object sender, EventArgs e)
         {
