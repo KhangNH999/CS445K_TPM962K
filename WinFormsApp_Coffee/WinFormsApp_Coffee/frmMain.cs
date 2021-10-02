@@ -12,12 +12,16 @@ namespace WinFormsApp_Coffee
 {
     public partial class frmMain : Form
     {
+      
         private TaiKhoanLogin dntaikhoan;
         public TaiKhoanLogin DnTaiKhoan
         {
             get { return dntaikhoan; }
             set { dntaikhoan = value; PhanQuyen(dntaikhoan.MaLoaiTK); }
         }
+
+        
+
         private double total;
         public frmMain(TaiKhoanLogin tk)
         {
@@ -71,7 +75,7 @@ namespace WinFormsApp_Coffee
 
         private void quảnLýTàiKhoảnCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQuanlytaikhoancanhan f = new frmQuanlytaikhoancanhan();
+            frmQuanlytaikhoancanhan f = new frmQuanlytaikhoancanhan(DnTaiKhoan);
             f.ShowDialog();
         }
 

@@ -451,19 +451,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC-NHAT\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1Git\\SE447M_Nhom8\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
       "projectName": "WinFormsApp_Coffee",
-      "projectPath": "E:\\1Git\\SE447M_Nhom8\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
-      "packagesPath": "C:\\Users\\PC-NHAT\\.nuget\\packages\\",
-      "outputPath": "E:\\1Git\\SE447M_Nhom8\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\PC-NHAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -512,7 +516,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

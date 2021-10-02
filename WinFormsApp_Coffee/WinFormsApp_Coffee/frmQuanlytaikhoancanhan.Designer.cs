@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace WinFormsApp_Coffee
 {
     partial class frmQuanlytaikhoancanhan
@@ -41,7 +43,7 @@ namespace WinFormsApp_Coffee
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtNgaysinh = new System.Windows.Forms.TextBox();
+            this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtGioitinh = new System.Windows.Forms.TextBox();
@@ -78,6 +80,7 @@ namespace WinFormsApp_Coffee
             this.btnCapnhat.TabIndex = 1;
             this.btnCapnhat.Text = "Cập nhật thông tin cá nhân";
             this.btnCapnhat.UseVisualStyleBackColor = true;
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // btnDoimatkhau
             // 
@@ -105,6 +108,7 @@ namespace WinFormsApp_Coffee
             this.txtTendangnhap.Location = new System.Drawing.Point(175, 12);
             this.txtTendangnhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTendangnhap.Name = "txtTendangnhap";
+            this.txtTendangnhap.ReadOnly = true;
             this.txtTendangnhap.Size = new System.Drawing.Size(350, 27);
             this.txtTendangnhap.TabIndex = 1;
             // 
@@ -173,7 +177,7 @@ namespace WinFormsApp_Coffee
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.txtNgaysinh);
+            this.panel5.Controls.Add(this.dtngaysinh);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(12, 130);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -181,13 +185,16 @@ namespace WinFormsApp_Coffee
             this.panel5.Size = new System.Drawing.Size(529, 51);
             this.panel5.TabIndex = 6;
             // 
-            // txtNgaysinh
+            // dtngaysinh
             // 
-            this.txtNgaysinh.Location = new System.Drawing.Point(175, 12);
-            this.txtNgaysinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNgaysinh.Name = "txtNgaysinh";
-            this.txtNgaysinh.Size = new System.Drawing.Size(350, 27);
-            this.txtNgaysinh.TabIndex = 1;
+            this.dtngaysinh.CustomFormat = "dd/MM/yyyy";
+            this.dtngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtngaysinh.Location = new System.Drawing.Point(174, 11);
+            this.dtngaysinh.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.dtngaysinh.Name = "dtngaysinh";
+            this.dtngaysinh.Size = new System.Drawing.Size(351, 27);
+            this.dtngaysinh.TabIndex = 1;
+            this.dtngaysinh.Value = new System.DateTime(2021, 10, 1, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -318,9 +325,11 @@ namespace WinFormsApp_Coffee
             // 
             // txtMatk
             // 
+            this.txtMatk.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.txtMatk.Location = new System.Drawing.Point(175, 12);
             this.txtMatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatk.Name = "txtMatk";
+            this.txtMatk.ReadOnly = true;
             this.txtMatk.Size = new System.Drawing.Size(350, 27);
             this.txtMatk.TabIndex = 1;
             // 
@@ -375,6 +384,8 @@ namespace WinFormsApp_Coffee
 
         }
 
+       
+
         #endregion
 
         private System.Windows.Forms.Button btnCapnhat;
@@ -389,7 +400,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtNgaysinh;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtGioitinh;
@@ -406,5 +416,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtMatk;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtngaysinh;
     }
 }

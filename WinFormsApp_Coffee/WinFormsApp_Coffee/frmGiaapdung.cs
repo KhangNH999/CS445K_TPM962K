@@ -78,5 +78,36 @@ namespace WinFormsApp_Coffee
             dateBD.Value = Convert.ToDateTime(dgvGiaapdung.Rows[e.RowIndex].Cells[2].Value);
             cbtrangthai.SelectedItem = dgvGiaapdung.Rows[e.RowIndex].Cells[3].Value + "";
         }
+
+        private void btnKhoadotgia_Click(object sender, EventArgs e)
+        {
+            if (txtMadotgia.Text == "" || txtGiaban.Text == "" || cbtrangthai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào đợt muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            {
+                int ma = Int32.Parse(txtMadotgia.Text);
+                double giaban = double.Parse(txtGiaban.Text);
+                DateTime ngay = dateBD.Value;
+                int trangthai = cbtrangthai.SelectedIndex;
+                if (GiaApDungDAO.Instance.suaThongTinKhoa(ma, giaban, ngay, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
+                {
+                    MessageBox.Show("khóa thông tin đợt giá thành công");
+                    loadGia();
+                    xoaDuLieu();
+                }
+                else
+                {
+                    MessageBox.Show("khóa thất bại");
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

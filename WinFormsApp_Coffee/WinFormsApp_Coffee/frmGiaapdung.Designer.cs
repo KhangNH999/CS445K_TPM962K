@@ -83,6 +83,7 @@ namespace WinFormsApp_Coffee
             this.btnKhoadotgia.TabIndex = 1;
             this.btnKhoadotgia.Text = "Khóa đợt giá";
             this.btnKhoadotgia.UseVisualStyleBackColor = true;
+            this.btnKhoadotgia.Click += new System.EventHandler(this.btnKhoadotgia_Click);
             // 
             // btnThemdotgia
             // 
@@ -114,7 +115,8 @@ namespace WinFormsApp_Coffee
             this.cbtrangthai.FormattingEnabled = true;
             this.cbtrangthai.Items.AddRange(new object[] {
             "Chưa áp dụng",
-            "Đã áp dụng"});
+            "Đã áp dụng",
+            "Đã khóa"});
             this.cbtrangthai.Location = new System.Drawing.Point(112, 165);
             this.cbtrangthai.Name = "cbtrangthai";
             this.cbtrangthai.Size = new System.Drawing.Size(193, 28);
