@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
         "projectName": "WinFormsApp_Coffee",
-        "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\WinFormsApp_Coffee.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\New folder (2)\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\GitnhomTMP\\CS445K_TPM962K\\WinFormsApp_Coffee\\WinFormsApp_Coffee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

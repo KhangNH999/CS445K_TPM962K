@@ -19,16 +19,17 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
         }
+        //Lấy dữ liệu bên form chính
         public int Idban { get => idban; set => idban = value; }
         public double TotalPrice { get => totalPrice; set => totalPrice = value; }
-
+        //Load lên datagrid
         void load()
         {
             dgvThanhToan.DataSource = MenuDAO.Instance.GetListMenuByTable(idban);
             CultureInfo culture = new CultureInfo("vi-VN");
             txtTongTien.Text = totalPrice.ToString("c", culture);
         }
-
+        //Tạo sự kiện thanh toán
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(idban);

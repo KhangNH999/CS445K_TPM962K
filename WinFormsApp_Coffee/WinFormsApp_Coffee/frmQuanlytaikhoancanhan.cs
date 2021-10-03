@@ -23,13 +23,10 @@ namespace WinFormsApp_Coffee
 
         public frmQuanlytaikhoancanhan(TaiKhoanLogin tk)
         {
-
-            InitializeComponent();
-           
+            InitializeComponent();         
             this.DnTaiKhoan = tk;
-
         }
-
+        //Load thông tin cá nhân
         void ChangeTaiKhoan(TaiKhoanLogin tk)
         {
             txtTendangnhap.Text = DnTaiKhoan.TenDangNhap;
@@ -42,7 +39,7 @@ namespace WinFormsApp_Coffee
             txtSodienthoai.Text = DnTaiKhoan.Sdt;
         }
        
-
+        //Tạo sự kiện đổi mật khẩu
         private void btnDoimatkhau_Click(object sender, EventArgs e)
         {
             frmDoimatkhau f = new frmDoimatkhau();
@@ -63,14 +60,11 @@ namespace WinFormsApp_Coffee
                 string gioitinh = txtGioitinh.Text;
                 string cmnd = txtCmnd.Text;
                 string email = txtEmail.Text;
-                string sdt = txtSodienthoai.Text;
-               
+                string sdt = txtSodienthoai.Text;             
 
                     if (CapNhapTaiKhoanDAO.Instance.capnhapthongtincanhan(mataikhoan, tennv, ngaysinh, gioitinh, cmnd, email, sdt))
                     {
-
                         MessageBox.Show("Cập nhập thành công");
-                  
                     }
                     else
                     {
@@ -85,11 +79,10 @@ namespace WinFormsApp_Coffee
             }
         }
 
-
+        //Tạo sự kiện cập nhật
             private void btnCapnhat_Click(object sender, EventArgs e)
             {
-            capnhapthongtincanhan();
-            
+                capnhapthongtincanhan();     
             }
         }
     }
