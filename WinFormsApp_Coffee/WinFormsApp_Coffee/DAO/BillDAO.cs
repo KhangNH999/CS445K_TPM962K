@@ -41,6 +41,7 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create PROC [dbo].[USP_InsertBill]
+        @matk int,
         @maban int
         as
         begin 
@@ -52,16 +53,16 @@ namespace WinFormsApp_Coffee.DAO
         trangthaihoadon
         )
         values(
-        1,
+        @matk,
         GETDATE(),
         @maban,
         0
         )
         end
          */
-        public void InsertBill(int id)
+        public void InsertBill(int mataikhoan,int idban)
         {
-            clsDB.Instance.execQuery("exec USP_InsertBill @maban", new object[] { id });
+            clsDB.Instance.execQuery("exec USP_InsertBill @matk , @maban", new object[] { mataikhoan , idban });
         }
         public int GetMaxIDBill()
         {

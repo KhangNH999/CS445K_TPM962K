@@ -203,7 +203,7 @@ namespace WinFormsApp_Coffee
 
             if (idBill == -1) //Không có bill thì nó sẽ tạo bill mới, còn nếu có thì nó chỉ thêm món
             {
-                BillDAO.Instance.InsertBill(table.MaBan);
+                BillDAO.Instance.InsertBill(dntaikhoan.MaTaiKhoan,table.MaBan);
                 BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
             }
             else

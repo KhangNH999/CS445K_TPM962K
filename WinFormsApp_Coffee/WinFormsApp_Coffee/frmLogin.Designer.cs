@@ -54,12 +54,12 @@ namespace WinFormsApp_Coffee
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 218);
+            this.panel1.Size = new System.Drawing.Size(634, 218);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(548, 163);
+            this.btnExit.Location = new System.Drawing.Point(504, 163);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(118, 36);
@@ -71,7 +71,7 @@ namespace WinFormsApp_Coffee
             // btnLogin
             // 
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(413, 163);
+            this.btnLogin.Location = new System.Drawing.Point(378, 163);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 36);
@@ -88,7 +88,7 @@ namespace WinFormsApp_Coffee
             this.panel3.Location = new System.Drawing.Point(5, 84);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(671, 71);
+            this.panel3.Size = new System.Drawing.Size(617, 71);
             this.panel3.TabIndex = 2;
             // 
             // ckbShow
@@ -96,7 +96,7 @@ namespace WinFormsApp_Coffee
             this.ckbShow.AutoSize = true;
             this.ckbShow.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ckbShow.ForeColor = System.Drawing.Color.Black;
-            this.ckbShow.Location = new System.Drawing.Point(588, 19);
+            this.ckbShow.Location = new System.Drawing.Point(533, 19);
             this.ckbShow.Margin = new System.Windows.Forms.Padding(4);
             this.ckbShow.Name = "ckbShow";
             this.ckbShow.Size = new System.Drawing.Size(73, 29);
@@ -110,7 +110,7 @@ namespace WinFormsApp_Coffee
             this.txtPassWord.Location = new System.Drawing.Point(228, 17);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(341, 31);
+            this.txtPassWord.Size = new System.Drawing.Size(297, 31);
             this.txtPassWord.TabIndex = 1;
             this.txtPassWord.UseSystemPasswordChar = true;
             // 
@@ -133,7 +133,7 @@ namespace WinFormsApp_Coffee
             this.panel2.Location = new System.Drawing.Point(5, 5);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(671, 71);
+            this.panel2.Size = new System.Drawing.Size(617, 71);
             this.panel2.TabIndex = 0;
             // 
             // txtUserName
@@ -141,7 +141,7 @@ namespace WinFormsApp_Coffee
             this.txtUserName.Location = new System.Drawing.Point(228, 19);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(433, 31);
+            this.txtUserName.Size = new System.Drawing.Size(378, 31);
             this.txtUserName.TabIndex = 1;
             // 
             // label1
@@ -163,7 +163,7 @@ namespace WinFormsApp_Coffee
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(705, 241);
+            this.ClientSize = new System.Drawing.Size(662, 237);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
