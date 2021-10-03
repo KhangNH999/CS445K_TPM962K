@@ -47,9 +47,13 @@ namespace WinFormsApp_Coffee
                 string tendot = txtTendot.Text;
                 DateTime ngaybd = dateNgaybd.Value;
                 DateTime ngaykt = dateNgaykt.Value;
-
                 int trangthai = cbbTrangthai.SelectedIndex;
-                if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(ma)) //Kiểm tra tồn tại
+                if (ma < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(ma,tendot)) //Kiểm tra tồn tại
                 {
                     MessageBox.Show("Đợt khuyến mãi đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

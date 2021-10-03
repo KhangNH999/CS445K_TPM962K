@@ -33,7 +33,7 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create proc USP_InsertBillInfo
-       @mahd int, @madu int, @sl int, @tlgiamgia float
+       @mahd int, @madu int, @sl int
         as
         begin 
         declare @isExistBillInfo int
@@ -54,13 +54,13 @@ namespace WinFormsApp_Coffee.DAO
         begin
         insert dbo.CHITIETHOADON
         (mahoadon,madouong,soluong,giatien,tlgiamgia,tongtien)
-        values(@mahd, @madu, @sl,@price,@tlgiamgia,@sl*@price) 
+        values(@mahd, @madu, @sl,@price,0,@sl*@price) 
         end
         end
          */
-        public void InsertBillInfo(int mahoadon, int madouong, int sl, double tlgiamgia)
+        public void InsertBillInfo(int mahoadon, int madouong, int sl)
         {
-            clsDB.Instance.execQuery("exec USP_InsertBillInfo @mahd , @madu , @sl , @tlgiamgia", new object[] { mahoadon , madouong , sl , tlgiamgia});
+            clsDB.Instance.execQuery("exec USP_InsertBillInfo @mahd , @madu , @sl ", new object[] { mahoadon , madouong , sl });
         }
         /*
          create proc USP_DeleteFood

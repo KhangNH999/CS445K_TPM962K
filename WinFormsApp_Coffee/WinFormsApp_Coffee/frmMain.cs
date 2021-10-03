@@ -95,7 +95,6 @@ namespace WinFormsApp_Coffee
                 f.TotalPrice = total;
                 f.ShowDialog();
             }
-            nmgiamgia.Value = 0;
             LoadBan();
         }
 
@@ -201,16 +200,15 @@ namespace WinFormsApp_Coffee
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
             int foodID = (cbDouong.SelectedItem as Food).Madouong;
             int count = (int)numupSL.Value;
-            double tlgiamgia = (double)nmgiamgia.Value;
 
             if (idBill == -1) //Không có bill thì nó sẽ tạo bill mới, còn nếu có thì nó chỉ thêm món
             {
                 BillDAO.Instance.InsertBill(table.MaBan);
-                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count, tlgiamgia);
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
             }
             else
             {
-                BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count, tlgiamgia);
+                BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
             }
 
             ShowBill(table.MaBan);
@@ -237,6 +235,28 @@ namespace WinFormsApp_Coffee
         {
             cbChuyenBan.DataSource = BanDAO.Instance.LoadDanhSachBan();
             cbChuyenBan.DisplayMember = "tenban";
+        }
+        //Tạo sự kiện chuyển bàn
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Ban table = lvBill.Tag as Ban;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
+            int id1 = (lvBill.Tag as Ban).MaBan;
+
+            int id2 = (cbChuyenBan.SelectedItem as Ban).MaBan;
+            if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", (lvBill.Tag as Ban).TenBan, (cbChuyenBan.SelectedItem as Ban).TenBan), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                if (idBill > 0)
+                {
+                    BanDAO.Instance.SwitchTable(id1, id2);
+                }
+                LoadBan();
+            }
+        }
+
+        private void flpBan_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

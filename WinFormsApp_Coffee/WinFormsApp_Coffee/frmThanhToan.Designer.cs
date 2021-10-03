@@ -175,7 +175,9 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
             this.Load += new System.EventHandler(this.frmThanhToan_Load_1);
             this.panel3.ResumeLayout(false);

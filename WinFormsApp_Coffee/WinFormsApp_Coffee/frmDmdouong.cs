@@ -48,9 +48,15 @@ namespace WinFormsApp_Coffee
             {
                 int madm = Int32.Parse(txtMadanhmuc.Text);
                 string tendm = txtTendanhmuc.Text;
-                if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(madm)) //Kiểm tra danh mục tồn tại
+                if (madm < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(madm,tendm)) //Kiểm tra danh mục tồn tại
                 {
                     MessageBox.Show("Danh mục này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
                 else
                 {

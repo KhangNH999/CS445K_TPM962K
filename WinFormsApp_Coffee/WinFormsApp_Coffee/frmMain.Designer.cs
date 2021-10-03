@@ -55,9 +55,7 @@ namespace WinFormsApp_Coffee
             this.cbDouong = new System.Windows.Forms.ComboBox();
             this.cbDMDouong = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.nmgiamgia = new System.Windows.Forms.NumericUpDown();
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,7 +70,6 @@ namespace WinFormsApp_Coffee
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmgiamgia)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -293,72 +290,52 @@ namespace WinFormsApp_Coffee
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.nmgiamgia);
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(733, 653);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(580, 94);
+            this.panel3.Size = new System.Drawing.Size(580, 107);
             this.panel3.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox2.Location = new System.Drawing.Point(237, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(123, 31);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Giảm giá";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Location = new System.Drawing.Point(384, 6);
+            this.textBox1.Location = new System.Drawing.Point(306, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(190, 31);
+            this.textBox1.Size = new System.Drawing.Size(268, 31);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // nmgiamgia
-            // 
-            this.nmgiamgia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nmgiamgia.Location = new System.Drawing.Point(237, 47);
-            this.nmgiamgia.Name = "nmgiamgia";
-            this.nmgiamgia.Size = new System.Drawing.Size(123, 31);
-            this.nmgiamgia.TabIndex = 5;
             // 
             // cbChuyenBan
             // 
             this.cbChuyenBan.FormattingEnabled = true;
-            this.cbChuyenBan.Location = new System.Drawing.Point(5, 46);
+            this.cbChuyenBan.Location = new System.Drawing.Point(4, 6);
             this.cbChuyenBan.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cbChuyenBan.Name = "cbChuyenBan";
-            this.cbChuyenBan.Size = new System.Drawing.Size(212, 33);
+            this.cbChuyenBan.Size = new System.Drawing.Size(283, 33);
             this.cbChuyenBan.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(5, 5);
+            this.button2.Location = new System.Drawing.Point(4, 46);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 32);
+            this.button2.Size = new System.Drawing.Size(283, 52);
             this.button2.TabIndex = 1;
             this.button2.Text = "Chuyển bàn";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(384, 46);
+            this.button1.Location = new System.Drawing.Point(306, 46);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 35);
+            this.button1.Size = new System.Drawing.Size(269, 52);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
@@ -414,14 +391,15 @@ namespace WinFormsApp_Coffee
             // 
             this.flpBan.Location = new System.Drawing.Point(28, 50);
             this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(700, 697);
+            this.flpBan.Size = new System.Drawing.Size(700, 710);
             this.flpBan.TabIndex = 9;
+            this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBan_Paint);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 764);
+            this.ClientSize = new System.Drawing.Size(1325, 774);
             this.Controls.Add(this.flpBan);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -429,7 +407,8 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
@@ -439,7 +418,6 @@ namespace WinFormsApp_Coffee
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmgiamgia)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -474,9 +452,7 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.ComboBox cbDouong;
         private System.Windows.Forms.ComboBox cbDMDouong;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown nmgiamgia;
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

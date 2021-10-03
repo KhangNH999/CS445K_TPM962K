@@ -52,27 +52,30 @@ namespace WinFormsApp_Coffee
             // 
             // btnXoasanpham
             // 
-            this.btnXoasanpham.Location = new System.Drawing.Point(266, 3);
+            this.btnXoasanpham.Location = new System.Drawing.Point(332, 4);
+            this.btnXoasanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoasanpham.Name = "btnXoasanpham";
-            this.btnXoasanpham.Size = new System.Drawing.Size(125, 63);
+            this.btnXoasanpham.Size = new System.Drawing.Size(156, 79);
             this.btnXoasanpham.TabIndex = 2;
             this.btnXoasanpham.Text = "Xóa sản phẩm";
             this.btnXoasanpham.UseVisualStyleBackColor = true;
             // 
             // btnSuasanpham
             // 
-            this.btnSuasanpham.Location = new System.Drawing.Point(135, 4);
+            this.btnSuasanpham.Location = new System.Drawing.Point(169, 5);
+            this.btnSuasanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSuasanpham.Name = "btnSuasanpham";
-            this.btnSuasanpham.Size = new System.Drawing.Size(125, 63);
+            this.btnSuasanpham.Size = new System.Drawing.Size(156, 79);
             this.btnSuasanpham.TabIndex = 1;
             this.btnSuasanpham.Text = "Sửa sản phẩm";
             this.btnSuasanpham.UseVisualStyleBackColor = true;
             // 
             // btnThemsanpham
             // 
-            this.btnThemsanpham.Location = new System.Drawing.Point(4, 3);
+            this.btnThemsanpham.Location = new System.Drawing.Point(5, 4);
+            this.btnThemsanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemsanpham.Name = "btnThemsanpham";
-            this.btnThemsanpham.Size = new System.Drawing.Size(125, 63);
+            this.btnThemsanpham.Size = new System.Drawing.Size(156, 79);
             this.btnThemsanpham.TabIndex = 0;
             this.btnThemsanpham.Text = "Thêm sản phẩm";
             this.btnThemsanpham.UseVisualStyleBackColor = true;
@@ -80,21 +83,21 @@ namespace WinFormsApp_Coffee
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvDotkhuyenmai);
-            this.panel2.Location = new System.Drawing.Point(10, 90);
+            this.panel2.Location = new System.Drawing.Point(12, 112);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(541, 257);
+            this.panel2.Size = new System.Drawing.Size(676, 321);
             this.panel2.TabIndex = 6;
             // 
             // dgvDotkhuyenmai
             // 
             this.dgvDotkhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDotkhuyenmai.Location = new System.Drawing.Point(5, 2);
+            this.dgvDotkhuyenmai.Location = new System.Drawing.Point(6, 2);
             this.dgvDotkhuyenmai.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDotkhuyenmai.Name = "dgvDotkhuyenmai";
             this.dgvDotkhuyenmai.RowHeadersWidth = 62;
             this.dgvDotkhuyenmai.RowTemplate.Height = 33;
-            this.dgvDotkhuyenmai.Size = new System.Drawing.Size(532, 253);
+            this.dgvDotkhuyenmai.Size = new System.Drawing.Size(665, 316);
             this.dgvDotkhuyenmai.TabIndex = 0;
             // 
             // panel1
@@ -102,9 +105,10 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnXoasanpham);
             this.panel1.Controls.Add(this.btnSuasanpham);
             this.panel1.Controls.Add(this.btnThemsanpham);
-            this.panel1.Location = new System.Drawing.Point(10, 14);
+            this.panel1.Location = new System.Drawing.Point(12, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 70);
+            this.panel1.Size = new System.Drawing.Size(501, 88);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -117,86 +121,97 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(556, 90);
+            this.panel3.Location = new System.Drawing.Point(695, 112);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(319, 257);
+            this.panel3.Size = new System.Drawing.Size(399, 321);
             this.panel3.TabIndex = 7;
             // 
             // cbbMadouong
             // 
             this.cbbMadouong.FormattingEnabled = true;
-            this.cbbMadouong.Location = new System.Drawing.Point(149, 119);
+            this.cbbMadouong.Location = new System.Drawing.Point(186, 149);
+            this.cbbMadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbMadouong.Name = "cbbMadouong";
-            this.cbbMadouong.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadouong.Size = new System.Drawing.Size(208, 33);
             this.cbbMadouong.TabIndex = 7;
             // 
             // cbbMadm
             // 
             this.cbbMadm.FormattingEnabled = true;
-            this.cbbMadm.Location = new System.Drawing.Point(149, 62);
+            this.cbbMadm.Location = new System.Drawing.Point(186, 78);
+            this.cbbMadm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbMadm.Name = "cbbMadm";
-            this.cbbMadm.Size = new System.Drawing.Size(167, 28);
+            this.cbbMadm.Size = new System.Drawing.Size(208, 33);
             this.cbbMadm.TabIndex = 6;
             // 
             // txtTilegiam
             // 
-            this.txtTilegiam.Location = new System.Drawing.Point(149, 174);
+            this.txtTilegiam.Location = new System.Drawing.Point(186, 218);
+            this.txtTilegiam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTilegiam.Name = "txtTilegiam";
-            this.txtTilegiam.Size = new System.Drawing.Size(167, 27);
+            this.txtTilegiam.Size = new System.Drawing.Size(208, 31);
             this.txtTilegiam.TabIndex = 5;
             // 
             // txtMadotkm
             // 
-            this.txtMadotkm.Location = new System.Drawing.Point(149, 11);
+            this.txtMadotkm.Location = new System.Drawing.Point(186, 14);
+            this.txtMadotkm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMadotkm.Name = "txtMadotkm";
-            this.txtMadotkm.Size = new System.Drawing.Size(167, 27);
+            this.txtMadotkm.Size = new System.Drawing.Size(208, 31);
             this.txtMadotkm.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 177);
+            this.label4.Location = new System.Drawing.Point(5, 221);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.Size = new System.Drawing.Size(121, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tỉ lệ giảm giá:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 122);
+            this.label3.Location = new System.Drawing.Point(5, 152);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã đồ uống:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 65);
+            this.label2.Location = new System.Drawing.Point(5, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã danh mục:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Location = new System.Drawing.Point(5, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã đợt khuyến mãi:";
             // 
             // frmDotkhuyenmai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 357);
+            this.ClientSize = new System.Drawing.Size(1106, 446);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "frmDotkhuyenmai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đợt khuyến mãi";

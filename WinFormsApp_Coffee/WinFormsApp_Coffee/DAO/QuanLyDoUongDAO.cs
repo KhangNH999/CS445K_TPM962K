@@ -60,9 +60,9 @@ namespace WinFormsApp_Coffee.DAO
             return result > 0;
         }
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
-        public bool kiemTraBanTonTai(int madouong)
+        public bool kiemTraBanTonTai(int madouong, string tendouong)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DOUONG where madouong=" + madouong + "");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DOUONG where madouong=" + madouong + " or tendouong=N'" + tendouong + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;

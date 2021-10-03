@@ -56,7 +56,12 @@ namespace WinFormsApp_Coffee
                 string tendouong = txtTendouong.Text;
                 int madotgia = Int32.Parse(cbbMadotgia.SelectedValue.ToString());
                 int trangthai = cbbTrangthai.SelectedIndex;
-                if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(madouong)) //Kiểm tra đồ uống tồn tại
+                if (madouong < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(madouong,tendouong)) //Kiểm tra đồ uống tồn tại
                 {
                     MessageBox.Show("Đồ uống này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

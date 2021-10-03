@@ -36,9 +36,9 @@ namespace WinFormsApp_Coffee.DAO
             return danhSachDanhMuc;
         }
         //Phương thức kiểm tra danh mục có tồn tại trong csdl hay ko?
-        public bool kiemTraDanhMucTonTai(int madanhmuc)
+        public bool kiemTraDanhMucTonTai(int madanhmuc, string tendanhmuc)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.danhmucdouong where madanhmuc=" + madanhmuc + "");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DANHMUCDOUONG where madanhmuc=" + madanhmuc + " or tendanhmuc=N'" + tendanhmuc + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;

@@ -58,7 +58,12 @@ namespace WinFormsApp_Coffee
                 string sdt = txtSdt.Text;
                 int loaitk = ccbLoaitk.SelectedIndex;
                 int trangthai = ccbTrangthaitk.SelectedIndex;
-                if(QuanLyTaiKhoanDAO.Instance.kiemTraTaiKhoanTonTai(mataikhoan))
+                if (mataikhoan < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (QuanLyTaiKhoanDAO.Instance.kiemTraTaiKhoanTonTai(mataikhoan))
                 {
                     MessageBox.Show("Tài khoản này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

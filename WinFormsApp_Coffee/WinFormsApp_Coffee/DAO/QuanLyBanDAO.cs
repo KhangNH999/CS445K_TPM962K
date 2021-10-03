@@ -59,7 +59,19 @@ namespace WinFormsApp_Coffee.DAO
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
         public bool kiemTraBanTonTai(int maban,string tenban)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where maban=" + maban + " or tenban='" + tenban + "'");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where maban=" + maban + " or tenban=N'" + tenban + "'");
+            if (tb.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool kiemTraTenBan(string tenban)
+        {
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where tenban='" + tenban + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;

@@ -44,19 +44,21 @@ namespace WinFormsApp_Coffee
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvChitiethoadon);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(16, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 304);
+            this.panel1.Size = new System.Drawing.Size(1079, 380);
             this.panel1.TabIndex = 0;
             // 
             // dgvChitiethoadon
             // 
             this.dgvChitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChitiethoadon.Location = new System.Drawing.Point(4, 4);
+            this.dgvChitiethoadon.Location = new System.Drawing.Point(5, 5);
+            this.dgvChitiethoadon.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChitiethoadon.Name = "dgvChitiethoadon";
             this.dgvChitiethoadon.RowHeadersWidth = 51;
             this.dgvChitiethoadon.RowTemplate.Height = 29;
-            this.dgvChitiethoadon.Size = new System.Drawing.Size(856, 297);
+            this.dgvChitiethoadon.Size = new System.Drawing.Size(1070, 371);
             this.dgvChitiethoadon.TabIndex = 0;
             // 
             // panel2
@@ -65,51 +67,59 @@ namespace WinFormsApp_Coffee
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtMataikhoan);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(13, 324);
+            this.panel2.Location = new System.Drawing.Point(16, 405);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 43);
+            this.panel2.Size = new System.Drawing.Size(1079, 54);
             this.panel2.TabIndex = 1;
             // 
             // txtMahoadon
             // 
-            this.txtMahoadon.Location = new System.Drawing.Point(385, 8);
+            this.txtMahoadon.Location = new System.Drawing.Point(481, 10);
+            this.txtMahoadon.Margin = new System.Windows.Forms.Padding(4);
             this.txtMahoadon.Name = "txtMahoadon";
-            this.txtMahoadon.Size = new System.Drawing.Size(179, 27);
+            this.txtMahoadon.Size = new System.Drawing.Size(223, 31);
             this.txtMahoadon.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(287, 11);
+            this.label2.Location = new System.Drawing.Point(359, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã hóa đơn:";
             // 
             // txtMataikhoan
             // 
-            this.txtMataikhoan.Location = new System.Drawing.Point(109, 8);
+            this.txtMataikhoan.Location = new System.Drawing.Point(136, 10);
+            this.txtMataikhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtMataikhoan.Name = "txtMataikhoan";
-            this.txtMataikhoan.Size = new System.Drawing.Size(172, 27);
+            this.txtMataikhoan.Size = new System.Drawing.Size(214, 31);
             this.txtMataikhoan.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã tài khoản:";
             // 
             // frmXemhoadon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 380);
+            this.ClientSize = new System.Drawing.Size(1115, 475);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmXemhoadon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem hóa đơn";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiethoadon)).EndInit();

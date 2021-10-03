@@ -48,9 +48,15 @@ namespace WinFormsApp_Coffee
                 int soghe = Int32.Parse(txtSoghe.Text);
                 DateTime ngay = dateBD.Value;
                 int trangthai = cbTrangThai.SelectedIndex;
+                if (ma < 0 || soghe < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (QuanLyBanDAO.Instance.kiemTraBanTonTai(ma,tenban)) //Kiểm tra bàn tồn tại
                 {
                     MessageBox.Show("Bàn này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
                 else
                 {                   
@@ -85,7 +91,12 @@ namespace WinFormsApp_Coffee
                 string tenban = txtTenban.Text;
                 int soghe = Int32.Parse(txtSoghe.Text);
                 DateTime ngay = dateBD.Value;
-                int trangthai = cbTrangThai.SelectedIndex;           
+                int trangthai = cbTrangThai.SelectedIndex;
+                if (soghe < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (QuanLyBanDAO.Instance.suaThongTinBan(ma, tenban, soghe, ngay, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
                 {
                     MessageBox.Show("Sửa thông tin bàn thành công");
@@ -95,8 +106,7 @@ namespace WinFormsApp_Coffee
                 else
                 {
                     MessageBox.Show("Sửa thông tin bàn thất bại");
-                }
-                
+                }               
             }
             catch (Exception)
             {

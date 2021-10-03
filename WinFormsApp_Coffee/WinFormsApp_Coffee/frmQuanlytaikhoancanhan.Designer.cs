@@ -73,10 +73,10 @@ namespace WinFormsApp_Coffee
             // 
             // btnCapnhat
             // 
-            this.btnCapnhat.Location = new System.Drawing.Point(12, 424);
-            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCapnhat.Location = new System.Drawing.Point(15, 530);
+            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapnhat.Name = "btnCapnhat";
-            this.btnCapnhat.Size = new System.Drawing.Size(529, 36);
+            this.btnCapnhat.Size = new System.Drawing.Size(661, 45);
             this.btnCapnhat.TabIndex = 1;
             this.btnCapnhat.Text = "Cập nhật thông tin cá nhân";
             this.btnCapnhat.UseVisualStyleBackColor = true;
@@ -84,10 +84,10 @@ namespace WinFormsApp_Coffee
             // 
             // btnDoimatkhau
             // 
-            this.btnDoimatkhau.Location = new System.Drawing.Point(12, 586);
-            this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDoimatkhau.Location = new System.Drawing.Point(15, 732);
+            this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDoimatkhau.Name = "btnDoimatkhau";
-            this.btnDoimatkhau.Size = new System.Drawing.Size(529, 37);
+            this.btnDoimatkhau.Size = new System.Drawing.Size(661, 46);
             this.btnDoimatkhau.TabIndex = 2;
             this.btnDoimatkhau.Text = "Đổi mật khẩu";
             this.btnDoimatkhau.UseVisualStyleBackColor = true;
@@ -97,27 +97,28 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.txtTendangnhap);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 468);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(15, 585);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 51);
+            this.panel2.Size = new System.Drawing.Size(661, 64);
             this.panel2.TabIndex = 4;
             // 
             // txtTendangnhap
             // 
-            this.txtTendangnhap.Location = new System.Drawing.Point(175, 12);
-            this.txtTendangnhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTendangnhap.Location = new System.Drawing.Point(219, 15);
+            this.txtTendangnhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTendangnhap.Name = "txtTendangnhap";
             this.txtTendangnhap.ReadOnly = true;
-            this.txtTendangnhap.Size = new System.Drawing.Size(350, 27);
+            this.txtTendangnhap.Size = new System.Drawing.Size(436, 31);
             this.txtTendangnhap.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 16);
+            this.label2.Location = new System.Drawing.Point(22, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên đăng nhập :";
             // 
@@ -125,26 +126,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel3.Controls.Add(this.txtMatkhau);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(12, 527);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(15, 659);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(529, 51);
+            this.panel3.Size = new System.Drawing.Size(661, 64);
             this.panel3.TabIndex = 3;
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(175, 12);
-            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMatkhau.Location = new System.Drawing.Point(219, 15);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(350, 27);
+            this.txtMatkhau.Size = new System.Drawing.Size(436, 31);
             this.txtMatkhau.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 16);
+            this.label3.Location = new System.Drawing.Point(22, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 20);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu :";
             // 
@@ -152,26 +154,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel4.Controls.Add(this.txtTen);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(12, 71);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(15, 89);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(529, 51);
+            this.panel4.Size = new System.Drawing.Size(661, 64);
             this.panel4.TabIndex = 5;
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(175, 12);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTen.Location = new System.Drawing.Point(219, 15);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(350, 27);
+            this.txtTen.Size = new System.Drawing.Size(436, 31);
             this.txtTen.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 16);
+            this.label4.Location = new System.Drawing.Point(22, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
+            this.label4.Size = new System.Drawing.Size(42, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên:";
             // 
@@ -179,29 +182,31 @@ namespace WinFormsApp_Coffee
             // 
             this.panel5.Controls.Add(this.dtngaysinh);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(12, 130);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(15, 162);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(529, 51);
+            this.panel5.Size = new System.Drawing.Size(661, 64);
             this.panel5.TabIndex = 6;
             // 
             // dtngaysinh
             // 
             this.dtngaysinh.CustomFormat = "dd/MM/yyyy";
             this.dtngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngaysinh.Location = new System.Drawing.Point(174, 11);
+            this.dtngaysinh.Location = new System.Drawing.Point(218, 14);
+            this.dtngaysinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtngaysinh.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtngaysinh.Name = "dtngaysinh";
-            this.dtngaysinh.Size = new System.Drawing.Size(351, 27);
+            this.dtngaysinh.Size = new System.Drawing.Size(438, 31);
             this.dtngaysinh.TabIndex = 1;
             this.dtngaysinh.Value = new System.DateTime(2021, 10, 1, 0, 0, 0, 0);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 16);
+            this.label5.Location = new System.Drawing.Point(22, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ngày sinh:";
             // 
@@ -209,26 +214,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel6.Controls.Add(this.txtGioitinh);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(12, 188);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Location = new System.Drawing.Point(15, 235);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(529, 51);
+            this.panel6.Size = new System.Drawing.Size(661, 64);
             this.panel6.TabIndex = 7;
             // 
             // txtGioitinh
             // 
-            this.txtGioitinh.Location = new System.Drawing.Point(175, 12);
-            this.txtGioitinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGioitinh.Location = new System.Drawing.Point(219, 15);
+            this.txtGioitinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGioitinh.Name = "txtGioitinh";
-            this.txtGioitinh.Size = new System.Drawing.Size(350, 27);
+            this.txtGioitinh.Size = new System.Drawing.Size(436, 31);
             this.txtGioitinh.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 16);
+            this.label6.Location = new System.Drawing.Point(22, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.Size = new System.Drawing.Size(82, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Giới tính:";
             // 
@@ -236,26 +242,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel7.Controls.Add(this.txtCmnd);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(12, 247);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Location = new System.Drawing.Point(15, 309);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(529, 51);
+            this.panel7.Size = new System.Drawing.Size(661, 64);
             this.panel7.TabIndex = 8;
             // 
             // txtCmnd
             // 
-            this.txtCmnd.Location = new System.Drawing.Point(175, 12);
-            this.txtCmnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCmnd.Location = new System.Drawing.Point(219, 15);
+            this.txtCmnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCmnd.Name = "txtCmnd";
-            this.txtCmnd.Size = new System.Drawing.Size(350, 27);
+            this.txtCmnd.Size = new System.Drawing.Size(436, 31);
             this.txtCmnd.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 16);
+            this.label7.Location = new System.Drawing.Point(22, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 20);
+            this.label7.Size = new System.Drawing.Size(69, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "CMND:";
             // 
@@ -263,26 +270,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel8.Controls.Add(this.txtEmail);
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(12, 306);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(15, 382);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(529, 51);
+            this.panel8.Size = new System.Drawing.Size(661, 64);
             this.panel8.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(175, 12);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Location = new System.Drawing.Point(219, 15);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(350, 27);
+            this.txtEmail.Size = new System.Drawing.Size(436, 31);
             this.txtEmail.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 16);
+            this.label8.Location = new System.Drawing.Point(22, 20);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.Size = new System.Drawing.Size(58, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Email:";
             // 
@@ -290,26 +298,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel9.Controls.Add(this.txtSodienthoai);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Location = new System.Drawing.Point(12, 365);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel9.Location = new System.Drawing.Point(15, 456);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(529, 51);
+            this.panel9.Size = new System.Drawing.Size(661, 64);
             this.panel9.TabIndex = 10;
             // 
             // txtSodienthoai
             // 
-            this.txtSodienthoai.Location = new System.Drawing.Point(175, 12);
-            this.txtSodienthoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSodienthoai.Location = new System.Drawing.Point(219, 15);
+            this.txtSodienthoai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSodienthoai.Name = "txtSodienthoai";
-            this.txtSodienthoai.Size = new System.Drawing.Size(350, 27);
+            this.txtSodienthoai.Size = new System.Drawing.Size(436, 31);
             this.txtSodienthoai.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 16);
+            this.label9.Location = new System.Drawing.Point(22, 20);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 20);
+            this.label9.Size = new System.Drawing.Size(121, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Số điện thoại:";
             // 
@@ -317,36 +326,37 @@ namespace WinFormsApp_Coffee
             // 
             this.panel1.Controls.Add(this.txtMatk);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(15, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(529, 51);
+            this.panel1.Size = new System.Drawing.Size(661, 64);
             this.panel1.TabIndex = 5;
             // 
             // txtMatk
             // 
             this.txtMatk.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtMatk.Location = new System.Drawing.Point(175, 12);
-            this.txtMatk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMatk.Location = new System.Drawing.Point(219, 15);
+            this.txtMatk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatk.Name = "txtMatk";
             this.txtMatk.ReadOnly = true;
-            this.txtMatk.Size = new System.Drawing.Size(350, 27);
+            this.txtMatk.Size = new System.Drawing.Size(436, 31);
             this.txtMatk.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Location = new System.Drawing.Point(22, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã tài khoản:";
             // 
             // frmQuanlytaikhoancanhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 639);
+            this.ClientSize = new System.Drawing.Size(691, 799);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -358,7 +368,8 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnDoimatkhau);
             this.Controls.Add(this.btnCapnhat);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmQuanlytaikhoancanhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản cá nhân";

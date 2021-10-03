@@ -46,6 +46,11 @@ namespace WinFormsApp_Coffee
                 double giaban = double.Parse(txtGiaban.Text);
                 DateTime ngay = dateBD.Value;
                 int trangthai = cbtrangthai.SelectedIndex;
+                if (ma < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (GiaApDungDAO.Instance.kiemTraGiaTonTai(ma)) //Kiểm tra don gia tồn tại
                 {
                     MessageBox.Show("Đợt giá này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -20,6 +20,10 @@ namespace WinFormsApp_Coffee.DAO
         public static int TableHeight = 163;
 
         private BanDAO() { }
+        public void SwitchTable(int id1, int id2)
+        {
+            clsDB.Instance.execQuery("usp_SwitchTable @id1 , @id2", new object[] { id1, id2 });
+        }
         //Load danh sách bàn
         /*
          * CREATE PROC USP_LayDanhSachBan2

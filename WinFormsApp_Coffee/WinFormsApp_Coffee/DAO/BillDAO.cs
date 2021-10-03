@@ -103,5 +103,40 @@ namespace WinFormsApp_Coffee.DAO
         end 
         go
          */
+        /*
+        alter PROCEDURE usp_SwitchTable
+           @id1 int, @id2 int
+           AS
+           BEGIN
+               DECLARE @idBill1 int
+               DECLARE @idBill2 int
+               Declare @isxistBill1 int 
+               Declare @isxistBill2 int 
+
+               SELECT @idBill1 = mahoadon FROM dbo.HOADON WHERE maban = @id1 AND trangthaihoadon = 0
+               SELECT @idBill2 = mahoadon FROM dbo.HOADON WHERE maban = @id2 AND trangthaihoadon = 0
+
+               SELECT @isxistBill1 = COUNT(*) FROM dbo.CHITIETHOADON as a, dbo.HOADON as b WHERE a.mahoadon = @idBill1 and b.trangthaihoadon=0
+               SELECT @isxistBill2 = COUNT(*) FROM dbo.CHITIETHOADON as a, dbo.HOADON as b WHERE a.mahoadon = @idBill2 and b.trangthaihoadon=0
+
+
+
+               if(@isxistBill1>0 and @isxistBill2>0)
+               begin
+               UPDATE dbo.HOADON SET maban = @id2 WHERE mahoadon = @idBill1
+               UPDATE dbo.HOADON SET maban = @id1 WHERE mahoadon = @idBill2
+               update dbo.BAN set trangthaiban = 1 where maban = @id1
+               update dbo.BAN set trangthaiban = 1 where maban = @id2
+               end
+               else
+               begin
+               UPDATE dbo.HOADON SET maban = @id2 WHERE mahoadon = @idBill1
+               UPDATE dbo.HOADON SET maban = @id1 WHERE mahoadon = @idBill2
+               update dbo.BAN set trangthaiban = 0 where maban = @id1
+               update dbo.BAN set trangthaiban = 1 where maban = @id2
+               end
+           END
+           GO
+        */
     }
 }

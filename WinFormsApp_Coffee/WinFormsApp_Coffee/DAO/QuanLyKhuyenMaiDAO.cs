@@ -59,9 +59,9 @@ namespace WinFormsApp_Coffee.DAO
             return result > 0;
         }
         //Phương thức kiểm tra có tồn tại trong csdl hay ko?
-        public bool kiemTraKmTonTai(int madotkm)
+        public bool kiemTraKmTonTai(int madotkm, string tendot)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.dotkhuyenmai where madotkm=" + madotkm + "");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.dotkhuyenmai where madotkm=" + madotkm + " or tendotkm=N'" + tendot + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;
