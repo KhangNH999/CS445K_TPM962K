@@ -24,7 +24,9 @@ namespace WinFormsApp_Coffee.DAO
         SELECT maban, tenban, soghe, ngaybdsudung, 
         case trangthaiban 
         when 0 then N'Trống' 
-        when 1 then N'Có người' end as trangthaiban FROM dbo.BAN       
+        when 1 then N'Có người'
+        when 2 then N'Đã khóa'
+        end as trangthaiban FROM dbo.BAN       
          */
         public List<Ban> loadDanhSachBan()
         {
@@ -40,26 +42,30 @@ namespace WinFormsApp_Coffee.DAO
         //Phương thức thêm bàn vào cơ sở dữ liệu
         /*
          Trước hết phải tạo thủ tục
-        CREATE PROC USP_ThemBan
-        @maban int,
         @tenban nvarchar(100),
         @soghe int,
         @ngaybd datetime,
         @trangthai int
         AS
-            BEGIN
-                INSERT dbo.BAN (maban, tenban, soghe, ngaybdsudung, trangthaiban) VALUES ( @maban , @tenban , @soghe , @ngaybd , @trangthai)
-            END
+        BEGIN
+        INSERT dbo.BAN (tenban, soghe, ngaybdsudung, trangthaiban) VALUES (@tenban , @soghe , @ngaybd , @trangthai)
+        END
          */
-        public bool themBan(int maban, string tenban, int soghe, DateTime ngaybd, int trangthai)
+        public bool themBan(string tenban, int soghe, DateTime ngaybd, int trangthai)
         {            
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemBan @maban , @tenban , @soghe , @ngaybd , @trangthai",new object[] { maban , tenban , soghe , ngaybd , trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemBan @tenban , @soghe , @ngaybd , @trangthai",new object[] { tenban , soghe , ngaybd , trangthai });
             return result > 0;
         }
+        public bool Khoaban(int ma)
+        {
+            int result = clsDB.Instance.execNonQuery("exec USP_Khoaban @maban", new object[] { ma });
+            return result > 0;
+        }
+
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
-        public bool kiemTraBanTonTai(int maban,string tenban)
+        public bool kiemTraBanTonTai(string tenban)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where maban=" + maban + " or tenban=N'" + tenban + "'");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where tenban=N'" + tenban + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;
@@ -69,18 +75,7 @@ namespace WinFormsApp_Coffee.DAO
                 return false;
             }
         }
-        public bool kiemTraTenBan(string tenban)
-        {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.ban where tenban='" + tenban + "'");
-            if (tb.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
         //Phương thức sửa thông tin bàn
         /*
          Muốn tạo phương thức này trước hết cần phải vào SQl Server tạo thủ tục

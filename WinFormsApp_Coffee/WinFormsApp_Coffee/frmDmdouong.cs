@@ -39,28 +39,22 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm danh mục
         private void btnThemdm_Click(object sender, EventArgs e)
         {
-            if (txtMadanhmuc.Text == "" || txtTendanhmuc.Text == "")
+            if (txtTendanhmuc.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madm = Int32.Parse(txtMadanhmuc.Text);
-                string tendm = txtTendanhmuc.Text;
-                if (madm < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(madm,tendm)) //Kiểm tra danh mục tồn tại
+                string tendm = txtTendanhmuc.Text;              
+                if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(tendm)) //Kiểm tra danh mục tồn tại
                 {
                     MessageBox.Show("Danh mục này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
                 {
-                    if (QuanLyDMDoUongDAO.Instance.themDanhMuc(madm, tendm))//Gọi phương thức thêm bàn từ QuanLyDMDoUongDAO
+                    if (QuanLyDMDoUongDAO.Instance.themDanhMuc(tendm))//Gọi phương thức thêm bàn từ QuanLyDMDoUongDAO
                     {
                         MessageBox.Show("Thêm danh mục thành công");
                         loadDanhMuc();

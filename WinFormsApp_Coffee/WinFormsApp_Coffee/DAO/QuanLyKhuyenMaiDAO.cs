@@ -43,25 +43,24 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         CREATE PROC USP_ThemKhuyenMai
-        @madotkm int,
         @tendotkm nvarchar(100),
         @ngaybatdau datetime,
         @ngayketthuc datetime,
         @trangthaidotkm int
         AS
             BEGIN
-                INSERT dbo.DOTKHUYENMAI (madotkm, tendotkm,  ngaybatdau, ngayketthuc, trangthaidotkm) VALUES ( @madotkm , @tendotkm , @ngaybatdau , @ngayketthuc , @trangthaidotkm)
+                INSERT dbo.DOTKHUYENMAI (tendotkm,  ngaybatdau, ngayketthuc, trangthaidotkm) VALUES (@tendotkm , @ngaybatdau , @ngayketthuc , @trangthaidotkm)
             END
          */
-        public bool themDotKhuyenMai(int madotkm, string tendotkm, DateTime ngaybatdau, DateTime ngayketthuc, int trangthaidotkm)
+        public bool themDotKhuyenMai(string tendotkm, DateTime ngaybatdau, DateTime ngayketthuc, int trangthaidotkm)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemKhuyenMai @madotkm , @tendotkm , @ngaybatdau , @ngayketthuc , @trangthaidotkm", new object[] { madotkm, tendotkm, ngaybatdau, ngayketthuc, trangthaidotkm });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemKhuyenMai @tendotkm , @ngaybatdau , @ngayketthuc , @trangthaidotkm", new object[] { tendotkm, ngaybatdau, ngayketthuc, trangthaidotkm });
             return result > 0;
         }
         //Phương thức kiểm tra có tồn tại trong csdl hay ko?
-        public bool kiemTraKmTonTai(int madotkm, string tendot)
+        public bool kiemTraKmTonTai(string tendot)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.dotkhuyenmai where madotkm=" + madotkm + " or tendotkm=N'" + tendot + "'");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.dotkhuyenmai where tendotkm=N'" + tendot + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;

@@ -22,7 +22,7 @@ namespace WinFormsApp_Coffee.DAO
         {
             List<Food> list = new List<Food>();
 
-            string query = "select * from DOUONG where madanhmuc = " + id;
+            string query = "select * from DOUONG where madanhmuc = " + id + " and trangthaidouong = 1";
 
             DataTable data = clsDB.Instance.execQuery(query);
 

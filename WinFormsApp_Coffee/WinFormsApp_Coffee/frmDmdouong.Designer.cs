@@ -54,7 +54,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnSuadm);
             this.panel1.Controls.Add(this.btnThemdm);
             this.panel1.Location = new System.Drawing.Point(16, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(929, 88);
             this.panel1.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace WinFormsApp_Coffee
             // btnXoadm
             // 
             this.btnXoadm.Location = new System.Drawing.Point(332, 5);
-            this.btnXoadm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoadm.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoadm.Name = "btnXoadm";
             this.btnXoadm.Size = new System.Drawing.Size(156, 79);
             this.btnXoadm.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace WinFormsApp_Coffee
             // btnSuadm
             // 
             this.btnSuadm.Location = new System.Drawing.Point(169, 5);
-            this.btnSuadm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuadm.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuadm.Name = "btnSuadm";
             this.btnSuadm.Size = new System.Drawing.Size(156, 79);
             this.btnSuadm.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace WinFormsApp_Coffee
             // btnThemdm
             // 
             this.btnThemdm.Location = new System.Drawing.Point(5, 5);
-            this.btnThemdm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemdm.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemdm.Name = "btnThemdm";
             this.btnThemdm.Size = new System.Drawing.Size(156, 79);
             this.btnThemdm.TabIndex = 0;
@@ -96,7 +96,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.dgvDmdouong);
             this.panel2.Location = new System.Drawing.Point(16, 112);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(529, 288);
             this.panel2.TabIndex = 1;
@@ -108,7 +108,7 @@ namespace WinFormsApp_Coffee
             this.Column1,
             this.Column2});
             this.dgvDmdouong.Location = new System.Drawing.Point(5, 5);
-            this.dgvDmdouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDmdouong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
@@ -141,15 +141,16 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(552, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(392, 288);
             this.panel3.TabIndex = 2;
             // 
             // txtMadanhmuc
             // 
+            this.txtMadanhmuc.Enabled = false;
             this.txtMadanhmuc.Location = new System.Drawing.Point(139, 6);
-            this.txtMadanhmuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMadanhmuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadanhmuc.Name = "txtMadanhmuc";
             this.txtMadanhmuc.Size = new System.Drawing.Size(249, 31);
             this.txtMadanhmuc.TabIndex = 4;
@@ -157,7 +158,7 @@ namespace WinFormsApp_Coffee
             // txtTendanhmuc
             // 
             this.txtTendanhmuc.Location = new System.Drawing.Point(139, 72);
-            this.txtTendanhmuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTendanhmuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtTendanhmuc.Name = "txtTendanhmuc";
             this.txtTendanhmuc.Size = new System.Drawing.Size(249, 31);
             this.txtTendanhmuc.TabIndex = 3;
@@ -191,7 +192,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDmdouong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

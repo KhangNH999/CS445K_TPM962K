@@ -125,7 +125,7 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(692, 109);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(398, 365);
             this.panel3.TabIndex = 10;
@@ -135,7 +135,7 @@ namespace WinFormsApp_Coffee
             this.dateNgaykt.CustomFormat = "dd/MM/yyyy";
             this.dateNgaykt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgaykt.Location = new System.Drawing.Point(145, 208);
-            this.dateNgaykt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateNgaykt.Margin = new System.Windows.Forms.Padding(4);
             this.dateNgaykt.Name = "dateNgaykt";
             this.dateNgaykt.Size = new System.Drawing.Size(252, 31);
             this.dateNgaykt.TabIndex = 18;
@@ -145,15 +145,16 @@ namespace WinFormsApp_Coffee
             this.dateNgaybd.CustomFormat = "dd/MM/yyyy";
             this.dateNgaybd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgaybd.Location = new System.Drawing.Point(144, 145);
-            this.dateNgaybd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateNgaybd.Margin = new System.Windows.Forms.Padding(4);
             this.dateNgaybd.Name = "dateNgaybd";
             this.dateNgaybd.Size = new System.Drawing.Size(252, 31);
             this.dateNgaybd.TabIndex = 17;
             // 
             // txtMadot
             // 
+            this.txtMadot.Enabled = false;
             this.txtMadot.Location = new System.Drawing.Point(144, 15);
-            this.txtMadot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMadot.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadot.Name = "txtMadot";
             this.txtMadot.Size = new System.Drawing.Size(249, 31);
             this.txtMadot.TabIndex = 4;
@@ -161,7 +162,7 @@ namespace WinFormsApp_Coffee
             // txtTendot
             // 
             this.txtTendot.Location = new System.Drawing.Point(144, 78);
-            this.txtTendot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTendot.Margin = new System.Windows.Forms.Padding(4);
             this.txtTendot.Name = "txtTendot";
             this.txtTendot.Size = new System.Drawing.Size(249, 31);
             this.txtTendot.TabIndex = 3;
@@ -259,7 +260,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnSuathongtin);
             this.panel1.Controls.Add(this.btnThemdotkhuyenmai);
             this.panel1.Location = new System.Drawing.Point(10, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1079, 88);
             this.panel1.TabIndex = 8;
@@ -267,7 +268,7 @@ namespace WinFormsApp_Coffee
             // btnXemdotkm
             // 
             this.btnXemdotkm.Location = new System.Drawing.Point(5, 4);
-            this.btnXemdotkm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemdotkm.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemdotkm.Name = "btnXemdotkm";
             this.btnXemdotkm.Size = new System.Drawing.Size(156, 79);
             this.btnXemdotkm.TabIndex = 3;
@@ -278,7 +279,7 @@ namespace WinFormsApp_Coffee
             // btnXoadotkhuyenmai
             // 
             this.btnXoadotkhuyenmai.Location = new System.Drawing.Point(496, 4);
-            this.btnXoadotkhuyenmai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoadotkhuyenmai.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoadotkhuyenmai.Name = "btnXoadotkhuyenmai";
             this.btnXoadotkhuyenmai.Size = new System.Drawing.Size(156, 79);
             this.btnXoadotkhuyenmai.TabIndex = 2;
@@ -289,7 +290,7 @@ namespace WinFormsApp_Coffee
             // btnSuathongtin
             // 
             this.btnSuathongtin.Location = new System.Drawing.Point(332, 4);
-            this.btnSuathongtin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuathongtin.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuathongtin.Name = "btnSuathongtin";
             this.btnSuathongtin.Size = new System.Drawing.Size(156, 79);
             this.btnSuathongtin.TabIndex = 1;
@@ -300,7 +301,7 @@ namespace WinFormsApp_Coffee
             // btnThemdotkhuyenmai
             // 
             this.btnThemdotkhuyenmai.Location = new System.Drawing.Point(169, 4);
-            this.btnThemdotkhuyenmai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemdotkhuyenmai.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemdotkhuyenmai.Name = "btnThemdotkhuyenmai";
             this.btnThemdotkhuyenmai.Size = new System.Drawing.Size(156, 79);
             this.btnThemdotkhuyenmai.TabIndex = 0;
@@ -317,7 +318,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmQuanlykhuyenmai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

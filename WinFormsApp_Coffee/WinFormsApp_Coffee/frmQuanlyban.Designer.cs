@@ -37,6 +37,11 @@ namespace WinFormsApp_Coffee
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvQuanlyban = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.dateBD = new System.Windows.Forms.DateTimePicker();
@@ -48,11 +53,6 @@ namespace WinFormsApp_Coffee
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanlyban)).BeginInit();
@@ -68,6 +68,7 @@ namespace WinFormsApp_Coffee
             this.btnKhoaban.TabIndex = 3;
             this.btnKhoaban.Text = "Khóa bàn";
             this.btnKhoaban.UseVisualStyleBackColor = true;
+            this.btnKhoaban.Click += new System.EventHandler(this.btnKhoaban_Click);
             // 
             // btnXoaban
             // 
@@ -142,6 +143,53 @@ namespace WinFormsApp_Coffee
             this.dgvQuanlyban.TabIndex = 0;
             this.dgvQuanlyban.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanlyban_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaBan";
+            this.Column1.HeaderText = "Mã bàn";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenBan";
+            this.Column2.HeaderText = "Tên bàn";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SoGhe";
+            this.Column3.HeaderText = "Số ghế";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TrangThai";
+            this.Column5.HeaderText = "Trạng thái bàn";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "NgayBatDauSD";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column4.HeaderText = "Ngày bắt đầu sử dụng";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cbTrangThai);
@@ -165,7 +213,8 @@ namespace WinFormsApp_Coffee
             this.cbTrangThai.FormattingEnabled = true;
             this.cbTrangThai.Items.AddRange(new object[] {
             "Trống",
-            "Có người"});
+            "Có người",
+            "Đã khóa"});
             this.cbTrangThai.Location = new System.Drawing.Point(141, 272);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(253, 33);
@@ -199,6 +248,7 @@ namespace WinFormsApp_Coffee
             // 
             // txtMaban
             // 
+            this.txtMaban.Enabled = false;
             this.txtMaban.Location = new System.Drawing.Point(141, 15);
             this.txtMaban.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMaban.Name = "txtMaban";
@@ -254,53 +304,6 @@ namespace WinFormsApp_Coffee
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên bàn:";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaBan";
-            this.Column1.HeaderText = "Mã bàn";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenBan";
-            this.Column2.HeaderText = "Tên bàn";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "SoGhe";
-            this.Column3.HeaderText = "Số ghế";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TrangThai";
-            this.Column5.HeaderText = "Trạng thái bàn";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "NgayBatDauSD";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column4.HeaderText = "Ngày bắt đầu sử dụng";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // frmQuanlyban
             // 

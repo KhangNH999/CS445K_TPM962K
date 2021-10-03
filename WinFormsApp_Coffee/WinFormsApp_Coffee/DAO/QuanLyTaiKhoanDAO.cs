@@ -54,7 +54,6 @@ namespace WinFormsApp_Coffee.DAO
         /*
          * Trước hết phải tạo thủ tục
          * CREATE PROC USP_ThemTaiKhoan
-              @mataikhoan int,
               @tendangnhap nvarchar(100),
               @matkhau nvarchar(100) , 
               @tennv nvarchar(100),
@@ -64,17 +63,17 @@ namespace WinFormsApp_Coffee.DAO
               @email nvarchar(100),
               @sdt nvarchar(100),
 		      @maloaitk int,
-             @trangthaitk int
+              @trangthaitk int
           AS
                BEGIN
-                   INSERT dbo.TAIKHOAN(mataikhoan , tendangnhap , matkhau , tennv , ngaysinh ,gioitinh , cmnd , email , sdt , maloaitk , trangthaitk)
-				   VALUES (@mataikhoan , @tendangnhap , @matkhau , @tennv , @ngaysinh ,@gioitinh , @cmnd , @email , @sdt  , @maloaitk , @trangthaitk)
+                   INSERT dbo.TAIKHOAN(tendangnhap , matkhau , tennv , ngaysinh ,gioitinh , cmnd , email , sdt , maloaitk , trangthaitk)
+				   VALUES (@tendangnhap , @matkhau , @tennv , @ngaysinh ,@gioitinh , @cmnd , @email , @sdt  , @maloaitk , @trangthaitk)
           END
          */
-        public bool themTaiKhoan(int mataikhoan, string tendangnhap , string matkhau , string tennv, DateTime ngaysinh, string gioitinh , string cmnd, string email , string sdt, int loaitk,  int trangthaitk)
+        public bool themTaiKhoan(string tendangnhap , string matkhau , string tennv, DateTime ngaysinh, string gioitinh , string cmnd, string email , string sdt, int loaitk,  int trangthaitk)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemTaiKhoan @mataikhoan , @tendangnhap , @matkhau , @tennv , @ngaysinh , @gioitinh , @cmnd , @email , @sdt , @maloaitk , @trangthaitk", new object[] {
-                mataikhoan , tendangnhap , matkhau , tennv , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthaitk });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemTaiKhoan @tendangnhap , @matkhau , @tennv , @ngaysinh , @gioitinh , @cmnd , @email , @sdt , @maloaitk , @trangthaitk", new object[] {
+                 tendangnhap , matkhau , tennv , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthaitk });
             return result > 0;
         }
         //Phương thức kiểm tra tài khoản có trong csdl hay không

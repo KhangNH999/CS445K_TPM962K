@@ -53,7 +53,7 @@ namespace WinFormsApp_Coffee
             // btnXoasanpham
             // 
             this.btnXoasanpham.Location = new System.Drawing.Point(332, 4);
-            this.btnXoasanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoasanpham.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoasanpham.Name = "btnXoasanpham";
             this.btnXoasanpham.Size = new System.Drawing.Size(156, 79);
             this.btnXoasanpham.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace WinFormsApp_Coffee
             // btnSuasanpham
             // 
             this.btnSuasanpham.Location = new System.Drawing.Point(169, 5);
-            this.btnSuasanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuasanpham.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuasanpham.Name = "btnSuasanpham";
             this.btnSuasanpham.Size = new System.Drawing.Size(156, 79);
             this.btnSuasanpham.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace WinFormsApp_Coffee
             // btnThemsanpham
             // 
             this.btnThemsanpham.Location = new System.Drawing.Point(5, 4);
-            this.btnThemsanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemsanpham.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemsanpham.Name = "btnThemsanpham";
             this.btnThemsanpham.Size = new System.Drawing.Size(156, 79);
             this.btnThemsanpham.TabIndex = 0;
@@ -106,7 +106,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnSuasanpham);
             this.panel1.Controls.Add(this.btnThemsanpham);
             this.panel1.Location = new System.Drawing.Point(12, 18);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(501, 88);
             this.panel1.TabIndex = 5;
@@ -122,7 +122,7 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(695, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(399, 321);
             this.panel3.TabIndex = 7;
@@ -131,7 +131,7 @@ namespace WinFormsApp_Coffee
             // 
             this.cbbMadouong.FormattingEnabled = true;
             this.cbbMadouong.Location = new System.Drawing.Point(186, 149);
-            this.cbbMadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMadouong.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMadouong.Name = "cbbMadouong";
             this.cbbMadouong.Size = new System.Drawing.Size(208, 33);
             this.cbbMadouong.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace WinFormsApp_Coffee
             // 
             this.cbbMadm.FormattingEnabled = true;
             this.cbbMadm.Location = new System.Drawing.Point(186, 78);
-            this.cbbMadm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMadm.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMadm.Name = "cbbMadm";
             this.cbbMadm.Size = new System.Drawing.Size(208, 33);
             this.cbbMadm.TabIndex = 6;
@@ -148,15 +148,16 @@ namespace WinFormsApp_Coffee
             // txtTilegiam
             // 
             this.txtTilegiam.Location = new System.Drawing.Point(186, 218);
-            this.txtTilegiam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTilegiam.Margin = new System.Windows.Forms.Padding(4);
             this.txtTilegiam.Name = "txtTilegiam";
             this.txtTilegiam.Size = new System.Drawing.Size(208, 31);
             this.txtTilegiam.TabIndex = 5;
             // 
             // txtMadotkm
             // 
+            this.txtMadotkm.Enabled = false;
             this.txtMadotkm.Location = new System.Drawing.Point(186, 14);
-            this.txtMadotkm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMadotkm.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadotkm.Name = "txtMadotkm";
             this.txtMadotkm.Size = new System.Drawing.Size(208, 31);
             this.txtMadotkm.TabIndex = 4;
@@ -210,7 +211,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDotkhuyenmai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

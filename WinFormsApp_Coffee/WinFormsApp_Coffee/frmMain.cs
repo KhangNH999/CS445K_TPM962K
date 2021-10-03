@@ -41,18 +41,21 @@ namespace WinFormsApp_Coffee
         {
             frmDmdouong f = new frmDmdouong();
             f.ShowDialog();
+            LoadCategory();
         }
         //Hiển thị form ql đồ uống
         private void quảnLýĐồUốngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDouong f = new frmDouong();
             f.ShowDialog();
+            LoadCategory();
         }
         //Hiển thị form ql bàn
         private void quảnLýBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanlyban f = new frmQuanlyban();
             f.ShowDialog();
+            LoadBan();
         }
         //Hiển thị form ql thống kê
         private void quảnLýThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +129,9 @@ namespace WinFormsApp_Coffee
                     case "Trống":
                         btn.BackColor = Color.Aqua; //Tô màu 
                         break;
+                    case "Đã khóa":
+                        btn.BackColor = Color.Yellow;
+                        break;
                     default:
                         btn.BackColor = Color.LightPink; //Tô màu
                         break;
@@ -138,6 +144,12 @@ namespace WinFormsApp_Coffee
         {
             int maBan = ((sender as Button).Tag as Ban).MaBan;
             string tenban = ((sender as Button).Tag as Ban).TenBan;
+            string trangthai = ((sender as Button).Tag as Ban).TrangThai;
+            if(trangthai == "Đã khóa")
+            {
+                MessageBox.Show("Bàn đã bị khóa, vui lòng chọn bàn khác !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             lvBill.Tag = (sender as Button).Tag;
             textBox1.Text = tenban;
             ShowBill(maBan);

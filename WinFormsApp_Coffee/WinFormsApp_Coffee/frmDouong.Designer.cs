@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKhoadouong = new System.Windows.Forms.Button();
             this.btnXoadouong = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@ namespace WinFormsApp_Coffee
             this.btnKhoadouong.TabIndex = 3;
             this.btnKhoadouong.Text = "Khóa đồ uống";
             this.btnKhoadouong.UseVisualStyleBackColor = true;
+            this.btnKhoadouong.Click += new System.EventHandler(this.btnKhoadouong_Click);
             // 
             // btnXoadouong
             // 
@@ -164,6 +166,8 @@ namespace WinFormsApp_Coffee
             // Column3
             // 
             this.Column3.DataPropertyName = "Giatien";
+            dataGridViewCellStyle1.Format = "#,###";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column3.HeaderText = "Giá bán";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -235,7 +239,8 @@ namespace WinFormsApp_Coffee
             this.cbbTrangthai.FormattingEnabled = true;
             this.cbbTrangthai.Items.AddRange(new object[] {
             "Hết",
-            "Còn"});
+            "Còn",
+            "Đã khóa"});
             this.cbbTrangthai.Location = new System.Drawing.Point(139, 348);
             this.cbbTrangthai.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTrangthai.Name = "cbbTrangthai";
@@ -293,6 +298,7 @@ namespace WinFormsApp_Coffee
             // 
             // txtMadouong
             // 
+            this.txtMadouong.Enabled = false;
             this.txtMadouong.Location = new System.Drawing.Point(139, 84);
             this.txtMadouong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadouong.Name = "txtMadouong";

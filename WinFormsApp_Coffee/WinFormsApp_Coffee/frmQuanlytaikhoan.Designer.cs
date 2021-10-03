@@ -266,6 +266,7 @@ namespace WinFormsApp_Coffee
             // 
             // txtMataikhoan
             // 
+            this.txtMataikhoan.Enabled = false;
             this.txtMataikhoan.Location = new System.Drawing.Point(156, 17);
             this.txtMataikhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMataikhoan.Name = "txtMataikhoan";

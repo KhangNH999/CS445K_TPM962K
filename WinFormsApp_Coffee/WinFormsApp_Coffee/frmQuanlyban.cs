@@ -36,31 +36,30 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm bàn
         private void btnThemban_Click(object sender, EventArgs e)
         {
-            if (txtMaban.Text == "" || txtTenban.Text == "" || txtSoghe.Text == "" || cbTrangThai.Text == "")
+            if (txtTenban.Text == "" || txtSoghe.Text == "" || cbTrangThai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int ma = Int32.Parse(txtMaban.Text);
                 string tenban = txtTenban.Text;
                 int soghe = Int32.Parse(txtSoghe.Text);
                 DateTime ngay = dateBD.Value;
                 int trangthai = cbTrangThai.SelectedIndex;
-                if (ma < 0 || soghe < 0)
+                if (soghe < 0)
                 {
                     MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (QuanLyBanDAO.Instance.kiemTraBanTonTai(ma,tenban)) //Kiểm tra bàn tồn tại
+                if (QuanLyBanDAO.Instance.kiemTraBanTonTai(tenban)) //Kiểm tra bàn tồn tại
                 {
                     MessageBox.Show("Bàn này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
                 {                   
-                    if (QuanLyBanDAO.Instance.themBan(ma, tenban, soghe, ngay, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
+                    if (QuanLyBanDAO.Instance.themBan(tenban, soghe, ngay, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
                     {
                         MessageBox.Show("Thêm bàn thành công");
                         loadBan();
@@ -148,6 +147,34 @@ namespace WinFormsApp_Coffee
                 else
                 {
                     MessageBox.Show("Xóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnKhoaban_Click(object sender, EventArgs e)
+        {
+            if (txtMaban.Text == "" || txtTenban.Text == "" || txtSoghe.Text == "" || cbTrangThai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào bàn muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn khóa bàn không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa bàn ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
+            {
+                return;
+            }
+            else
+            {
+                int ma = Int32.Parse(txtMaban.Text);
+                if (QuanLyBanDAO.Instance.Khoaban(ma))//Gọi phương thức khóa bàn từ DAO
+                {
+                    MessageBox.Show("Khóa bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadBan();
+                    xoaDuLieu();
+                }
+                else
+                {
+                    MessageBox.Show("Khóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

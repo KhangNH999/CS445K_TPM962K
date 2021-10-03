@@ -41,18 +41,17 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         create PROC [dbo].[USP_ThemDotGia]
-        @madotgia int,
         @giaban float,
         @ngaybd datetime,
         @trangthai int
         AS
             BEGIN
-                INSERT dbo.GIATHEODOT(madotgia, giaban, ngaybdban, trangthaigia) VALUES ( @madotgia , @giaban , @ngaybd , @trangthai)
+                INSERT dbo.GIATHEODOT(giaban, ngaybdban, trangthaigia) VALUES ( @giaban , @ngaybd , @trangthai)
             END
         */
-        public bool themgiaad(int madotgia, double giaban, DateTime ngaybd, int trangthai)
+        public bool themgiaad(double giaban, DateTime ngaybd, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemDotGia @madotgia , @giaban , @ngaybd , @trangthai", new object[] { madotgia, giaban, ngaybd, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemDotGia @giaban , @ngaybd , @trangthai", new object[] { giaban, ngaybd, trangthai });
             return result > 0;
         }
         public bool suaThongTinKhoa(int madotgia, double giaban, DateTime ngaybd, int trangthai)

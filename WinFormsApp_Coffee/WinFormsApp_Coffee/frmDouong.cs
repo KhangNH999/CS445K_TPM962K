@@ -44,7 +44,7 @@ namespace WinFormsApp_Coffee
 
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            if (cbbMadanhmuc.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -52,22 +52,16 @@ namespace WinFormsApp_Coffee
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
                 int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
-                int madouong = Int32.Parse(txtMadouong.Text);
                 string tendouong = txtTendouong.Text;
                 int madotgia = Int32.Parse(cbbMadotgia.SelectedValue.ToString());
                 int trangthai = cbbTrangthai.SelectedIndex;
-                if (madouong < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(madouong,tendouong)) //Kiểm tra đồ uống tồn tại
+                if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(tendouong)) //Kiểm tra đồ uống tồn tại
                 {
                     MessageBox.Show("Đồ uống này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (QuanLyDoUongDAO.Instance.themDoUong(madouong, tendouong, madanhmuc, madotgia, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
+                    if (QuanLyDoUongDAO.Instance.themDoUong(tendouong, madanhmuc, madotgia, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
                     {
                         MessageBox.Show("Thêm đồ uống thành công");
                         loadDouong();
@@ -185,6 +179,34 @@ namespace WinFormsApp_Coffee
             txtTendouong.Text = dgvDmdouong.Rows[e.RowIndex].Cells[1].Value + "";
             txtGiaban.Text = dgvDmdouong.Rows[e.RowIndex].Cells[3].Value + "";
             cbbTrangthai.SelectedItem = dgvDmdouong.Rows[e.RowIndex].Cells[2].Value + "";
+        }
+        //Tạo sự kiện khóa đồ uống
+        private void btnKhoadouong_Click(object sender, EventArgs e)
+        {
+            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn khóa đồ uống không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa đồ uống ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button3) != System.Windows.Forms.DialogResult.Yes)
+            {
+                return;
+            }
+            else
+            {
+                int madouong = Int32.Parse(txtMadouong.Text);
+                if (QuanLyDoUongDAO.Instance.Khoadouong(madouong))//Gọi phương thức xóa đồ uống từ DAO
+                {
+                    MessageBox.Show("Khóa đồ uống thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadDouong();
+                    xoaDuLieu();
+                }
+                else
+                {
+                    MessageBox.Show("Khóa đồ uống không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

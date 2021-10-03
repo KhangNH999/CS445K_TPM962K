@@ -72,7 +72,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnThemhd);
             this.panel1.Controls.Add(this.btnXemhd);
             this.panel1.Location = new System.Drawing.Point(18, 19);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(986, 89);
             this.panel1.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace WinFormsApp_Coffee
             // btnKhoahd
             // 
             this.btnKhoahd.Location = new System.Drawing.Point(660, 6);
-            this.btnKhoahd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhoahd.Margin = new System.Windows.Forms.Padding(4);
             this.btnKhoahd.Name = "btnKhoahd";
             this.btnKhoahd.Size = new System.Drawing.Size(156, 79);
             this.btnKhoahd.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace WinFormsApp_Coffee
             // btnXoahd
             // 
             this.btnXoahd.Location = new System.Drawing.Point(496, 5);
-            this.btnXoahd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoahd.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoahd.Name = "btnXoahd";
             this.btnXoahd.Size = new System.Drawing.Size(156, 79);
             this.btnXoahd.TabIndex = 3;
@@ -100,7 +100,7 @@ namespace WinFormsApp_Coffee
             // btnSuahd
             // 
             this.btnSuahd.Location = new System.Drawing.Point(331, 4);
-            this.btnSuahd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuahd.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuahd.Name = "btnSuahd";
             this.btnSuahd.Size = new System.Drawing.Size(156, 79);
             this.btnSuahd.TabIndex = 2;
@@ -110,7 +110,7 @@ namespace WinFormsApp_Coffee
             // btnThemhd
             // 
             this.btnThemhd.Location = new System.Drawing.Point(169, 5);
-            this.btnThemhd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemhd.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemhd.Name = "btnThemhd";
             this.btnThemhd.Size = new System.Drawing.Size(156, 79);
             this.btnThemhd.TabIndex = 1;
@@ -120,7 +120,7 @@ namespace WinFormsApp_Coffee
             // btnXemhd
             // 
             this.btnXemhd.Location = new System.Drawing.Point(6, 4);
-            this.btnXemhd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemhd.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemhd.Name = "btnXemhd";
             this.btnXemhd.Size = new System.Drawing.Size(156, 79);
             this.btnXemhd.TabIndex = 0;
@@ -285,6 +285,7 @@ namespace WinFormsApp_Coffee
             // 
             // txtMahd
             // 
+            this.txtMahd.Enabled = false;
             this.txtMahd.Location = new System.Drawing.Point(142, 15);
             this.txtMahd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMahd.Name = "txtMahd";

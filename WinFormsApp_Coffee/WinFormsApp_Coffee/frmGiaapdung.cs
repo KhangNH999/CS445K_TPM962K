@@ -35,29 +35,17 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm dot gia
         private void btnThemdotgia_Click(object sender, EventArgs e)
         {
-            if (txtMadotgia.Text == "" || txtGiaban.Text == "" || cbtrangthai.Text == "")
+            if (txtGiaban.Text == "" || cbtrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int ma = Int32.Parse(txtMadotgia.Text);
                 double giaban = double.Parse(txtGiaban.Text);
                 DateTime ngay = dateBD.Value;
                 int trangthai = cbtrangthai.SelectedIndex;
-                if (ma < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (GiaApDungDAO.Instance.kiemTraGiaTonTai(ma)) //Kiểm tra don gia tồn tại
-                {
-                    MessageBox.Show("Đợt giá này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    if (GiaApDungDAO.Instance.themgiaad(ma, giaban, ngay, trangthai))//Gọi phương thức thêm bàn từ GiaApDungDAO
+                    if (GiaApDungDAO.Instance.themgiaad(giaban, ngay, trangthai))//Gọi phương thức thêm bàn từ GiaApDungDAO
                     {
                         MessageBox.Show("Thêm giá thành công");
                         loadGia();
@@ -66,8 +54,7 @@ namespace WinFormsApp_Coffee
                     else
                     {
                         MessageBox.Show("Thêm giá thất bại");
-                    }
-                }
+                    }               
             }
             catch (Exception)
             {

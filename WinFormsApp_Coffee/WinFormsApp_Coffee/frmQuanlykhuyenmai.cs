@@ -36,30 +36,24 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm đợt khuyến mãi
         private void btnThemdotkhuyenmai_Click(object sender, EventArgs e)
         {
-            if (txtMadot.Text == "" || txtTendot.Text == "" || cbbTrangthai.Text == "")
+            if (txtTendot.Text == "" || cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try//try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int ma = Int32.Parse(txtMadot.Text);
                 string tendot = txtTendot.Text;
                 DateTime ngaybd = dateNgaybd.Value;
                 DateTime ngaykt = dateNgaykt.Value;
                 int trangthai = cbbTrangthai.SelectedIndex;
-                if (ma < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(ma,tendot)) //Kiểm tra tồn tại
+                if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(tendot)) //Kiểm tra tồn tại
                 {
                     MessageBox.Show("Đợt khuyến mãi đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (QuanLyKhuyenMaiDAO.Instance.themDotKhuyenMai(ma, tendot, ngaybd, ngaykt, trangthai))//Gọi phương thức thêm  từ DAO
+                    if (QuanLyKhuyenMaiDAO.Instance.themDotKhuyenMai(tendot, ngaybd, ngaykt, trangthai))//Gọi phương thức thêm  từ DAO
                     {
                         MessageBox.Show("Thêm thành công");
                         loadKm();

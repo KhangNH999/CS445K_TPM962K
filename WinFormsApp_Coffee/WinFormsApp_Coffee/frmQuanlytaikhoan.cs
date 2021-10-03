@@ -41,13 +41,12 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm bàn
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if(txtMataikhoan.Text == ""||txtTendangnhap.Text == ""||txtMatkhau.Text == "")
+            if(txtTendangnhap.Text == "" || txtMatkhau.Text == "" || txtTen.Text == "" || txtGioitinh.Text == "" || txtCmnd.Text == "" || txtSdt.Text == "" || txtEmail.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             try
             {
-                int mataikhoan = Int32.Parse(txtMataikhoan.Text);
                 string tendangnhap = txtTendangnhap.Text;
                 string matkhau = txtMatkhau.Text;
                 string ten = txtTen.Text;
@@ -58,20 +57,10 @@ namespace WinFormsApp_Coffee
                 string sdt = txtSdt.Text;
                 int loaitk = ccbLoaitk.SelectedIndex;
                 int trangthai = ccbTrangthaitk.SelectedIndex;
-                if (mataikhoan < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (QuanLyTaiKhoanDAO.Instance.kiemTraTaiKhoanTonTai(mataikhoan))
-                {
-                    MessageBox.Show("Tài khoản này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    if(QuanLyTaiKhoanDAO.Instance.themTaiKhoan(mataikhoan, tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
+               
+                    if(QuanLyTaiKhoanDAO.Instance.themTaiKhoan(tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
                     {
-                        MessageBox.Show("Thêm bàn tài khoản thành công!");
+                        MessageBox.Show("Thêm tài khoản thành công!");
                         loadTaiKhoan();
                         xoaDuLieu();
                     }
@@ -79,7 +68,7 @@ namespace WinFormsApp_Coffee
                     {
                         MessageBox.Show("Thêm tài khoản thất bại");
                     }
-                }
+                
             }
             catch (Exception)
             {

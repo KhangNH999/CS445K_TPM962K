@@ -36,9 +36,9 @@ namespace WinFormsApp_Coffee.DAO
             return danhSachDanhMuc;
         }
         //Phương thức kiểm tra danh mục có tồn tại trong csdl hay ko?
-        public bool kiemTraDanhMucTonTai(int madanhmuc, string tendanhmuc)
+        public bool kiemTraDanhMucTonTai(string tendanhmuc)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DANHMUCDOUONG where madanhmuc=" + madanhmuc + " or tendanhmuc=N'" + tendanhmuc + "'");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DANHMUCDOUONG where tendanhmuc=N'" + tendanhmuc + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;
@@ -52,16 +52,15 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         CREATE PROC USP_Themdanhmuc
-        @madanhmuc int,
         @tendanhmuc nvarchar(100)
         AS
-            BEGIN
-                INSERT dbo.DANHMUCDOUONG(madanhmuc,tendanhmuc) VALUES (@madanhmuc,@tendanhmuc)
-            END
+        BEGIN
+        INSERT dbo.DANHMUCDOUONG(tendanhmuc) VALUES (@tendanhmuc)
+        END
          */
-        public bool themDanhMuc(int madanhmuc, string tendanhmuc)
+        public bool themDanhMuc(string tendanhmuc)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_Themdanhmuc @madanhmuc , @tendanhmuc", new object[] { madanhmuc,tendanhmuc });
+            int result = clsDB.Instance.execNonQuery("exec USP_Themdanhmuc @tendanhmuc", new object[] { tendanhmuc });
             return result > 0;
         }
         //Phương thức sửa thông tin danh mục

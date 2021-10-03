@@ -21,11 +21,13 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         CREATE PROC USP_LayDanhSachDoUong
-         AS
+          AS
         SELECT madouong, tendouong, b.giaban, 
         case trangthaidouong 
         when 0 then N'Hết' 
-        when 1 then N'Còn' end as trangthaidouong, c.tendanhmuc
+        when 1 then N'Còn' 
+        when 2 then N'Đã khóa'
+        end as trangthaidouong, c.tendanhmuc
         FROM dbo.DOUONG as a, dbo.GIATHEODOT as b, dbo.DANHMUCDOUONG as c where a.madotgia = b.madotgia 
         and a.madanhmuc = c.madanhmuc      
          */
@@ -44,25 +46,24 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         CREATE PROC USP_ThemDoUong
-            @madouong int,
             @tendouong nvarchar(100),
 			@madanhmuc int,
             @madotgia int,      
             @trangthaidouong int
         AS
             BEGIN
-                INSERT dbo.DOUONG (madouong,tendouong, madanhmuc, madotgia, trangthaidouong) VALUES ( @madouong, @tendouong, @madanhmuc, @madotgia, @trangthaidouong)
+                INSERT dbo.DOUONG (tendouong, madanhmuc, madotgia, trangthaidouong) VALUES ( @tendouong, @madanhmuc, @madotgia, @trangthaidouong)
             END
          */
-        public bool themDoUong(int madouong, string tendouong, int madanhmuc, int madotgia, int trangthai)
+        public bool themDoUong(string tendouong, int madanhmuc, int madotgia, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemDoUong @madouong , @tendouong , @madanhmuc , @madotgia , @trangthaidouong", new object[] { madouong, tendouong, madanhmuc, madotgia, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemDoUong @tendouong , @madanhmuc , @madotgia , @trangthaidouong", new object[] { tendouong, madanhmuc, madotgia, trangthai });
             return result > 0;
         }
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
-        public bool kiemTraBanTonTai(int madouong, string tendouong)
+        public bool kiemTraBanTonTai(string tendouong)
         {
-            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DOUONG where madouong=" + madouong + " or tendouong=N'" + tendouong + "'");
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.DOUONG where tendouong=N'" + tendouong + "'");
             if (tb.Rows.Count > 0)
             {
                 return true;
@@ -71,6 +72,19 @@ namespace WinFormsApp_Coffee.DAO
             {
                 return false;
             }
+        }
+        /*
+         create proc [dbo].[USP_Khoadouong]
+         @madouong int
+         as 
+            begin 
+	            update dbo.DOUONG set trangthaidouong = 2 where madouong = @madouong
+         end
+         */
+        public bool Khoadouong(int madouong)
+        {
+            int result = clsDB.Instance.execNonQuery("exec USP_Khoadouong @madouong", new object[] { madouong });
+            return result > 0;
         }
         //Phương thức sửa thông tin đồ uống
         /*
