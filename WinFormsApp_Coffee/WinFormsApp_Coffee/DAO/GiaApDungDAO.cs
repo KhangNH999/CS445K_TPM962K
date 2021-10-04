@@ -21,7 +21,7 @@ namespace WinFormsApp_Coffee.DAO
          Trước hết phải tạo thủ tục
          Create PROC [dbo].[USP_LayGiaApDung]
          AS
-        SELECT madotgia, giaban, ngaybdban, 
+        SELECT madotgia, ngaybdban, 
         case trangthaigia
         when 0 then N'Chưa áp dụng' 
         when 1 then N'Đã áp dụng' end as trangthaigia FROM dbo.GIATHEODOT  
@@ -41,22 +41,22 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Trước hết phải tạo thủ tục
         create PROC [dbo].[USP_ThemDotGia]
-        @giaban float,
+        
         @ngaybd datetime,
         @trangthai int
         AS
             BEGIN
-                INSERT dbo.GIATHEODOT(giaban, ngaybdban, trangthaigia) VALUES ( @giaban , @ngaybd , @trangthai)
+                INSERT dbo.GIATHEODOT( ngaybdban, trangthaigia) VALUES ( @ngaybd , @trangthai)
             END
         */
-        public bool themgiaad(double giaban, DateTime ngaybd, int trangthai)
+        public bool themgiaad(DateTime ngaybd, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemDotGia @giaban , @ngaybd , @trangthai", new object[] { giaban, ngaybd, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemDotGia @ngaybd , @trangthai", new object[] { ngaybd, trangthai });
             return result > 0;
         }
-        public bool suaThongTinKhoa(int madotgia, double giaban, DateTime ngaybd, int trangthai)
+        public bool suaThongTinKhoa(int madotgia, DateTime ngaybd, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_SuaTTKhoa @@madotgia , @giaban , @ngaybd , @trangthai", new object[] { madotgia, giaban, ngaybd, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_SuaTTKhoa @@madotgia , @ngaybd , @trangthai", new object[] { madotgia, ngaybd, trangthai });
             return result > 0;
         }
         //  Phương thức kiểm tra đợt giá có tồn tại trong csdl hay ko?

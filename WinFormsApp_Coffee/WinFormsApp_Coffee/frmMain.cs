@@ -81,6 +81,12 @@ namespace WinFormsApp_Coffee
             frmQuanlytaikhoancanhan f = new frmQuanlytaikhoancanhan(DnTaiKhoan);
             f.ShowDialog();
         }
+        //Hiển thị form ql đợt giá
+        private void quảnLýĐợtGiáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGiaapdung f = new frmGiaapdung();
+            f.ShowDialog();
+        }
         //Tạo sự kiện thanh toán
         private void button1_Click(object sender, EventArgs e)
         {
@@ -274,5 +280,7 @@ namespace WinFormsApp_Coffee
         {
 
         }
+
+       
     }
 }

@@ -16,7 +16,7 @@ namespace WinFormsApp_Coffee
             InitializeComponent();
             loadDouong();
             loadDMDouong();
-            loadMaDotGia();
+            //loadMaDotGia();
         }
         //phương thức load bàn lên datagridview
         void loadDouong()
@@ -30,21 +30,13 @@ namespace WinFormsApp_Coffee
             cbbMadanhmuc.SelectedIndex = 0;
             txtMadouong.Clear();
             txtTendouong.Clear();
-            cbbMadotgia.SelectedIndex = 0;
-            txtGiaban.Clear();
             cbbTrangthai.SelectedIndex = 0;
             txtMadouong.Focus();
         }
 
-        private void btnGiaapdung_Click(object sender, EventArgs e)
-        {
-            frmGiaapdung f = new frmGiaapdung();
-            f.ShowDialog();
-        }
-
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if (cbbMadanhmuc.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            if (cbbMadanhmuc.Text == "" || txtTendouong.Text == "" ||  cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -53,7 +45,7 @@ namespace WinFormsApp_Coffee
             {
                 int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
                 string tendouong = txtTendouong.Text;
-                int madotgia = Int32.Parse(cbbMadotgia.SelectedValue.ToString());
+                
                 int trangthai = cbbTrangthai.SelectedIndex;
                 if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(tendouong)) //Kiểm tra đồ uống tồn tại
                 {
@@ -61,7 +53,7 @@ namespace WinFormsApp_Coffee
                 }
                 else
                 {
-                    if (QuanLyDoUongDAO.Instance.themDoUong(tendouong, madanhmuc, madotgia, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
+                    if (QuanLyDoUongDAO.Instance.themDoUong(tendouong, madanhmuc, trangthai))//Gọi phương thức thêm bàn từ QuanLyBanDAO
                     {
                         MessageBox.Show("Thêm đồ uống thành công");
                         loadDouong();
@@ -82,7 +74,7 @@ namespace WinFormsApp_Coffee
         private void btnSuadouong_Click(object sender, EventArgs e)
         {
             //Tạo sự kiện sửa đồ uống                  
-            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -92,9 +84,8 @@ namespace WinFormsApp_Coffee
                 int madouong = Int32.Parse(txtMadouong.Text);
                 string tendouong = txtTendouong.Text;
                 int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
-                int madotgia = Int32.Parse(cbbMadotgia.SelectedValue.ToString());
                 int trangthai = cbbTrangthai.SelectedIndex;
-                if (QuanLyDoUongDAO.Instance.suaThongTinDoUong(madouong, tendouong, madanhmuc, madotgia, trangthai))//Gọi phương thức sửa đồ uố từ QuanLyDoUongDAO
+                if (QuanLyDoUongDAO.Instance.suaThongTinDoUong(madouong, tendouong, madanhmuc, trangthai))//Gọi phương thức sửa đồ uố từ QuanLyDoUongDAO
                 {
                     MessageBox.Show("Sửa thông tin đồ uống thành công");
                     loadDouong();
@@ -113,7 +104,7 @@ namespace WinFormsApp_Coffee
 
         private void btnXoadouong_Click(object sender, EventArgs e)
         {
-            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" ||  cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn xóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -147,6 +138,7 @@ namespace WinFormsApp_Coffee
             cbbMadanhmuc.ValueMember = "madanhmuc";
         }
         //phương thức load mã đợt giá
+        /*
         void loadMaDotGia()
         {
             cbbMadotgia.DataSource = QuanLyDoUongDAO.Instance.loadMaDotGia();
@@ -154,7 +146,9 @@ namespace WinFormsApp_Coffee
             cbbMadotgia.ValueMember = "madotgia";
             cbbMadotgia.SelectedIndex = 0;
         }
-        //phương thức load giá
+        */
+        //phương thức load giá - 
+        /*
         void loadGia()
         {
             if (cbbMadotgia.SelectedValue.ToString() == "System.Data.DataRowView") return;
@@ -166,24 +160,28 @@ namespace WinFormsApp_Coffee
                 txtGiaban.Text = dt.Rows[i]["giaban"].ToString();
             }
         }
+        */
         //phương thức xử lý khi nhấp chuột vào combobox mã đợt giá
+        /*
         private void cbbMadotgia_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadGia();
         }
+        */
         //Phương thức khi nhấp chuột sẽ hiện dữ liệu lên textbox
         private void dgvdouong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
             txtMadouong.Text = dgvDmdouong.Rows[e.RowIndex].Cells[0].Value + "";
             txtTendouong.Text = dgvDmdouong.Rows[e.RowIndex].Cells[1].Value + "";
-            txtGiaban.Text = dgvDmdouong.Rows[e.RowIndex].Cells[3].Value + "";
+            
             cbbTrangthai.SelectedItem = dgvDmdouong.Rows[e.RowIndex].Cells[2].Value + "";
+            cbbMadanhmuc.SelectedItem = dgvDmdouong.Rows[e.RowIndex].Cells[3].Value + "";
         }
         //Tạo sự kiện khóa đồ uống
         private void btnKhoadouong_Click(object sender, EventArgs e)
         {
-            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbMadotgia.Text == "" || txtGiaban.Text == "" || cbbTrangthai.Text == "")
+            if (cbbMadanhmuc.Text == "" || txtMadouong.Text == "" || txtTendouong.Text == "" || cbbTrangthai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -207,6 +205,11 @@ namespace WinFormsApp_Coffee
                     MessageBox.Show("Khóa đồ uống không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            xoaDuLieu();
         }
     }
 }

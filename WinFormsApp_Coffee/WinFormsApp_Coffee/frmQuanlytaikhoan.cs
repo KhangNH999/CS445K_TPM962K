@@ -160,5 +160,10 @@ namespace WinFormsApp_Coffee
             ccbLoaitk.DataSource = QuanLyTaiKhoanDAO.Instance.loadLoaiTK();
             ccbLoaitk.DisplayMember = "tenloaitk";
         }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            xoaDuLieu();
+        }
     }
 }

@@ -22,14 +22,13 @@ namespace WinFormsApp_Coffee.DAO
          Trước hết phải tạo thủ tục
         CREATE PROC USP_LayDanhSachDoUong
           AS
-        SELECT madouong, tendouong, b.giaban, 
+        SELECT madouong, tendouong, 
         case trangthaidouong 
         when 0 then N'Hết' 
         when 1 then N'Còn' 
         when 2 then N'Đã khóa'
         end as trangthaidouong, c.tendanhmuc
-        FROM dbo.DOUONG as a, dbo.GIATHEODOT as b, dbo.DANHMUCDOUONG as c where a.madotgia = b.madotgia 
-        and a.madanhmuc = c.madanhmuc      
+        FROM dbo.DOUONG as a, dbo.DANHMUCDOUONG as c where a.madanhmuc = c.madanhmuc
          */
         public List<Douong> loadDanhSachDoUong()
         {
@@ -48,16 +47,16 @@ namespace WinFormsApp_Coffee.DAO
         CREATE PROC USP_ThemDoUong
             @tendouong nvarchar(100),
 			@madanhmuc int,
-            @madotgia int,      
+              
             @trangthaidouong int
         AS
             BEGIN
-                INSERT dbo.DOUONG (tendouong, madanhmuc, madotgia, trangthaidouong) VALUES ( @tendouong, @madanhmuc, @madotgia, @trangthaidouong)
+                INSERT dbo.DOUONG (tendouong, madanhmuc, trangthaidouong) VALUES ( @tendouong, @madanhmuc, @trangthaidouong)
             END
          */
-        public bool themDoUong(string tendouong, int madanhmuc, int madotgia, int trangthai)
+        public bool themDoUong(string tendouong, int madanhmuc, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_ThemDoUong @tendouong , @madanhmuc , @madotgia , @trangthaidouong", new object[] { tendouong, madanhmuc, madotgia, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_ThemDoUong @tendouong , @madanhmuc ,  @trangthaidouong", new object[] { tendouong, madanhmuc, trangthai });
             return result > 0;
         }
         //Phương thức kiểm tra bàn có tồn tại trong csdl hay ko?
@@ -93,18 +92,18 @@ namespace WinFormsApp_Coffee.DAO
             @madouong int,
             @tendouong nvarchar(100),
     		@madanhmuc int,
-            @madotgia int,
+            
             @trangthai int
             as 
                 begin 
-                    update dbo.DOUONG set tendouong = @tendouong, madanhmuc = @madanhmuc , madotgia = @madotgia , trangthaidouong = @trangthai where madouong = @madouong
+                    update dbo.DOUONG set tendouong = @tendouong, madanhmuc = @madanhmuc , trangthaidouong = @trangthai where madouong = @madouong
                 end     
          sau đó tạo phương thức xác nhận sửa thông tin đồ uống 
          biến result dùng để trả số hàng khi thực thi câu lệnh truy vấn exec USP_SuaThongTinDoUong
          */
-        public bool suaThongTinDoUong(int madouong, string tendouong, int madanhmuc, int madotgia, int trangthai)
+        public bool suaThongTinDoUong(int madouong, string tendouong, int madanhmuc, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_SuaThongTinDoUong @madouong , @tendouong , @madanhmuc , @madotgia , @trangthai", new object[] { madouong, tendouong, madanhmuc, madotgia, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_SuaThongTinDoUong @madouong , @tendouong , @madanhmuc , @trangthai", new object[] { madouong, tendouong, madanhmuc, trangthai });
             return result > 0;
         }
         //Phương thức xóa đồ uống

@@ -42,6 +42,7 @@ namespace WinFormsApp_Coffee
             this.txtTendanhmuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLammoi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).BeginInit();
@@ -50,21 +51,20 @@ namespace WinFormsApp_Coffee
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLammoi);
             this.panel1.Controls.Add(this.btnXoadm);
             this.panel1.Controls.Add(this.btnSuadm);
             this.panel1.Controls.Add(this.btnThemdm);
-            this.panel1.Location = new System.Drawing.Point(16, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(929, 88);
+            this.panel1.Size = new System.Drawing.Size(743, 70);
             this.panel1.TabIndex = 0;
             // 
             // btnXoadm
             // 
-            this.btnXoadm.Location = new System.Drawing.Point(332, 5);
-            this.btnXoadm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoadm.Location = new System.Drawing.Point(266, 4);
             this.btnXoadm.Name = "btnXoadm";
-            this.btnXoadm.Size = new System.Drawing.Size(156, 79);
+            this.btnXoadm.Size = new System.Drawing.Size(125, 63);
             this.btnXoadm.TabIndex = 2;
             this.btnXoadm.Text = "Xóa danh mục";
             this.btnXoadm.UseVisualStyleBackColor = true;
@@ -72,10 +72,9 @@ namespace WinFormsApp_Coffee
             // 
             // btnSuadm
             // 
-            this.btnSuadm.Location = new System.Drawing.Point(169, 5);
-            this.btnSuadm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuadm.Location = new System.Drawing.Point(135, 4);
             this.btnSuadm.Name = "btnSuadm";
-            this.btnSuadm.Size = new System.Drawing.Size(156, 79);
+            this.btnSuadm.Size = new System.Drawing.Size(125, 63);
             this.btnSuadm.TabIndex = 1;
             this.btnSuadm.Text = "Sửa danh mục";
             this.btnSuadm.UseVisualStyleBackColor = true;
@@ -83,10 +82,9 @@ namespace WinFormsApp_Coffee
             // 
             // btnThemdm
             // 
-            this.btnThemdm.Location = new System.Drawing.Point(5, 5);
-            this.btnThemdm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemdm.Location = new System.Drawing.Point(4, 4);
             this.btnThemdm.Name = "btnThemdm";
-            this.btnThemdm.Size = new System.Drawing.Size(156, 79);
+            this.btnThemdm.Size = new System.Drawing.Size(125, 63);
             this.btnThemdm.TabIndex = 0;
             this.btnThemdm.Text = "Thêm danh mục";
             this.btnThemdm.UseVisualStyleBackColor = true;
@@ -95,10 +93,9 @@ namespace WinFormsApp_Coffee
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvDmdouong);
-            this.panel2.Location = new System.Drawing.Point(16, 112);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(13, 90);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 288);
+            this.panel2.Size = new System.Drawing.Size(423, 230);
             this.panel2.TabIndex = 1;
             // 
             // dgvDmdouong
@@ -107,12 +104,11 @@ namespace WinFormsApp_Coffee
             this.dgvDmdouong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvDmdouong.Location = new System.Drawing.Point(5, 5);
-            this.dgvDmdouong.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDmdouong.Location = new System.Drawing.Point(4, 4);
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
-            this.dgvDmdouong.Size = new System.Drawing.Size(518, 276);
+            this.dgvDmdouong.Size = new System.Drawing.Size(414, 221);
             this.dgvDmdouong.TabIndex = 0;
             this.dgvDmdouong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDmdouong_CellClick);
             // 
@@ -140,59 +136,63 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.txtTendanhmuc);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(552, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(442, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 288);
+            this.panel3.Size = new System.Drawing.Size(314, 230);
             this.panel3.TabIndex = 2;
             // 
             // txtMadanhmuc
             // 
             this.txtMadanhmuc.Enabled = false;
-            this.txtMadanhmuc.Location = new System.Drawing.Point(139, 6);
-            this.txtMadanhmuc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMadanhmuc.Location = new System.Drawing.Point(111, 5);
             this.txtMadanhmuc.Name = "txtMadanhmuc";
-            this.txtMadanhmuc.Size = new System.Drawing.Size(249, 31);
+            this.txtMadanhmuc.Size = new System.Drawing.Size(200, 27);
             this.txtMadanhmuc.TabIndex = 4;
             // 
             // txtTendanhmuc
             // 
-            this.txtTendanhmuc.Location = new System.Drawing.Point(139, 72);
-            this.txtTendanhmuc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTendanhmuc.Location = new System.Drawing.Point(111, 58);
             this.txtTendanhmuc.Name = "txtTendanhmuc";
-            this.txtTendanhmuc.Size = new System.Drawing.Size(249, 31);
+            this.txtTendanhmuc.Size = new System.Drawing.Size(200, 27);
             this.txtTendanhmuc.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 25);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên danh mục:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 25);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã danh mục:";
             // 
+            // btnLammoi
+            // 
+            this.btnLammoi.Location = new System.Drawing.Point(621, 4);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.Size = new System.Drawing.Size(119, 63);
+            this.btnLammoi.TabIndex = 3;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.UseVisualStyleBackColor = true;
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
+            // 
             // frmDmdouong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 419);
+            this.ClientSize = new System.Drawing.Size(771, 335);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDmdouong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -221,5 +221,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.TextBox txtMadanhmuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button btnLammoi;
     }
 }

@@ -148,5 +148,10 @@ namespace WinFormsApp_Coffee
             }
 
         }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            xoaDuLieu();
+        }
     }
 }
