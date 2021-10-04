@@ -252,10 +252,14 @@ namespace WinFormsApp_Coffee
         private void button2_Click(object sender, EventArgs e)
         {
             Ban table = lvBill.Tag as Ban;
+            if (table == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
             int id1 = (lvBill.Tag as Ban).MaBan;
-
-            int id2 = (cbChuyenBan.SelectedItem as Ban).MaBan;
+            int id2 = (cbChuyenBan.SelectedItem as Ban).MaBan;          
             if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", (lvBill.Tag as Ban).TenBan, (cbChuyenBan.SelectedItem as Ban).TenBan), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 if (idBill > 0)

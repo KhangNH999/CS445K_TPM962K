@@ -39,8 +39,7 @@ namespace WinFormsApp_Coffee.DAO
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
-        select @price = c.giaban from dbo.DOUONG as b, dbo.GIATHEODOT as c 
-        where  b.madouong=@madu and b.madotgia = c.madotgia 
+        select @price = giaban from dbo.SP_DG where  madouong=@madu
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
@@ -70,8 +69,7 @@ namespace WinFormsApp_Coffee.DAO
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
-        select @price = c.giaban from dbo.DOUONG as b, dbo.GIATHEODOT as c 
-        where  b.madouong=@madu and b.madotgia = c.madotgia 
+        select @price = giaban from dbo.SP_DG where  madouong=@madu 
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
