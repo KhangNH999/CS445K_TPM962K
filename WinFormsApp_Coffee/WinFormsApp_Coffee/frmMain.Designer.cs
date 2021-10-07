@@ -48,6 +48,8 @@ namespace WinFormsApp_Coffee
             this.quảnLýKhuyễnMãiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.quảnLýHóaĐơnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.quảnLýĐợtGiáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.numupSL = new System.Windows.Forms.NumericUpDown();
@@ -66,8 +68,6 @@ namespace WinFormsApp_Coffee
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.quảnLýĐợtGiáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).BeginInit();
@@ -218,6 +218,18 @@ namespace WinFormsApp_Coffee
             this.quảnLýHóaĐơnToolStripMenuItem1.Text = "Quản lý hóa đơn";
             this.quảnLýHóaĐơnToolStripMenuItem1.Click += new System.EventHandler(this.quảnLýHóaĐơnToolStripMenuItem1_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
+            // 
+            // quảnLýĐợtGiáToolStripMenuItem
+            // 
+            this.quảnLýĐợtGiáToolStripMenuItem.Name = "quảnLýĐợtGiáToolStripMenuItem";
+            this.quảnLýĐợtGiáToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
+            this.quảnLýĐợtGiáToolStripMenuItem.Text = "Quản lý đợt giá";
+            this.quảnLýĐợtGiáToolStripMenuItem.Click += new System.EventHandler(this.quảnLýĐợtGiáToolStripMenuItem_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button3);
@@ -308,7 +320,7 @@ namespace WinFormsApp_Coffee
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox1.Location = new System.Drawing.Point(245, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(215, 27);
@@ -394,24 +406,13 @@ namespace WinFormsApp_Coffee
             // 
             // flpBan
             // 
+            this.flpBan.AutoScroll = true;
             this.flpBan.Location = new System.Drawing.Point(22, 40);
-            this.flpBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpBan.Margin = new System.Windows.Forms.Padding(2);
             this.flpBan.Name = "flpBan";
             this.flpBan.Size = new System.Drawing.Size(560, 568);
             this.flpBan.TabIndex = 9;
             this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBan_Paint);
-            // 
-            // quảnLýĐợtGiáToolStripMenuItem
-            // 
-            this.quảnLýĐợtGiáToolStripMenuItem.Name = "quảnLýĐợtGiáToolStripMenuItem";
-            this.quảnLýĐợtGiáToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
-            this.quảnLýĐợtGiáToolStripMenuItem.Text = "Quản lý đợt giá";
-            this.quảnLýĐợtGiáToolStripMenuItem.Click += new System.EventHandler(this.quảnLýĐợtGiáToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
             // 
             // frmMain
             // 

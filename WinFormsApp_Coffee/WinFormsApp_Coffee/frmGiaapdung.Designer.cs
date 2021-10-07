@@ -32,8 +32,9 @@ namespace WinFormsApp_Coffee
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnXemdotgia = new System.Windows.Forms.Button();
             this.btnLammoi = new System.Windows.Forms.Button();
-            this.btnKhoadotgia = new System.Windows.Forms.Button();
+            this.btnSuadotgia = new System.Windows.Forms.Button();
             this.btnThemdotgia = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbtrangthai = new System.Windows.Forms.ComboBox();
@@ -66,13 +67,24 @@ namespace WinFormsApp_Coffee
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnXemdotgia);
             this.panel4.Controls.Add(this.btnLammoi);
-            this.panel4.Controls.Add(this.btnKhoadotgia);
+            this.panel4.Controls.Add(this.btnSuadotgia);
             this.panel4.Controls.Add(this.btnThemdotgia);
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(765, 61);
             this.panel4.TabIndex = 2;
+            // 
+            // btnXemdotgia
+            // 
+            this.btnXemdotgia.Location = new System.Drawing.Point(4, 3);
+            this.btnXemdotgia.Name = "btnXemdotgia";
+            this.btnXemdotgia.Size = new System.Drawing.Size(125, 54);
+            this.btnXemdotgia.TabIndex = 3;
+            this.btnXemdotgia.Text = "Xem đợt giá";
+            this.btnXemdotgia.UseVisualStyleBackColor = true;
+            this.btnXemdotgia.Click += new System.EventHandler(this.btnXemdotgia_Click);
             // 
             // btnLammoi
             // 
@@ -84,19 +96,19 @@ namespace WinFormsApp_Coffee
             this.btnLammoi.UseVisualStyleBackColor = true;
             this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
-            // btnKhoadotgia
+            // btnSuadotgia
             // 
-            this.btnKhoadotgia.Location = new System.Drawing.Point(135, 4);
-            this.btnKhoadotgia.Name = "btnKhoadotgia";
-            this.btnKhoadotgia.Size = new System.Drawing.Size(125, 54);
-            this.btnKhoadotgia.TabIndex = 1;
-            this.btnKhoadotgia.Text = "Khóa đợt giá";
-            this.btnKhoadotgia.UseVisualStyleBackColor = true;
-            this.btnKhoadotgia.Click += new System.EventHandler(this.btnKhoadotgia_Click);
+            this.btnSuadotgia.Location = new System.Drawing.Point(266, 4);
+            this.btnSuadotgia.Name = "btnSuadotgia";
+            this.btnSuadotgia.Size = new System.Drawing.Size(125, 54);
+            this.btnSuadotgia.TabIndex = 1;
+            this.btnSuadotgia.Text = "Sửa đợt giá";
+            this.btnSuadotgia.UseVisualStyleBackColor = true;
+            this.btnSuadotgia.Click += new System.EventHandler(this.btnSuadotgia_Click);
             // 
             // btnThemdotgia
             // 
-            this.btnThemdotgia.Location = new System.Drawing.Point(4, 4);
+            this.btnThemdotgia.Location = new System.Drawing.Point(135, 4);
             this.btnThemdotgia.Name = "btnThemdotgia";
             this.btnThemdotgia.Size = new System.Drawing.Size(125, 54);
             this.btnThemdotgia.TabIndex = 0;
@@ -122,8 +134,7 @@ namespace WinFormsApp_Coffee
             this.cbtrangthai.FormattingEnabled = true;
             this.cbtrangthai.Items.AddRange(new object[] {
             "Chưa áp dụng",
-            "Đã áp dụng",
-            "Đã khóa"});
+            "Đã áp dụng"});
             this.cbtrangthai.Location = new System.Drawing.Point(112, 121);
             this.cbtrangthai.Name = "cbtrangthai";
             this.cbtrangthai.Size = new System.Drawing.Size(193, 28);
@@ -248,7 +259,7 @@ namespace WinFormsApp_Coffee
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnKhoadotgia;
+        private System.Windows.Forms.Button btnSuadotgia;
         private System.Windows.Forms.Button btnThemdotgia;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMadotgia;
@@ -263,5 +274,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDotgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnXemdotgia;
     }
 }

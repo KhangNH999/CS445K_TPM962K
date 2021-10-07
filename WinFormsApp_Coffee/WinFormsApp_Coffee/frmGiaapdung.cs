@@ -72,38 +72,48 @@ namespace WinFormsApp_Coffee
 
         private void btnKhoadotgia_Click(object sender, EventArgs e)
         {
-            if (txtMadotgia.Text == "" || cbtrangthai.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhấp chuột vào đợt muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
-            {
-                int ma = Int32.Parse(txtMadotgia.Text);
-                
-                DateTime ngay = dateBD.Value;
-                int trangthai = cbtrangthai.SelectedIndex;
-                if (GiaApDungDAO.Instance.suaThongTinKhoa(ma, ngay, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
-                {
-                    MessageBox.Show("khóa thông tin đợt giá thành công");
-                    loadGia();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("khóa thất bại");
-                }
 
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
             xoaDuLieu();
+        }
+
+        private void btnXemdotgia_Click(object sender, EventArgs e)
+        {
+            frmChiTietDotGia f = new frmChiTietDotGia();
+            f.ShowDialog();
+        }
+
+        private void btnSuadotgia_Click(object sender, EventArgs e)
+        {
+            if (txtMadotgia.Text == "" || dateBD.Text == "" || cbtrangthai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào mã muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            {
+                int madotgia = Int32.Parse(txtMadotgia.Text);
+                DateTime ngaybd = dateBD.Value;
+                int trangthai = cbtrangthai.SelectedIndex;
+
+                if (GiaApDungDAO.Instance.suaDotGia(madotgia, ngaybd, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
+                {
+                    MessageBox.Show("Sửa thông tin bàn thành công");
+                    loadGia();
+                    xoaDuLieu();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thông tin bàn thất bại");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -54,9 +54,9 @@ namespace WinFormsApp_Coffee.DAO
             int result = clsDB.Instance.execNonQuery("exec USP_ThemDotGia @ngaybd , @trangthai", new object[] { ngaybd, trangthai });
             return result > 0;
         }
-        public bool suaThongTinKhoa(int madotgia, DateTime ngaybd, int trangthai)
+        public bool suaDotGia(int madotgia, DateTime ngaybd, int trangthai)
         {
-            int result = clsDB.Instance.execNonQuery("exec USP_SuaTTKhoa @@madotgia , @ngaybd , @trangthai", new object[] { madotgia, ngaybd, trangthai });
+            int result = clsDB.Instance.execNonQuery("exec USP_SuaDotGia @madotgia , @ngaybd , @trangthai ", new object[] {madotgia, ngaybd, trangthai });
             return result > 0;
         }
         //  Phương thức kiểm tra đợt giá có tồn tại trong csdl hay ko?
