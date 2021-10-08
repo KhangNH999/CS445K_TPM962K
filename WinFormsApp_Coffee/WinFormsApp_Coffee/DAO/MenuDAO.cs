@@ -20,7 +20,7 @@ namespace WinFormsApp_Coffee.DAO
         {
             List<Menu> listMenu = new List<Menu>();
 
-            string query = "SELECT f.tendouong, bi.soluong, bi.giatien, bi.giatien*bi.soluong AS totalPrice FROM dbo.CHITIETHOADON AS bi, dbo.HOADON AS b, dbo.DOUONG AS f WHERE bi.mahoadon = b.mahoadon AND bi.madouong = f.madouong AND b.trangthaihoadon = 0 AND b.maban = " + id;
+            string query = "SELECT f.tendouong, bi.soluong, bi.giatien, bi.tlgiamgia, bi.tongtien AS totalPrice FROM dbo.CHITIETHOADON AS bi, dbo.HOADON AS b, dbo.DOUONG AS f WHERE bi.mahoadon = b.mahoadon AND bi.madouong = f.madouong AND b.trangthaihoadon = 0 AND b.maban = " + id;
             DataTable data = clsDB.Instance.execQuery(query);
 
             foreach (DataRow item in data.Rows)

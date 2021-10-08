@@ -39,7 +39,9 @@ namespace WinFormsApp_Coffee.DAO
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
+        declare @tlgiamgia float
         select @price = giaban from dbo.SP_DG where  madouong=@madu
+        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI where madouong = @madu
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
@@ -47,10 +49,20 @@ namespace WinFormsApp_Coffee.DAO
         begin
         declare @newcount int = @foodCount + @sl
         if(@newcount>0)
+        begin
+        if(@tlgiamgia>0)
+        update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon = @mahd
+        else
         update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = @newcount*@price where madouong = @madu and mahoadon = @mahd
+        end
         end
         else
         begin
+        if(@tlgiamgia>0)
+        insert dbo.CHITIETHOADON
+        (mahoadon,madouong,soluong,giatien,tlgiamgia,tongtien)
+        values(@mahd, @madu, @sl,@price,@tlgiamgia,(@sl*@price)-(((@sl*@price)/100)*@tlgiamgia)) 
+        else
         insert dbo.CHITIETHOADON
         (mahoadon,madouong,soluong,giatien,tlgiamgia,tongtien)
         values(@mahd, @madu, @sl,@price,0,@sl*@price) 
@@ -63,13 +75,15 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create proc USP_DeleteFood
-        @mahd int, @madu int, @sl int
+     @mahd int, @madu int, @sl int
         as
         begin 
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
+        declare @tlgiamgia float
         select @price = giaban from dbo.SP_DG where  madouong=@madu 
+        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI where madouong = @madu
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
@@ -77,11 +91,17 @@ namespace WinFormsApp_Coffee.DAO
         begin
         declare @newcount int = @foodCount - @sl
         if(@newcount>0)
+        begin
+        if (@tlgiamgia>0)
+        update dbo.CHITIETHOADON set soluong = @foodCount - @sl, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon =@mahd
+        else
         update dbo.CHITIETHOADON set soluong = @foodCount - @sl, tongtien = @newcount * @price where madouong = @madu and mahoadon =@mahd
+        end
         else
         delete dbo.CHITIETHOADON where mahoadon = @mahd and madouong = @madu
         end
         end
+
         go
          */
         public void DeleteBillInfo(int mahoadon, int madouong, int sl)

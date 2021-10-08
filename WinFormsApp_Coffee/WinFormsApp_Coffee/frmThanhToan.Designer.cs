@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThanhToan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -38,14 +39,20 @@ namespace WinFormsApp_Coffee
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvThanhToan = new System.Windows.Forms.DataGridView();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnInBill = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTongTien
@@ -107,7 +114,7 @@ namespace WinFormsApp_Coffee
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(661, 248);
+            this.panel1.Size = new System.Drawing.Size(840, 248);
             this.panel1.TabIndex = 3;
             // 
             // dgvThanhToan
@@ -117,14 +124,50 @@ namespace WinFormsApp_Coffee
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column5,
             this.Column4});
             this.dgvThanhToan.Location = new System.Drawing.Point(5, 5);
             this.dgvThanhToan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvThanhToan.Name = "dgvThanhToan";
             this.dgvThanhToan.RowHeadersWidth = 51;
             this.dgvThanhToan.RowTemplate.Height = 29;
-            this.dgvThanhToan.Size = new System.Drawing.Size(655, 239);
+            this.dgvThanhToan.Size = new System.Drawing.Size(831, 239);
             this.dgvThanhToan.TabIndex = 0;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnInBill);
+            this.panel4.Location = new System.Drawing.Point(681, 269);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(172, 49);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnInBill
+            // 
+            this.btnInBill.Location = new System.Drawing.Point(6, 7);
+            this.btnInBill.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInBill.Name = "btnInBill";
+            this.btnInBill.Size = new System.Drawing.Size(162, 36);
+            this.btnInBill.TabIndex = 0;
+            this.btnInBill.Text = "In Bill";
+            this.btnInBill.UseVisualStyleBackColor = true;
+            this.btnInBill.Click += new System.EventHandler(this.btnInBill_Click);
             // 
             // Column1
             // 
@@ -133,12 +176,12 @@ namespace WinFormsApp_Coffee
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.Column1.Width = 159;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "Count";
-            this.Column2.HeaderText = "Số lượng";
+            this.Column2.HeaderText = "SL";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -155,22 +198,32 @@ namespace WinFormsApp_Coffee
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Tlgiamgia";
+            this.Column5.HeaderText = "KM";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
             // Column4
             // 
             this.Column4.DataPropertyName = "Totalprice";
             dataGridViewCellStyle2.Format = "#,###";
             this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column4.HeaderText = "Thành tiền";
+            this.Column4.HeaderText = "T.Tiền";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
+            this.Column4.Width = 169;
             // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 328);
+            this.ClientSize = new System.Drawing.Size(861, 328);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -185,6 +238,7 @@ namespace WinFormsApp_Coffee
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -198,9 +252,14 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvThanhToan;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnInBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

@@ -134,16 +134,23 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int ma = Int32.Parse(txtMadot.Text);
-                if (QuanLyKhuyenMaiDAO.Instance.xoaDotKhuyenMai(ma))//Gọi phương thức xóa km từ DAO
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
                 {
-                    MessageBox.Show("Xóa bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadKm();
-                    xoaDuLieu();
+                    int ma = Int32.Parse(txtMadot.Text);
+                    if (QuanLyKhuyenMaiDAO.Instance.xoaDotKhuyenMai(ma))//Gọi phương thức xóa km từ DAO
+                    {
+                        MessageBox.Show("Xóa bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadKm();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đợt giá này đang được sử dụng !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

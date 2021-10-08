@@ -482,3 +482,4 @@ C:\Users\ASUS\OneDrive\Máy tính\New folder\CS445K_TPM962K\WinFormsApp_Coffee\W
 C:\Users\ASUS\OneDrive\Máy tính\New folder\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.pdb
 C:\Users\ASUS\OneDrive\Máy tính\New folder\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Máy tính\New folder\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmChiTietDotGia.resources
+C:\Users\ASUS\Desktop\GitnhomTMP\CS445K_TPM962K\WinFormsApp_Coffee\WinFormsApp_Coffee\obj\Debug\netcoreapp3.1\WinFormsApp_Coffee.frmChiTietDotGia.resources

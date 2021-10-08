@@ -23,6 +23,8 @@ namespace WinFormsApp_Coffee
         
 
         private double total;
+        private double giamgia;
+        private double thanhtien;
         public frmMain(TaiKhoanLogin tk)
         {
             InitializeComponent();
@@ -101,7 +103,11 @@ namespace WinFormsApp_Coffee
             {
                 frmThanhToan f = new frmThanhToan();
                 f.Idban = table.MaBan;
+                f.Tenban = table.TenBan;
                 f.TotalPrice = total;
+                f.Tentk = DnTaiKhoan.TenNV;
+                f.Giamgia = giamgia;
+                f.Thanhtien = thanhtien;
                 f.ShowDialog();
             }
             LoadBan();
@@ -166,16 +172,23 @@ namespace WinFormsApp_Coffee
             lvBill.Items.Clear();
             List<WinFormsApp_Coffee.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
             double totalPrice = 0;
+            double giam = 0;
+            double tt = 0;
             foreach (WinFormsApp_Coffee.DTO.Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.Food.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
                 lsvItem.SubItems.Add(item.Price.ToString("#,###"));
+                lsvItem.SubItems.Add(item.Tlgiamgia.ToString());
                 lsvItem.SubItems.Add(item.Totalprice.ToString("#,###"));
+                giam += (((item.Price * item.Count) / 100) * item.Tlgiamgia);
                 totalPrice += item.Totalprice;
+                tt += (item.Price * item.Count);
                 lvBill.Items.Add(lsvItem);
             }
             total = totalPrice;
+            giamgia = giam;
+            thanhtien = tt;
         }
         //Load danh mục đồ uống
         void LoadCategory()
@@ -195,9 +208,9 @@ namespace WinFormsApp_Coffee
         private void cbDMDouong_SelectedIndexChanged(object sender, EventArgs e)
         {
             int id = 0;
-
-            ComboBox cb = sender as ComboBox;
-
+            cbDouong.Text = "";
+           
+            ComboBox cb = sender as ComboBox;           
             if (cb.SelectedItem == null)
                 return;
 
@@ -215,6 +228,8 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng chọn bàn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (cbDouong.SelectedItem == null)
+                return;
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
             int foodID = (cbDouong.SelectedItem as Food).Madouong;
             int count = (int)numupSL.Value;
@@ -241,6 +256,8 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng chọn bàn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (cbDouong.SelectedItem == null)
+                return;
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
             int foodID = (cbDouong.SelectedItem as Food).Madouong;
             int count = (int)numupSL.Value;
@@ -273,6 +290,7 @@ namespace WinFormsApp_Coffee
                     BanDAO.Instance.SwitchTable(id1, id2);
                 }
                 LoadBan();
+                ShowBill(table.MaBan);
             }
         }
 
