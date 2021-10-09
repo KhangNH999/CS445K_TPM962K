@@ -49,5 +49,8 @@
     <Compile Update="frmXemhoadon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmXemHoaDonChoNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

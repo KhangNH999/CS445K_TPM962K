@@ -63,7 +63,7 @@ namespace WinFormsApp_Coffee.DAO
         public List<Thongkebanchay> loadThongKeDoUongBanChay()
         {
             List<Thongkebanchay> danhSach = new List<Thongkebanchay>();
-            DataTable data = clsDB.Instance.execQuery("select c.tendouong, sum(a.soluong) as soluong, SUM(a.tongtien) as tong, d.tendanhmuc from dbo.CHITIETHOADON as a, dbo.HOADON as b , dbo.DOUONG as c, dbo.DANHMUCDOUONG as d where a.mahoadon = b.mahoadon and a.madouong = c.madouong and c.madanhmuc = d.madanhmuc and b.trangthaihoadon = 1 group by c.tendouong, d.tendanhmuc");//Lấy thủ tục từ SQL server
+            DataTable data = clsDB.Instance.execQuery("select c.tendouong, sum(a.soluong) as soluong, SUM(a.tongtien) as tong, d.tendanhmuc from dbo.CHITIETHOADON as a, dbo.HOADON as b , dbo.DOUONG as c, dbo.DANHMUCDOUONG as d where a.mahoadon = b.mahoadon and a.madouong = c.madouong and c.madanhmuc = d.madanhmuc and b.trangthaihoadon = 1 group by c.tendouong, d.tendanhmuc order by sum(a.soluong) desc");//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
                 Thongkebanchay tk = new Thongkebanchay(item);

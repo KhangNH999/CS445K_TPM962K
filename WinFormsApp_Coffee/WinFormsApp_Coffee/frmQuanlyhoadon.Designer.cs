@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKhoahd = new System.Windows.Forms.Button();
             this.btnXoahd = new System.Windows.Forms.Button();
@@ -37,18 +38,23 @@ namespace WinFormsApp_Coffee
             this.btnXemhd = new System.Windows.Forms.Button();
             this.pnlDShd = new System.Windows.Forms.Panel();
             this.dgvQlhoadon = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtTrangthaihd = new System.Windows.Forms.TextBox();
+            this.cbtrangthai = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtMabanhd = new System.Windows.Forms.TextBox();
+            this.cbtenban = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtGiolaphd = new System.Windows.Forms.TextBox();
+            this.dtNgaylap = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtMatkhd = new System.Windows.Forms.TextBox();
+            this.cbtennv = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMahd = new System.Windows.Forms.TextBox();
@@ -86,6 +92,7 @@ namespace WinFormsApp_Coffee
             this.btnKhoahd.TabIndex = 4;
             this.btnKhoahd.Text = "Khóa hóa đơn";
             this.btnKhoahd.UseVisualStyleBackColor = true;
+            this.btnKhoahd.Click += new System.EventHandler(this.btnKhoahd_Click);
             // 
             // btnXoahd
             // 
@@ -96,6 +103,7 @@ namespace WinFormsApp_Coffee
             this.btnXoahd.TabIndex = 3;
             this.btnXoahd.Text = "Xóa hóa đơn";
             this.btnXoahd.UseVisualStyleBackColor = true;
+            this.btnXoahd.Click += new System.EventHandler(this.btnXoahd_Click);
             // 
             // btnSuahd
             // 
@@ -106,6 +114,7 @@ namespace WinFormsApp_Coffee
             this.btnSuahd.TabIndex = 2;
             this.btnSuahd.Text = "Sửa hóa đơn";
             this.btnSuahd.UseVisualStyleBackColor = true;
+            this.btnSuahd.Click += new System.EventHandler(this.btnSuahd_Click);
             // 
             // btnThemhd
             // 
@@ -116,6 +125,7 @@ namespace WinFormsApp_Coffee
             this.btnThemhd.TabIndex = 1;
             this.btnThemhd.Text = "Thêm hóa đơn";
             this.btnThemhd.UseVisualStyleBackColor = true;
+            this.btnThemhd.Click += new System.EventHandler(this.btnThemhd_Click);
             // 
             // btnXemhd
             // 
@@ -139,14 +149,69 @@ namespace WinFormsApp_Coffee
             // 
             // dgvQlhoadon
             // 
+            this.dgvQlhoadon.AllowUserToAddRows = false;
             this.dgvQlhoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQlhoadon.Location = new System.Drawing.Point(4, 5);
-            this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvQlhoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvQlhoadon.Location = new System.Drawing.Point(0, 2);
+            this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQlhoadon.Name = "dgvQlhoadon";
-            this.dgvQlhoadon.RowHeadersWidth = 51;
+            this.dgvQlhoadon.RowHeadersWidth = 62;
             this.dgvQlhoadon.RowTemplate.Height = 25;
             this.dgvQlhoadon.Size = new System.Drawing.Size(588, 421);
             this.dgvQlhoadon.TabIndex = 0;
+            this.dgvQlhoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQlhoadon_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHD";
+            this.Column1.HeaderText = "Mã HĐ";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 107;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Tentk";
+            this.Column2.HeaderText = "Tên nhân viên";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Ngaylap";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column3.HeaderText = "Ngày lập";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 107;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Tenban";
+            this.Column4.HeaderText = "Tên bàn";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 107;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Trangthaihoadon";
+            this.Column5.HeaderText = "Trạng thái";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 170;
             // 
             // panel2
             // 
@@ -163,7 +228,7 @@ namespace WinFormsApp_Coffee
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.txtTrangthaihd);
+            this.panel7.Controls.Add(this.cbtrangthai);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(6, 299);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -171,13 +236,17 @@ namespace WinFormsApp_Coffee
             this.panel7.Size = new System.Drawing.Size(374, 64);
             this.panel7.TabIndex = 7;
             // 
-            // txtTrangthaihd
+            // cbtrangthai
             // 
-            this.txtTrangthaihd.Location = new System.Drawing.Point(142, 15);
-            this.txtTrangthaihd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTrangthaihd.Name = "txtTrangthaihd";
-            this.txtTrangthaihd.Size = new System.Drawing.Size(226, 31);
-            this.txtTrangthaihd.TabIndex = 1;
+            this.cbtrangthai.FormattingEnabled = true;
+            this.cbtrangthai.Items.AddRange(new object[] {
+            "Chưa thanh toán",
+            "Đã thanh toán",
+            "Đã khóa"});
+            this.cbtrangthai.Location = new System.Drawing.Point(142, 20);
+            this.cbtrangthai.Name = "cbtrangthai";
+            this.cbtrangthai.Size = new System.Drawing.Size(226, 33);
+            this.cbtrangthai.TabIndex = 1;
             // 
             // label7
             // 
@@ -191,7 +260,7 @@ namespace WinFormsApp_Coffee
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txtMabanhd);
+            this.panel6.Controls.Add(this.cbtenban);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(6, 225);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -199,13 +268,13 @@ namespace WinFormsApp_Coffee
             this.panel6.Size = new System.Drawing.Size(374, 64);
             this.panel6.TabIndex = 6;
             // 
-            // txtMabanhd
+            // cbtenban
             // 
-            this.txtMabanhd.Location = new System.Drawing.Point(142, 15);
-            this.txtMabanhd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMabanhd.Name = "txtMabanhd";
-            this.txtMabanhd.Size = new System.Drawing.Size(226, 31);
-            this.txtMabanhd.TabIndex = 1;
+            this.cbtenban.FormattingEnabled = true;
+            this.cbtenban.Location = new System.Drawing.Point(142, 20);
+            this.cbtenban.Name = "cbtenban";
+            this.cbtenban.Size = new System.Drawing.Size(226, 33);
+            this.cbtenban.TabIndex = 1;
             // 
             // label6
             // 
@@ -213,13 +282,13 @@ namespace WinFormsApp_Coffee
             this.label6.Location = new System.Drawing.Point(4, 20);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 25);
+            this.label6.Size = new System.Drawing.Size(77, 25);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Mã bàn:";
+            this.label6.Text = "Tên bàn:";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.txtGiolaphd);
+            this.panel5.Controls.Add(this.dtNgaylap);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(6, 151);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -227,13 +296,15 @@ namespace WinFormsApp_Coffee
             this.panel5.Size = new System.Drawing.Size(374, 64);
             this.panel5.TabIndex = 5;
             // 
-            // txtGiolaphd
+            // dtNgaylap
             // 
-            this.txtGiolaphd.Location = new System.Drawing.Point(142, 15);
-            this.txtGiolaphd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGiolaphd.Name = "txtGiolaphd";
-            this.txtGiolaphd.Size = new System.Drawing.Size(226, 31);
-            this.txtGiolaphd.TabIndex = 1;
+            this.dtNgaylap.CustomFormat = "dd/MM/yyyy";
+            this.dtNgaylap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgaylap.Location = new System.Drawing.Point(142, 20);
+            this.dtNgaylap.Name = "dtNgaylap";
+            this.dtNgaylap.Size = new System.Drawing.Size(226, 31);
+            this.dtNgaylap.TabIndex = 1;
+            this.dtNgaylap.Value = new System.DateTime(2021, 10, 9, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -241,13 +312,13 @@ namespace WinFormsApp_Coffee
             this.label5.Location = new System.Drawing.Point(4, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 25);
+            this.label5.Size = new System.Drawing.Size(87, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Giờ lập:";
+            this.label5.Text = "Ngày lập:";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txtMatkhd);
+            this.panel4.Controls.Add(this.cbtennv);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(4, 79);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -255,13 +326,13 @@ namespace WinFormsApp_Coffee
             this.panel4.Size = new System.Drawing.Size(376, 64);
             this.panel4.TabIndex = 4;
             // 
-            // txtMatkhd
+            // cbtennv
             // 
-            this.txtMatkhd.Location = new System.Drawing.Point(145, 15);
-            this.txtMatkhd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMatkhd.Name = "txtMatkhd";
-            this.txtMatkhd.Size = new System.Drawing.Size(226, 31);
-            this.txtMatkhd.TabIndex = 1;
+            this.cbtennv.FormattingEnabled = true;
+            this.cbtennv.Location = new System.Drawing.Point(144, 20);
+            this.cbtennv.Name = "cbtennv";
+            this.cbtennv.Size = new System.Drawing.Size(226, 33);
+            this.cbtennv.TabIndex = 1;
             // 
             // label4
             // 
@@ -269,9 +340,9 @@ namespace WinFormsApp_Coffee
             this.label4.Location = new System.Drawing.Point(4, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
+            this.label4.Size = new System.Drawing.Size(123, 25);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Mã tài khoản:";
+            this.label4.Text = "Tên nhân viên:";
             // 
             // panel3
             // 
@@ -345,19 +416,24 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridView dgvQlhoadon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtTrangthaihd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txtMabanhd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtGiolaphd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtMatkhd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMahd;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbtrangthai;
+        private System.Windows.Forms.ComboBox cbtenban;
+        private System.Windows.Forms.DateTimePicker dtNgaylap;
+        private System.Windows.Forms.ComboBox cbtennv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

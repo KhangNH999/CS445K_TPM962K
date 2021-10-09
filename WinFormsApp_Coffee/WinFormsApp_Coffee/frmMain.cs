@@ -111,6 +111,7 @@ namespace WinFormsApp_Coffee
                 f.ShowDialog();
             }
             LoadBan();
+            ShowBill(table.MaBan);
         }
 
         private void quảnLýHóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -121,7 +122,7 @@ namespace WinFormsApp_Coffee
 
         private void quảnLýHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmXemhoadon f = new frmXemhoadon();
+            frmXemHoaDonChoNV f = new frmXemHoaDonChoNV();
             f.ShowDialog();
         }
         //Load bàn 
