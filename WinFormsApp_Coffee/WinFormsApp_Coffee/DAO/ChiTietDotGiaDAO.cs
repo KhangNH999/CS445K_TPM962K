@@ -28,10 +28,15 @@ namespace WinFormsApp_Coffee.DAO
             }
             return danhSachChiTietDoUong;
         }
-
+        public DataTable loadTendouong()
+        {
+            string SQL = "select * from dbo.DOUONG";
+            DataTable dt = clsDB.Instance.execQuery(SQL);
+            return dt;
+        }
         public DataTable loadMaDotGia()
         {
-            string SQL = "select * from dbo.GIATHEODOT";
+            string SQL = "select * from dbo.GIATHEODOT where trangthaigia = 1";
             DataTable dt = clsDB.Instance.execQuery(SQL);
             return dt;
         }

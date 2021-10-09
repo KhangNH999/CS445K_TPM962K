@@ -136,15 +136,23 @@ namespace WinFormsApp_Coffee
             {
                 int madotkm = Int32.Parse(cbbMadotkm.SelectedValue.ToString());
                 int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
-                if (ChitietKMDAO.Instance.xoaSanPhamKM(madotkm,madouong))//Gọi phương thức xóa bàn từ DAO
+                try
                 {
-                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadDanhSachKM();
-                    loadXoadulieu();
+                    if (ChitietKMDAO.Instance.xoaSanPhamKM(madotkm, madouong))//Gọi phương thức xóa bàn từ DAO
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDanhSachKM();
+                        loadXoadulieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đợt khuyến mãi này đang được sử dụng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
         }

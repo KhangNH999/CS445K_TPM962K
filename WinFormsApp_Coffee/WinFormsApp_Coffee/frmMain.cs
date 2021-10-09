@@ -81,7 +81,19 @@ namespace WinFormsApp_Coffee
         private void quảnLýTàiKhoảnCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanlytaikhoancanhan f = new frmQuanlytaikhoancanhan(DnTaiKhoan);
+            f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
+        }
+        //Cập nhật lại tài khoản
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
+            DnTaiKhoan.MaTaiKhoan = e.Acc.MaTaiKhoan;
+            DnTaiKhoan.TenNV = e.Acc.TenNV;
+            DnTaiKhoan.NgaySinh = e.Acc.NgaySinh;
+            DnTaiKhoan.GioiTinh = e.Acc.GioiTinh;
+            DnTaiKhoan.CMnd = e.Acc.CMND;
+            DnTaiKhoan.Email = e.Acc.Email;
+            DnTaiKhoan.Sdt = e.Acc.SDT;
         }
         //Hiển thị form ql đợt giá
         private void quảnLýĐợtGiáToolStripMenuItem_Click(object sender, EventArgs e)

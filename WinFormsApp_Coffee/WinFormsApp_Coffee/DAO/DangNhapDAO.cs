@@ -21,7 +21,7 @@ namespace WinFormsApp_Coffee.DAO
         @matkhau nvarchar(100)
         AS
         BEGIN
-        SELECT * FROM dbo.TAIKHOAN where tendangnhap = @tendangnhap and matkhau = @matkhau
+        SELECT * FROM dbo.TAIKHOAN where tendangnhap = @tendangnhap and matkhau = @matkhau and trangthaitk = 0
         END
          */
         public bool DangNhap(string tendangnhap, string matkhau)
@@ -39,6 +39,22 @@ namespace WinFormsApp_Coffee.DAO
                 return new TaiKhoanLogin(item);
             }
             return null;
+        }
+        public TaiKhoan Laymataikhoan(int matk)
+        {
+            DataTable data = clsDB.Instance.execQuery("Select * from TAIKHOAN where mataikhoan = " + matk + "");
+
+            foreach (DataRow item in data.Rows)
+            {
+                return new TaiKhoan(item);
+            }
+
+            return null;
+        }
+        public bool KiemtrataikhoanBiKhoa(string tendn)
+        {
+            DataTable dt = clsDB.Instance.execQuery("select * from dbo.TAIKHOAN where tendangnhap = '" + tendn + "' and trangthaitk = 1");
+            return dt.Rows.Count > 0;
         }
     }
 }

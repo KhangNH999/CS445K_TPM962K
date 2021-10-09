@@ -115,16 +115,24 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int madm = Int32.Parse(txtMadanhmuc.Text);
-                if (QuanLyDMDoUongDAO.Instance.xoaDanhMuc(madm))//Gọi phương thức xóa danh mục từ DAO
+                try
                 {
-                    MessageBox.Show("Xóa danh mục thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadDanhMuc();
-                    xoaDuLieu();
+                    int madm = Int32.Parse(txtMadanhmuc.Text);
+                    if (QuanLyDMDoUongDAO.Instance.xoaDanhMuc(madm))//Gọi phương thức xóa danh mục từ DAO
+                    {
+                        MessageBox.Show("Xóa danh mục thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDanhMuc();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa danh mục không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa danh mục không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Danh mục này đang được sử dụng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
         }

@@ -21,6 +21,7 @@ namespace WinFormsApp_Coffee
         {
             dgvQuanlytaikhoan.DataSource = QuanLyTaiKhoanDAO.Instance.loadDanhSachTaiKhoan();
             ccbTrangthaitk.SelectedIndex = 0;
+            cbGioiTinh.SelectedIndex = 0;
         }
         //phương thức xóa dữ liệu có trong textbox, dataTimePicker, Combobox
         void xoaDuLieu()
@@ -30,7 +31,7 @@ namespace WinFormsApp_Coffee
             txtMatkhau.Clear();
             txtTen.Clear();
             DateNgaysinh.Value = DateTime.Today;
-            txtGioitinh.Clear();
+            cbGioiTinh.SelectedIndex=0;
             txtCmnd.Clear();
             txtEmail.Clear();
             txtSdt.Clear();
@@ -41,9 +42,10 @@ namespace WinFormsApp_Coffee
         //Tạo sự kiện thêm bàn
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if(txtTendangnhap.Text == "" || txtMatkhau.Text == "" || txtTen.Text == "" || txtGioitinh.Text == "" || txtCmnd.Text == "" || txtSdt.Text == "" || txtEmail.Text == "")
+            if(txtTendangnhap.Text == "" || txtMatkhau.Text == "" || txtTen.Text == "" || cbGioiTinh.Text == "" || txtCmnd.Text == "" || txtSdt.Text == "" || txtEmail.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             try
             {
@@ -51,14 +53,18 @@ namespace WinFormsApp_Coffee
                 string matkhau = txtMatkhau.Text;
                 string ten = txtTen.Text;
                 DateTime ngaysinh = DateNgaysinh.Value;
-                string gioitinh = txtGioitinh.Text;
+                string gioitinh = cbGioiTinh.SelectedItem.ToString();
                 string cmnd = txtCmnd.Text;
                 string email = txtEmail.Text;
                 string sdt = txtSdt.Text;
                 int loaitk = ccbLoaitk.SelectedIndex;
                 int trangthai = ccbTrangthaitk.SelectedIndex;
-               
-                    if(QuanLyTaiKhoanDAO.Instance.themTaiKhoan(tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
+                if (QuanLyTaiKhoanDAO.Instance.kiemTraTaiKhoanTonTai(tendangnhap))
+                {
+                    MessageBox.Show("Tên đăng nhập này đã tồn tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (QuanLyTaiKhoanDAO.Instance.themTaiKhoan(tendangnhap, matkhau, ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
                     {
                         MessageBox.Show("Thêm tài khoản thành công!");
                         loadTaiKhoan();
@@ -80,6 +86,7 @@ namespace WinFormsApp_Coffee
             if (txtMataikhoan.Text == "" || txtTendangnhap.Text == "" || txtMatkhau.Text == "" )
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             try
             {
@@ -88,7 +95,7 @@ namespace WinFormsApp_Coffee
                 string matkhau = txtMatkhau.Text;
                 string ten = txtTen.Text;
                 DateTime ngaysinh = DateNgaysinh.Value;
-                string gioitinh = txtGioitinh.Text;
+                string gioitinh = cbGioiTinh.SelectedItem.ToString();
                 string cmnd = txtCmnd.Text;
                 string email = txtEmail.Text;
                 string sdt = txtSdt.Text;
@@ -119,7 +126,7 @@ namespace WinFormsApp_Coffee
             txtMatkhau.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[2].Value + "";
             txtTen.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[3].Value + "";
             DateNgaysinh.Value = Convert.ToDateTime(dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[4].Value);
-            txtGioitinh.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[5].Value + "";
+            cbGioiTinh.SelectedItem = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[5].Value + "";
             txtCmnd.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[6].Value + "";
             txtEmail.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[7].Value + "";
             txtSdt.Text = dgvQuanlytaikhoan.Rows[e.RowIndex].Cells[8].Value + "";
@@ -141,16 +148,29 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int mataikhoan = Int32.Parse(txtMataikhoan.Text);
-                if (QuanLyTaiKhoanDAO.Instance.xoaTaiKhoan(mataikhoan))//Gọi phương thức xóa bàn từ DAO
+                if (QuanLyTaiKhoanDAO.Instance.KiemTraTaiKhoanAdmin(Int32.Parse(txtMataikhoan.Text)))
                 {
-                    MessageBox.Show("Xóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadTaiKhoan();
-                    xoaDuLieu();
+                    MessageBox.Show("Bạn không thể xóa tài khoản admin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-                else
+                try
                 {
-                    MessageBox.Show("Xóa tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int mataikhoan = Int32.Parse(txtMataikhoan.Text);
+                    if (QuanLyTaiKhoanDAO.Instance.xoaTaiKhoan(mataikhoan))//Gọi phương thức xóa từ DAO
+                    {
+                        MessageBox.Show("Xóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadTaiKhoan();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn không thể xóa tài khoản này, tài khoản này hiện tại đang sử dụng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }          
         }
@@ -164,6 +184,43 @@ namespace WinFormsApp_Coffee
         private void btnLammoi_Click(object sender, EventArgs e)
         {
             xoaDuLieu();
+        }
+
+        private void btnKhoatk_Click(object sender, EventArgs e)
+        {
+            if (txtMataikhoan.Text == "" || txtTendangnhap.Text == "" || txtMatkhau.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào tài khoản muốn khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+           
+            if (MessageBox.Show("Bạn có muốn khóa tài khoản không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn khóa tài khoản ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
+            {
+                return;
+            }
+            else
+            {
+                int mataikhoan = Int32.Parse(txtMataikhoan.Text);
+                if (QuanLyTaiKhoanDAO.Instance.KiemTraTaiKhoanAdmin(Int32.Parse(txtMataikhoan.Text)))
+                {
+                    MessageBox.Show("Bạn không thể khóa tài khoản admin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    if (QuanLyTaiKhoanDAO.Instance.KhoaTaiKhoan(mataikhoan))//Gọi phương thức khóa từ DAO
+                    {
+                        MessageBox.Show("Khóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadTaiKhoan();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Khóa tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

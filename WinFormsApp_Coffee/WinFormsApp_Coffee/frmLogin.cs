@@ -54,6 +54,11 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if(DangNhapDAO.Instance.KiemtrataikhoanBiKhoa(tendangnhap))
+            {
+                MessageBox.Show("Tài khoản này đã bị khóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (DangNhapDAO.Instance.DangNhap(tendangnhap, matkhau))
             {
                 TaiKhoanLogin dntaikhoan = DangNhapDAO.Instance.LayTaiKhoan(tendangnhap);

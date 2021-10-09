@@ -29,7 +29,6 @@ namespace WinFormsApp_Coffee
         //Load thông tin cá nhân
         void ChangeTaiKhoan(TaiKhoanLogin tk)
         {
-            txtTendangnhap.Text = DnTaiKhoan.TenDangNhap;
             txtMatk.Text = DnTaiKhoan.MaTaiKhoan.ToString();
             txtTen.Text = DnTaiKhoan.TenNV;
             dtngaysinh.Value = DnTaiKhoan.NgaySinh;
@@ -43,6 +42,8 @@ namespace WinFormsApp_Coffee
         private void btnDoimatkhau_Click(object sender, EventArgs e)
         {
             frmDoimatkhau f = new frmDoimatkhau();
+            f.Matk = DnTaiKhoan.MaTaiKhoan;
+            f.Tendn = DnTaiKhoan.TenDangNhap;
             f.ShowDialog();
         }
         void capnhapthongtincanhan()
@@ -51,6 +52,7 @@ namespace WinFormsApp_Coffee
             if (txtMatk.Text == "" || txtTen.Text == "" || txtGioitinh.Text == "" || txtCmnd.Text == "" || txtEmail.Text == "" || txtSodienthoai.Text == "" )
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             try
             {
@@ -65,6 +67,8 @@ namespace WinFormsApp_Coffee
                     if (CapNhapTaiKhoanDAO.Instance.capnhapthongtincanhan(mataikhoan, tennv, ngaysinh, gioitinh, cmnd, email, sdt))
                     {
                         MessageBox.Show("Cập nhập thành công");
+                    if (updateAccount != null)
+                        updateAccount(this, new AccountEvent(DangNhapDAO.Instance.Laymataikhoan(mataikhoan)));
                     }
                     else
                     {
@@ -84,8 +88,29 @@ namespace WinFormsApp_Coffee
             {
                 capnhapthongtincanhan();     
             }
+        private event EventHandler<AccountEvent> updateAccount;
+        public event EventHandler<AccountEvent> UpdateAccount
+        {
+            add { updateAccount += value; }
+            remove { updateAccount -= value; }
         }
     }
+    public class AccountEvent : EventArgs
+    {
+        private TaiKhoan acc;
+
+        public TaiKhoan Acc
+        {
+            get { return acc; }
+            set { acc = value; }
+        }
+
+        public AccountEvent(TaiKhoan acc)
+        {
+            this.Acc = acc;
+        }
+    }
+}
 
 
 

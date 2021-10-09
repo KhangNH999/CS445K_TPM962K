@@ -15,14 +15,14 @@ namespace WinFormsApp_Coffee
         {
             InitializeComponent();
             loadDS();
-            
+            loadTenDouong();
+            loadMadotgia();
         }
         void xoaDuLieu()
         {
-            txtMadotgia.Clear();
+            cbMadotgia.SelectedIndex = 0;
             txtGiaban.Clear();
-            txtMadouong.Clear();
-            txtMadotgia.Focus();
+            cbTenmon.SelectedIndex = 0;
         }
         void loadDS()
         {
@@ -30,15 +30,15 @@ namespace WinFormsApp_Coffee
         }
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if (txtMadotgia.Text == "" || txtMadouong.Text == "" || txtGiaban.Text == "")
+            if (cbMadotgia.Text == "" || cbTenmon.Text == "" || txtGiaban.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotgia = Int32.Parse(txtMadotgia.Text);
-                int madouong = Int32.Parse(txtMadouong.Text);
+                int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
                 double giaban = double.Parse(txtGiaban.Text);
                 if (ChiTietDotGiaDAO.Instance.kiemTraMaDotGiaTonTai(madotgia) == false) //Kiểm tra bàn tồn tại
                 {
@@ -65,19 +65,24 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Bạn đã nhập sai kí tự hoặc mã đồ uống không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //void loadDMDouong()
-        //{
-        //    cbMadouong.DataSource = QuanLyDoUongDAO.Instance.loadDMDouong();
-        //    cbbMadanhmu.DisplayMember = "tendanhmuc";
-        //    cbbMadanhmuc.ValueMember = "madanhmuc";
-        //}
-
+        void loadTenDouong()
+        {
+            cbTenmon.DataSource = ChiTietDotGiaDAO.Instance.loadTendouong();
+            cbTenmon.DisplayMember = "tendouong";
+            cbTenmon.ValueMember = "madouong";
+        }
+        void loadMadotgia()
+        {
+            cbMadotgia.DataSource = ChiTietDotGiaDAO.Instance.loadMaDotGia();
+            cbMadotgia.DisplayMember = "madotgia";
+            cbMadotgia.ValueMember = "madotgia";
+        }
         private void dgvChitietdotgia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            txtMadotgia.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[1].Value + "";
-            txtMadouong.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[0].Value + "";
-            txtGiaban.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[2].Value + "";
+            cbMadotgia.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[0].Value + "";
+            cbTenmon.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[2].Value + "";
+            txtGiaban.Text = dgvChitietdotgia.Rows[e.RowIndex].Cells[1].Value + "";
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
@@ -87,15 +92,15 @@ namespace WinFormsApp_Coffee
 
         private void btnSuadouong_Click(object sender, EventArgs e)
         {
-            if (txtMadotgia.Text == "" || txtMadouong.Text == "" || txtGiaban.Text == "")
+            if (cbMadotgia.Text == "" || cbTenmon.Text == "" || txtGiaban.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấp chuột vào mã muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotgia = Int32.Parse(txtMadotgia.Text);
-                int madouong = Int32.Parse(txtMadouong.Text);
+                int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
                 double giaban = double.Parse(txtGiaban.Text);
                 if (giaban < 0)
                 {
@@ -121,7 +126,7 @@ namespace WinFormsApp_Coffee
 
         private void btnXoadouong_Click(object sender, EventArgs e)
         {
-            if (txtMadotgia.Text == "" || txtMadouong.Text == "" || txtGiaban.Text == "")
+            if (cbMadotgia.Text == "" || cbTenmon.Text == "" || txtGiaban.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấp chuột vào mã muốn xóa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -133,18 +138,26 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int madotgia = Int32.Parse(txtMadotgia.Text);
-                int madouong = Int32.Parse(txtMadouong.Text);
+                try
+                {
+                    int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                    int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
 
-                if (ChiTietDotGiaDAO.Instance.xoaChiTietDoUong(madotgia, madouong))//Gọi phương thức xóa bàn từ DAO
-                {
-                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadDS();
-                    xoaDuLieu();
+                    if (ChiTietDotGiaDAO.Instance.xoaChiTietDoUong(madotgia, madouong))//Gọi phương thức xóa bàn từ DAO
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDS();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn không thể xóa đồ uống này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
         }

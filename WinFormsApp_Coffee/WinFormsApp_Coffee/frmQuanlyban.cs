@@ -137,16 +137,24 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int ma = Int32.Parse(txtMaban.Text);
-                if (QuanLyBanDAO.Instance.xoaBan(ma))//Gọi phương thức xóa bàn từ DAO
+                try
                 {
-                    MessageBox.Show("Xóa bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadBan();
-                    xoaDuLieu();
+                    int ma = Int32.Parse(txtMaban.Text);
+                    if (QuanLyBanDAO.Instance.xoaBan(ma))//Gọi phương thức xóa bàn từ DAO
+                    {
+                        MessageBox.Show("Xóa bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadBan();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa bàn không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn không thể xóa bàn này. Bàn này đang được dùng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
         }

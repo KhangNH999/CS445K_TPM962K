@@ -77,19 +77,10 @@ namespace WinFormsApp_Coffee.DAO
             return result > 0;
         }
         //Phương thức kiểm tra tài khoản có trong csdl hay không
-        public bool kiemTraTaiKhoanTonTai(int mataikhoan)
+        public bool kiemTraTaiKhoanTonTai(string tendn)
         {
-            DataTable tb = clsDB.Instance.execQuery("select *from dbo.taikhoan where mataikhoan=" + mataikhoan + "" );
-            if(tb.Rows.Count>0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
-
+            DataTable tb = clsDB.Instance.execQuery("select * from dbo.taikhoan where tendangnhap = '" + tendn + "'");
+            return tb.Rows.Count > 0;
         }
         //Phương thức sửa tt tài khoản
         /*CREATE proc [dbo].[USP_SuaThongTinTaiKhoan]
@@ -129,6 +120,24 @@ namespace WinFormsApp_Coffee.DAO
         {
             int result = clsDB.Instance.execNonQuery("exec USP_XoaTaiKhoan @mataikhoan", new object[] { mataikhoan });
             return result>0;
+        }
+        /*
+         create proc USP_KhoaTaiKhoan
+        @mataikhoan int
+        as 
+        begin
+        update dbo.TAIKHOAN set trangthaitk = 1 where mataikhoan = @mataikhoan
+        end 
+         */
+        public bool KhoaTaiKhoan(int mataikhoan)
+        {
+            int result = clsDB.Instance.execNonQuery("exec USP_KhoaTaiKhoan @mataikhoan", new object[] { mataikhoan });
+            return result > 0;
+        }
+        public bool KiemTraTaiKhoanAdmin(int mataikhoan)
+        {
+            DataTable dt = clsDB.Instance.execQuery("select * from dbo.TAIKHOAN where mataikhoan = " + mataikhoan + " and maloaitk = 0");
+            return dt.Rows.Count > 0;
         }
         //Load loại tk
         public DataTable loadLoaiTK()

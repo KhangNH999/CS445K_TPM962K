@@ -33,12 +33,6 @@ namespace WinFormsApp_Coffee
         {
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.btnDoimatkhau = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtTendangnhap = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtMatkhau = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,8 +54,6 @@ namespace WinFormsApp_Coffee
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMatk = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -73,10 +65,10 @@ namespace WinFormsApp_Coffee
             // 
             // btnCapnhat
             // 
-            this.btnCapnhat.Location = new System.Drawing.Point(15, 530);
+            this.btnCapnhat.Location = new System.Drawing.Point(15, 539);
             this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapnhat.Name = "btnCapnhat";
-            this.btnCapnhat.Size = new System.Drawing.Size(661, 45);
+            this.btnCapnhat.Size = new System.Drawing.Size(661, 55);
             this.btnCapnhat.TabIndex = 1;
             this.btnCapnhat.Text = "Cập nhật thông tin cá nhân";
             this.btnCapnhat.UseVisualStyleBackColor = true;
@@ -84,71 +76,14 @@ namespace WinFormsApp_Coffee
             // 
             // btnDoimatkhau
             // 
-            this.btnDoimatkhau.Location = new System.Drawing.Point(15, 732);
+            this.btnDoimatkhau.Location = new System.Drawing.Point(15, 604);
             this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDoimatkhau.Name = "btnDoimatkhau";
-            this.btnDoimatkhau.Size = new System.Drawing.Size(661, 46);
+            this.btnDoimatkhau.Size = new System.Drawing.Size(661, 51);
             this.btnDoimatkhau.TabIndex = 2;
             this.btnDoimatkhau.Text = "Đổi mật khẩu";
             this.btnDoimatkhau.UseVisualStyleBackColor = true;
             this.btnDoimatkhau.Click += new System.EventHandler(this.btnDoimatkhau_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtTendangnhap);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(15, 585);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(661, 64);
-            this.panel2.TabIndex = 4;
-            // 
-            // txtTendangnhap
-            // 
-            this.txtTendangnhap.Location = new System.Drawing.Point(219, 15);
-            this.txtTendangnhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTendangnhap.Name = "txtTendangnhap";
-            this.txtTendangnhap.ReadOnly = true;
-            this.txtTendangnhap.Size = new System.Drawing.Size(436, 31);
-            this.txtTendangnhap.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên đăng nhập :";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtMatkhau);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(15, 659);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(661, 64);
-            this.panel3.TabIndex = 3;
-            // 
-            // txtMatkhau
-            // 
-            this.txtMatkhau.Location = new System.Drawing.Point(219, 15);
-            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(436, 31);
-            this.txtMatkhau.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mật khẩu :";
             // 
             // panel4
             // 
@@ -193,7 +128,7 @@ namespace WinFormsApp_Coffee
             this.dtngaysinh.CustomFormat = "dd/MM/yyyy";
             this.dtngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtngaysinh.Location = new System.Drawing.Point(218, 14);
-            this.dtngaysinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtngaysinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtngaysinh.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtngaysinh.Name = "dtngaysinh";
             this.dtngaysinh.Size = new System.Drawing.Size(438, 31);
@@ -356,7 +291,7 @@ namespace WinFormsApp_Coffee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 799);
+            this.ClientSize = new System.Drawing.Size(691, 677);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -364,8 +299,6 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnDoimatkhau);
             this.Controls.Add(this.btnCapnhat);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -373,10 +306,6 @@ namespace WinFormsApp_Coffee
             this.Name = "frmQuanlytaikhoancanhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản cá nhân";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -401,12 +330,6 @@ namespace WinFormsApp_Coffee
 
         private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.Button btnDoimatkhau;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtTendangnhap;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtMatkhau;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label4;
