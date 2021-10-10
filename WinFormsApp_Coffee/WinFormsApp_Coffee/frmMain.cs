@@ -135,6 +135,7 @@ namespace WinFormsApp_Coffee
         private void quảnLýHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmXemHoaDonChoNV f = new frmXemHoaDonChoNV();
+            f.Matk = DnTaiKhoan.MaTaiKhoan;
             f.ShowDialog();
         }
         //Load bàn 

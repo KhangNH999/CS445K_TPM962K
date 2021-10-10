@@ -55,11 +55,13 @@ namespace WinFormsApp_Coffee
         {
             double tongcong = 0;
             List<Thongke> danhSach = new List<Thongke>();
+            DateTime ngay1 = dateTimePicker1.Value;
+            DateTime ngay2 = dateTimePicker2.Value;
             if (cbbtennhanvien.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
             int id = Convert.ToInt32(cbbtennhanvien.SelectedValue.ToString());
-            dgvQuanlythongke.DataSource = QuanLyThongKeDAO.Instance.loadThongKeTheoTenNV(id);
-            string SQL = "SELECT b.mahoadon, d.tenban, a.tendouong, b.soluong, b.tlgiamgia, b.tongtien, c.giolap, e.tennv FROM dbo.DOUONG as a, dbo.CHITIETHOADON as b, dbo.HOADON as c, dbo.BAN as d, dbo.TAIKHOAN as e WHERE  c.mataikhoan = e.mataikhoan and c.maban = d.maban and b.mahoadon = c.mahoadon and b.madouong = a.madouong and c.mataikhoan = " + id + " and c.trangthaihoadon = 1";
+            dgvQuanlythongke.DataSource = QuanLyThongKeDAO.Instance.loadThongKeTheoTenNV(id, ngay1, ngay2);
+            string SQL = "SELECT b.mahoadon, d.tenban, a.tendouong, b.soluong, b.tlgiamgia, b.tongtien, c.giolap, e.tennv FROM dbo.DOUONG as a, dbo.CHITIETHOADON as b, dbo.HOADON as c, dbo.BAN as d, dbo.TAIKHOAN as e WHERE  c.mataikhoan = e.mataikhoan and c.maban = d.maban and b.mahoadon = c.mahoadon and b.madouong = a.madouong and c.mataikhoan = " + id + " and c.giolap >= '" + ngay1 + "' and c.giolap <= '" + ngay2 + "' and c.trangthaihoadon = 1";
             DataTable dt = clsDB.Instance.execQuery(SQL);
             foreach (DataRow item in dt.Rows)
             {

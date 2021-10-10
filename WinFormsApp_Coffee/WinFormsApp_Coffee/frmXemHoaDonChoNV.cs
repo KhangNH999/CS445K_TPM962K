@@ -11,14 +11,17 @@ namespace WinFormsApp_Coffee
 {
     public partial class frmXemHoaDonChoNV : Form
     {
+        private int matk;
+
+        public int Matk { get => matk; set => matk = value; }
+
         public frmXemHoaDonChoNV()
         {
             InitializeComponent();
-            loadHD();
         }
         void loadHD()
         {
-            dgvQlhoadon.DataSource = QuanLyHoaDonDAO.Instance.loadDanhSachHD();
+            dgvQlhoadon.DataSource = QuanLyHoaDonDAO.Instance.loadDanhSachHDTheoNV(matk);
         }
 
         private void dgvQlhoadon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -32,6 +35,7 @@ namespace WinFormsApp_Coffee
 
         private void frmXemHoaDonChoNV_Load(object sender, EventArgs e)
         {
+            loadHD();
         }
 
         private void btnXemhoadon_Click(object sender, EventArgs e)
@@ -47,6 +51,13 @@ namespace WinFormsApp_Coffee
             f.Tennv = txtNV.Text;
             f.Tenban = txtTenban.Text;
             f.ShowDialog();
+        }
+
+        private void btnTHongke_Click(object sender, EventArgs e)
+        {
+            DateTime ngay1 = dtNgay.Value;
+            DateTime ngay2 = dtngay1.Value;
+            dgvQlhoadon.DataSource = QuanLyHoaDonDAO.Instance.loadDanhSachHDTheoNgay(matk, ngay1, ngay2);
         }
     }
 }

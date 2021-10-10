@@ -38,10 +38,10 @@ namespace WinFormsApp_Coffee.DAO
             }
             return danhSach;
         }
-        public List<Thongke> loadThongKeTheoTenNV(int matk)
+        public List<Thongke> loadThongKeTheoTenNV(int matk, DateTime ngay1, DateTime ngay2)
         {
             List<Thongke> danhSach = new List<Thongke>();
-            DataTable data = clsDB.Instance.execQuery(" SELECT b.mahoadon, d.tenban, a.tendouong, b.soluong, b.tlgiamgia, b.tongtien, c.giolap, e.tennv FROM dbo.DOUONG as a, dbo.CHITIETHOADON as b, dbo.HOADON as c, dbo.BAN as d, dbo.TAIKHOAN as e WHERE  c.mataikhoan = e.mataikhoan and c.maban = d.maban and b.mahoadon = c.mahoadon and b.madouong = a.madouong and c.mataikhoan = " + matk + " and c.trangthaihoadon = 1");//Lấy thủ tục từ SQL server
+            DataTable data = clsDB.Instance.execQuery(" SELECT b.mahoadon, d.tenban, a.tendouong, b.soluong, b.tlgiamgia, b.tongtien, c.giolap, e.tennv FROM dbo.DOUONG as a, dbo.CHITIETHOADON as b, dbo.HOADON as c, dbo.BAN as d, dbo.TAIKHOAN as e WHERE  c.mataikhoan = e.mataikhoan and c.maban = d.maban and b.mahoadon = c.mahoadon and b.madouong = a.madouong and c.mataikhoan = " + matk + " and c.giolap >= '" + ngay1 + "' and c.giolap <= '" + ngay2 + "' and c.trangthaihoadon = 1");//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
                 Thongke tk = new Thongke(item);

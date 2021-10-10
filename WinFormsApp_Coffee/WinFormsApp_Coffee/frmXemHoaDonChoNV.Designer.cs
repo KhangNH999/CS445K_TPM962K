@@ -33,6 +33,9 @@ namespace WinFormsApp_Coffee
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemHoaDonChoNV));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtNgay = new System.Windows.Forms.DateTimePicker();
+            this.btnTHongke = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnXemhoadon = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,7 +54,11 @@ namespace WinFormsApp_Coffee
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtngay1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,30 +77,65 @@ namespace WinFormsApp_Coffee
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 638);
+            this.panel1.Size = new System.Drawing.Size(1023, 813);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.dtngay1);
+            this.groupBox4.Controls.Add(this.dtNgay);
+            this.groupBox4.Controls.Add(this.btnTHongke);
+            this.groupBox4.Location = new System.Drawing.Point(3, 197);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1017, 89);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thống kê hóa đơn theo ngày";
+            // 
+            // dtNgay
+            // 
+            this.dtNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgay.Location = new System.Drawing.Point(101, 33);
+            this.dtNgay.Name = "dtNgay";
+            this.dtNgay.Size = new System.Drawing.Size(259, 31);
+            this.dtNgay.TabIndex = 14;
+            this.dtNgay.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
+            // 
+            // btnTHongke
+            // 
+            this.btnTHongke.Location = new System.Drawing.Point(780, 27);
+            this.btnTHongke.Name = "btnTHongke";
+            this.btnTHongke.Size = new System.Drawing.Size(231, 44);
+            this.btnTHongke.TabIndex = 13;
+            this.btnTHongke.Text = "Thống kê";
+            this.btnTHongke.UseVisualStyleBackColor = true;
+            this.btnTHongke.Click += new System.EventHandler(this.btnTHongke_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnXemhoadon);
-            this.groupBox3.Location = new System.Drawing.Point(3, 197);
+            this.groupBox3.Location = new System.Drawing.Point(6, 292);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1017, 63);
+            this.groupBox3.Size = new System.Drawing.Size(1017, 96);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Chức năng";
+            this.groupBox3.Text = "Xem chi tiết hóa đơn";
             // 
             // btnXemhoadon
             // 
-            this.btnXemhoadon.Location = new System.Drawing.Point(314, 18);
+            this.btnXemhoadon.Location = new System.Drawing.Point(12, 30);
             this.btnXemhoadon.Name = "btnXemhoadon";
-            this.btnXemhoadon.Size = new System.Drawing.Size(343, 40);
+            this.btnXemhoadon.Size = new System.Drawing.Size(996, 50);
             this.btnXemhoadon.TabIndex = 10;
             this.btnXemhoadon.Text = "Xem chi tiết hóa đơn";
             this.btnXemhoadon.UseVisualStyleBackColor = true;
@@ -191,9 +233,9 @@ namespace WinFormsApp_Coffee
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvQlhoadon);
-            this.groupBox1.Location = new System.Drawing.Point(3, 266);
+            this.groupBox1.Location = new System.Drawing.Point(3, 394);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1017, 369);
+            this.groupBox1.Size = new System.Drawing.Size(1017, 416);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -214,7 +256,7 @@ namespace WinFormsApp_Coffee
             this.dgvQlhoadon.Name = "dgvQlhoadon";
             this.dgvQlhoadon.RowHeadersWidth = 62;
             this.dgvQlhoadon.RowTemplate.Height = 25;
-            this.dgvQlhoadon.Size = new System.Drawing.Size(1007, 335);
+            this.dgvQlhoadon.Size = new System.Drawing.Size(1007, 379);
             this.dgvQlhoadon.TabIndex = 1;
             this.dgvQlhoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQlhoadon_CellClick);
             // 
@@ -260,11 +302,39 @@ namespace WinFormsApp_Coffee
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // dtngay1
+            // 
+            this.dtngay1.CustomFormat = "dd/MM/yyyy";
+            this.dtngay1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtngay1.Location = new System.Drawing.Point(499, 32);
+            this.dtngay1.Name = "dtngay1";
+            this.dtngay1.Size = new System.Drawing.Size(259, 31);
+            this.dtngay1.TabIndex = 15;
+            this.dtngay1.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 25);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Từ ngày:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(391, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Đến ngày:";
+            // 
             // frmXemHoaDonChoNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 659);
+            this.ClientSize = new System.Drawing.Size(1047, 834);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXemHoaDonChoNV";
@@ -272,6 +342,8 @@ namespace WinFormsApp_Coffee
             this.Load += new System.EventHandler(this.frmXemHoaDonChoNV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -303,5 +375,11 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DateTimePicker dtNgay;
+        private System.Windows.Forms.Button btnTHongke;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtngay1;
     }
 }

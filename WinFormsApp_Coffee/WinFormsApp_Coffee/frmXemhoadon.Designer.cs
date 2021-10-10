@@ -51,10 +51,14 @@ namespace WinFormsApp_Coffee
             this.label3 = new System.Windows.Forms.Label();
             this.txtNhanVien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTong = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiethoadon)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -249,11 +253,46 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 1;
             this.label1.Text = "Xem chi tiết hóa đơn";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtTong);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(16, 588);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1079, 75);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tổng doanh thu";
+            // 
+            // txtTong
+            // 
+            this.txtTong.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTong.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txtTong.Location = new System.Drawing.Point(650, 18);
+            this.txtTong.Name = "txtTong";
+            this.txtTong.ReadOnly = true;
+            this.txtTong.Size = new System.Drawing.Size(423, 45);
+            this.txtTong.TabIndex = 3;
+            this.txtTong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(497, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 38);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Tổng cộng";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // frmXemhoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 590);
+            this.ClientSize = new System.Drawing.Size(1109, 671);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -268,6 +307,8 @@ namespace WinFormsApp_Coffee
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiethoadon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +334,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtTong;
+        private System.Windows.Forms.Label label6;
     }
 }
