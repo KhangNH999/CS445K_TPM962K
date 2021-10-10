@@ -30,10 +30,14 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemHoaDonChoNV));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtngay1 = new System.Windows.Forms.DateTimePicker();
             this.dtNgay = new System.Windows.Forms.DateTimePicker();
             this.btnTHongke = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -54,15 +58,17 @@ namespace WinFormsApp_Coffee
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtngay1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtTong = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +106,34 @@ namespace WinFormsApp_Coffee
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thống kê hóa đơn theo ngày";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(391, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Đến ngày:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 25);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Từ ngày:";
+            // 
+            // dtngay1
+            // 
+            this.dtngay1.CustomFormat = "dd/MM/yyyy";
+            this.dtngay1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtngay1.Location = new System.Drawing.Point(499, 32);
+            this.dtngay1.Name = "dtngay1";
+            this.dtngay1.Size = new System.Drawing.Size(259, 31);
+            this.dtngay1.TabIndex = 15;
+            this.dtngay1.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
             // 
             // dtNgay
             // 
@@ -250,7 +284,8 @@ namespace WinFormsApp_Coffee
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.dgvQlhoadon.Location = new System.Drawing.Point(5, 29);
             this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQlhoadon.Name = "dgvQlhoadon";
@@ -302,42 +337,60 @@ namespace WinFormsApp_Coffee
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // dtngay1
+            // Column6
             // 
-            this.dtngay1.CustomFormat = "dd/MM/yyyy";
-            this.dtngay1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngay1.Location = new System.Drawing.Point(499, 32);
-            this.dtngay1.Name = "dtngay1";
-            this.dtngay1.Size = new System.Drawing.Size(259, 31);
-            this.dtngay1.TabIndex = 15;
-            this.dtngay1.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
+            this.Column6.DataPropertyName = "Tongtien";
+            dataGridViewCellStyle2.Format = "#,###";
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column6.HeaderText = "Tổng tiền";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
-            // label6
+            // groupBox5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 25);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Từ ngày:";
+            this.groupBox5.Controls.Add(this.txtTong);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Location = new System.Drawing.Point(12, 833);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1023, 88);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tổng doanh thu";
             // 
-            // label7
+            // txtTong
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(391, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 25);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Đến ngày:";
+            this.txtTong.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTong.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txtTong.Location = new System.Drawing.Point(591, 30);
+            this.txtTong.Name = "txtTong";
+            this.txtTong.ReadOnly = true;
+            this.txtTong.Size = new System.Drawing.Size(423, 45);
+            this.txtTong.TabIndex = 5;
+            this.txtTong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(438, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(156, 38);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Tổng cộng";
             // 
             // frmXemHoaDonChoNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 834);
+            this.ClientSize = new System.Drawing.Size(1047, 932);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmXemHoaDonChoNV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem hóa đơn";
             this.Load += new System.EventHandler(this.frmXemHoaDonChoNV_Load);
             this.panel1.ResumeLayout(false);
@@ -349,6 +402,8 @@ namespace WinFormsApp_Coffee
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -358,11 +413,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvQlhoadon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TextBox txtTenban;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMaHD;
@@ -381,5 +431,14 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtngay1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtTong;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

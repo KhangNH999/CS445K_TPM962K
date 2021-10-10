@@ -138,45 +138,50 @@ namespace WinFormsApp_Coffee.DAO
         when 0 then N'Chưa thanh toán' 
         when 1 then N'Đã thanh toán' 
         when 2 then N'Đã khóa'
-        end as trangthaihoadon
-        FROM dbo.HOADON as a, dbo.TAIKHOAN as b, dbo.BAN as c
-        where a.mataikhoan = b.mataikhoan and a.maban = c.maban
-        and b.mataikhoan = @matk
+        end as trangthaihoadon, SUM(d.tongtien)as Tongtien
+        FROM dbo.HOADON as a, dbo.TAIKHOAN as b, dbo.BAN as c, dbo.CHITIETHOADON as d
+        where a.mataikhoan = b.mataikhoan and a.maban = c.maban and a.mahoadon = d.mahoadon and a.trangthaihoadon =1
+        and a.mataikhoan = @matk
+        group by a.mahoadon, b.tennv, a.giolap, c.tenban,
+        trangthaihoadon
          */
-        public List<Hoadon> loadDanhSachHDTheoNV(int matk)
+        public List<HoadonChoNV> loadDanhSachHDTheoNV(int matk)
         {
-            List<Hoadon> danhSach = new List<Hoadon>();
+            List<HoadonChoNV> danhSach = new List<HoadonChoNV>();
             DataTable data = clsDB.Instance.execQuery("USP_LayHDTheoNV @matk ", new object[] { matk });//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
-                Hoadon hd = new Hoadon(item);
+                HoadonChoNV hd = new HoadonChoNV(item);
                 danhSach.Add(hd);
             }
             return danhSach;
         }
         /*
          create proc USP_LayHDTheoNgay
-        @matk int,
-        @ngay1 date,
-        @ngay2 date
+            @matk int,
+            @ngay1 date,
+            @ngay2 date
           AS
-        SELECT a.mahoadon, b.tennv, a.giolap, c.tenban,
+          SELECT a.mahoadon, b.tennv, a.giolap, c.tenban,
         case trangthaihoadon 
         when 0 then N'Chưa thanh toán' 
         when 1 then N'Đã thanh toán' 
         when 2 then N'Đã khóa'
-        end as trangthaihoadon
-        FROM dbo.HOADON as a, dbo.TAIKHOAN as b, dbo.BAN as c
+        end as trangthaihoadon, SUM(d.tongtien)as Tongtien
+        FROM dbo.HOADON as a, dbo.TAIKHOAN as b, dbo.BAN as c, dbo.CHITIETHOADON as d
         where a.mataikhoan = b.mataikhoan and a.maban = c.maban
-        and a.mataikhoan = @matk and a.giolap >= @ngay1 and a.giolap<=@ngay2
+        and a.mahoadon = d.mahoadon
+        and a.mataikhoan = @matk and a.giolap >= @ngay1 and a.giolap<=@ngay2 and trangthaihoadon =1
+        group by a.mahoadon, b.tennv, a.giolap, c.tenban, 
+        trangthaihoadon      
          */
-        public List<Hoadon> loadDanhSachHDTheoNgay(int matk, DateTime ngay1, DateTime ngay2)
+        public List<HoadonChoNV> loadDanhSachHDTheoNgay(int matk, DateTime ngay1, DateTime ngay2)
         {
-            List<Hoadon> danhSach = new List<Hoadon>();
+            List<HoadonChoNV> danhSach = new List<HoadonChoNV>();
             DataTable data = clsDB.Instance.execQuery("USP_LayHDTheoNgay @matk , @ngay1 , @ngay2 ", new object[] { matk , ngay1 , ngay2 });//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
-                Hoadon hd = new Hoadon(item);
+                HoadonChoNV hd = new HoadonChoNV(item);
                 danhSach.Add(hd);
             }
             return danhSach;
