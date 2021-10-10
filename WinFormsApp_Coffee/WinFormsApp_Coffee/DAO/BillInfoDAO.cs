@@ -33,15 +33,16 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create proc USP_InsertBillInfo
-       @mahd int, @madu int, @sl int
+     @mahd int, @madu int, @sl int
         as
         begin 
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
         declare @tlgiamgia float
-        select @price = giaban from dbo.SP_DG where  madouong=@madu
-        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI where madouong = @madu
+        declare @ngay date = GETDATE()
+        select @price = giaban from dbo.SP_DG as b , dbo.GIATHEODOT as a where  b.madouong=@madu and b.madotgia = a.madotgia and @ngay>=a.ngaybdban and a.trangthaigia = 1 
+        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI as a, dbo.DOTKHUYENMAI as b where a.madouong = @madu and a.madotkm = b.madotkm and @ngay>=b.ngaybatdau and @ngay<=b.ngayketthuc and b.trangthaidotkm = 1
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
@@ -50,22 +51,28 @@ namespace WinFormsApp_Coffee.DAO
         declare @newcount int = @foodCount + @sl
         if(@newcount>0)
         begin
+        if(@price>0)
+        begin
         if(@tlgiamgia>0)
         update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon = @mahd
         else
         update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = @newcount*@price where madouong = @madu and mahoadon = @mahd
         end
         end
+        end
         else
+        begin
+        if(@price >0)
         begin
         if(@tlgiamgia>0)
         insert dbo.CHITIETHOADON
         (mahoadon,madouong,soluong,giatien,tlgiamgia,tongtien)
         values(@mahd, @madu, @sl,@price,@tlgiamgia,(@sl*@price)-(((@sl*@price)/100)*@tlgiamgia)) 
-        else
+        else        
         insert dbo.CHITIETHOADON
         (mahoadon,madouong,soluong,giatien,tlgiamgia,tongtien)
         values(@mahd, @madu, @sl,@price,0,@sl*@price) 
+        end
         end
         end
          */
@@ -75,15 +82,16 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create proc USP_DeleteFood
-     @mahd int, @madu int, @sl int
+    @mahd int, @madu int, @sl int
         as
         begin 
         declare @isExistBillInfo int
         declare @foodCount int =1
         declare @price float
         declare @tlgiamgia float
-        select @price = giaban from dbo.SP_DG where  madouong=@madu 
-        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI where madouong = @madu
+        declare @ngay date = GETDATE()
+        select @price = giaban from dbo.SP_DG as b , dbo.GIATHEODOT as a where  b.madouong=@madu and b.madotgia = a.madotgia and @ngay>=a.ngaybdban and a.trangthaigia = 1  
+        select @tlgiamgia = tilegiamgia from dbo.CHITIETKHUYENMAI as a, dbo.DOTKHUYENMAI as b where a.madouong = @madu and a.madotkm = b.madotkm and @ngay>=b.ngaybatdau and @ngay<=b.ngayketthuc and b.trangthaidotkm = 1
         select @isExistBillInfo = mahoadon,@foodCount=b.soluong
         from dbo.CHITIETHOADON as b
         where mahoadon = @mahd and madouong = @madu
@@ -101,6 +109,7 @@ namespace WinFormsApp_Coffee.DAO
         delete dbo.CHITIETHOADON where mahoadon = @mahd and madouong = @madu
         end
         end
+
 
         go
          */

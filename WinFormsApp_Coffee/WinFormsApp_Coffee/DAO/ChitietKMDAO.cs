@@ -18,15 +18,16 @@ namespace WinFormsApp_Coffee.DAO
         private ChitietKMDAO() { }
         /*
          CREATE PROC USP_LayDanhSachKM
+        @madotkm int
          AS
         SELECT a.tendouong, b.tendotkm, c.tilegiamgia
         FROM dbo.DOUONG as a, dbo.DOTKHUYENMAI as b, dbo.CHITIETKHUYENMAI as c 
-        WHERE a.madouong = c.madouong and c.madotkm = b.madotkm
+        WHERE a.madouong = c.madouong and c.madotkm = b.madotkm and b.madotkm = @madotkm
          */
-        public List<ChitietKM> loadDanhSachKM()
+        public List<ChitietKM> loadDanhSachKM(int madotkm)
         {
             List<ChitietKM> danhSachKM = new List<ChitietKM>();
-            DataTable data = clsDB.Instance.execQuery("USP_LayDanhSachKM");//Lấy thủ tục từ SQL server
+            DataTable data = clsDB.Instance.execQuery("USP_LayDanhSachKM @madotkm ", new object[] { madotkm });//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
                 ChitietKM ban = new ChitietKM(item);

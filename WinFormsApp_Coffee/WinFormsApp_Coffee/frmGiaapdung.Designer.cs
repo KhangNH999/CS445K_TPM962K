@@ -29,7 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaapdung));
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnXemdotgia = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace WinFormsApp_Coffee
             this.panel4.Controls.Add(this.btnSuadotgia);
             this.panel4.Controls.Add(this.btnThemdotgia);
             this.panel4.Location = new System.Drawing.Point(7, 31);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(659, 76);
             this.panel4.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace WinFormsApp_Coffee
             // btnXemdotgia
             // 
             this.btnXemdotgia.Location = new System.Drawing.Point(5, 4);
-            this.btnXemdotgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemdotgia.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemdotgia.Name = "btnXemdotgia";
             this.btnXemdotgia.Size = new System.Drawing.Size(156, 68);
             this.btnXemdotgia.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace WinFormsApp_Coffee
             // btnLammoi
             // 
             this.btnLammoi.Location = new System.Drawing.Point(496, 5);
-            this.btnLammoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLammoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLammoi.Name = "btnLammoi";
             this.btnLammoi.Size = new System.Drawing.Size(156, 68);
             this.btnLammoi.TabIndex = 2;
@@ -95,7 +95,7 @@ namespace WinFormsApp_Coffee
             // btnSuadotgia
             // 
             this.btnSuadotgia.Location = new System.Drawing.Point(332, 5);
-            this.btnSuadotgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuadotgia.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuadotgia.Name = "btnSuadotgia";
             this.btnSuadotgia.Size = new System.Drawing.Size(156, 68);
             this.btnSuadotgia.TabIndex = 1;
@@ -106,7 +106,7 @@ namespace WinFormsApp_Coffee
             // btnThemdotgia
             // 
             this.btnThemdotgia.Location = new System.Drawing.Point(169, 5);
-            this.btnThemdotgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemdotgia.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemdotgia.Name = "btnThemdotgia";
             this.btnThemdotgia.Size = new System.Drawing.Size(156, 68);
             this.btnThemdotgia.TabIndex = 0;
@@ -123,7 +123,7 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(7, 31);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(388, 430);
             this.panel3.TabIndex = 1;
@@ -135,7 +135,7 @@ namespace WinFormsApp_Coffee
             "Chưa áp dụng",
             "Đã áp dụng"});
             this.cbtrangthai.Location = new System.Drawing.Point(140, 151);
-            this.cbtrangthai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbtrangthai.Margin = new System.Windows.Forms.Padding(4);
             this.cbtrangthai.Name = "cbtrangthai";
             this.cbtrangthai.Size = new System.Drawing.Size(240, 33);
             this.cbtrangthai.TabIndex = 7;
@@ -145,16 +145,17 @@ namespace WinFormsApp_Coffee
             this.dateBD.CustomFormat = "dd/MM/yyyy";
             this.dateBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBD.Location = new System.Drawing.Point(140, 82);
-            this.dateBD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateBD.Margin = new System.Windows.Forms.Padding(4);
             this.dateBD.Name = "dateBD";
             this.dateBD.Size = new System.Drawing.Size(240, 31);
             this.dateBD.TabIndex = 6;
+            this.dateBD.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
             // 
             // txtMadotgia
             // 
             this.txtMadotgia.Enabled = false;
             this.txtMadotgia.Location = new System.Drawing.Point(140, 14);
-            this.txtMadotgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMadotgia.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadotgia.Name = "txtMadotgia";
             this.txtMadotgia.Size = new System.Drawing.Size(240, 31);
             this.txtMadotgia.TabIndex = 4;
@@ -199,7 +200,7 @@ namespace WinFormsApp_Coffee
             this.Column3,
             this.Column4});
             this.dgvGiaapdung.Location = new System.Drawing.Point(7, 31);
-            this.dgvGiaapdung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvGiaapdung.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGiaapdung.Name = "dgvGiaapdung";
             this.dgvGiaapdung.RowHeadersWidth = 51;
             this.dgvGiaapdung.RowTemplate.Height = 29;
@@ -218,8 +219,8 @@ namespace WinFormsApp_Coffee
             // Column3
             // 
             this.Column3.DataPropertyName = "NgayBatDauAD";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column3.HeaderText = "Ngày Bắt Đầu";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -273,7 +274,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmGiaapdung";
             this.Text = "Giá áp dụng";

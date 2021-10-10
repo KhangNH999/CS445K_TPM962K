@@ -11,33 +11,35 @@ namespace WinFormsApp_Coffee
 {
     public partial class frmChiTietDotGia : Form
     {
+        private int madotgia;
+
+        public int Madotgia { get => madotgia; set => madotgia = value; }
+
         public frmChiTietDotGia()
         {
             InitializeComponent();
-            loadDS();
             loadTenDouong();
-            loadMadotgia();
         }
         void xoaDuLieu()
         {
-            cbMadotgia.SelectedIndex = 0;
             txtGiaban.Clear();
             cbTenmon.SelectedIndex = 0;
         }
         void loadDS()
         {
-             dgvChitietdotgia.DataSource = ChiTietDotGiaDAO.Instance.loadChiTietDotGia();
+             dgvChitietdotgia.DataSource = ChiTietDotGiaDAO.Instance.loadChiTietDotGia(madotgia);
+             cbMadotgia.Text = madotgia.ToString();
         }
         private void btnThemdouong_Click(object sender, EventArgs e)
         {
-            if (cbMadotgia.Text == "" || cbTenmon.Text == "" || txtGiaban.Text == "")
+            if (cbTenmon.Text == "" || txtGiaban.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                int madotgia = Madotgia;
                 int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
                 double giaban = double.Parse(txtGiaban.Text);
                 if (ChiTietDotGiaDAO.Instance.kiemTraMaDotGiaTonTai(madotgia) == false) //Kiểm tra bàn tồn tại
@@ -71,12 +73,6 @@ namespace WinFormsApp_Coffee
             cbTenmon.DisplayMember = "tendouong";
             cbTenmon.ValueMember = "madouong";
         }
-        void loadMadotgia()
-        {
-            cbMadotgia.DataSource = ChiTietDotGiaDAO.Instance.loadMaDotGia();
-            cbMadotgia.DisplayMember = "madotgia";
-            cbMadotgia.ValueMember = "madotgia";
-        }
         private void dgvChitietdotgia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -99,7 +95,7 @@ namespace WinFormsApp_Coffee
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                int madotgia = Int32.Parse(cbMadotgia.Text);
                 int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
                 double giaban = double.Parse(txtGiaban.Text);
                 if (giaban < 0)
@@ -140,7 +136,7 @@ namespace WinFormsApp_Coffee
             {
                 try
                 {
-                    int madotgia = Int32.Parse(cbMadotgia.SelectedValue.ToString());
+                    int madotgia = Int32.Parse(cbMadotgia.Text);
                     int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
 
                     if (ChiTietDotGiaDAO.Instance.xoaChiTietDoUong(madotgia, madouong))//Gọi phương thức xóa bàn từ DAO
@@ -160,6 +156,11 @@ namespace WinFormsApp_Coffee
                     return;
                 }
             }
+        }
+
+        private void frmChiTietDotGia_Load(object sender, EventArgs e)
+        {
+            loadDS();
         }
     }
 }

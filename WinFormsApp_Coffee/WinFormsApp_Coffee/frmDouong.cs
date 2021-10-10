@@ -116,16 +116,24 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int madouong = Int32.Parse(txtMadouong.Text);
-                if (QuanLyDoUongDAO.Instance.xoaDoUong(madouong))//Gọi phương thức xóa đồ uống từ DAO
+                try
                 {
-                    MessageBox.Show("Xóa đồ uống thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadDouong();
-                    xoaDuLieu();
+                    int madouong = Int32.Parse(txtMadouong.Text);
+                    if (QuanLyDoUongDAO.Instance.xoaDoUong(madouong))//Gọi phương thức xóa đồ uống từ DAO
+                    {
+                        MessageBox.Show("Xóa đồ uống thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDouong();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa đồ uống không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Xóa đồ uống không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn không thể xóa đồ uống này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
 

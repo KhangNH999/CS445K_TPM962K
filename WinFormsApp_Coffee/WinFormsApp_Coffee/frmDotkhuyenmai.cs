@@ -11,24 +11,27 @@ namespace WinFormsApp_Coffee
 {
     public partial class frmDotkhuyenmai : Form
     {
+        private int madotkm;
+
+        public int Madotkm { get => madotkm; set => madotkm = value; }
+
         public frmDotkhuyenmai()
         {
             InitializeComponent();
-            loadDanhSachKM();
-            loadTenDotKM();
             loadTenDoUong();
         }
         void loadDanhSachKM()
         {
-            dgvDotkhuyenmai.DataSource = ChitietKMDAO.Instance.loadDanhSachKM();
+            dgvDotkhuyenmai.DataSource = ChitietKMDAO.Instance.loadDanhSachKM(madotkm);
+            txtKM.Text = madotkm.ToString();
         }
         //load ten dot km
-        void loadTenDotKM()
-        {
-            cbbMadotkm.DataSource = ChitietKMDAO.Instance.loadTenDotKM();
-            cbbMadotkm.DisplayMember = "tendotkm";
-            cbbMadotkm.ValueMember = "madotkm";
-        }
+        //void loadTenDotKM()
+        //{
+        //    cbbMadotkm.DataSource = ChitietKMDAO.Instance.loadTenDotKM();
+        //    cbbMadotkm.DisplayMember = "tendotkm";
+        //    cbbMadotkm.ValueMember = "madotkm";
+        //}
         //load ten do uong
         void loadTenDoUong()
         {
@@ -39,7 +42,6 @@ namespace WinFormsApp_Coffee
         //load xóa dữ liệu
         void loadXoadulieu()
         {
-            cbbMadotkm.SelectedIndex = 0;
             cbbMadouong.SelectedIndex = 0;
             txtTilegiam.Clear();
         }
@@ -53,7 +55,7 @@ namespace WinFormsApp_Coffee
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotkm = Int32.Parse(cbbMadotkm.SelectedValue.ToString());
+                int madotkm = Int32.Parse(txtKM.Text);
                 int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
                 double tlgiamgia = double.Parse(txtTilegiam.Text);
                 if (tlgiamgia < 0 || tlgiamgia > 100)
@@ -81,7 +83,6 @@ namespace WinFormsApp_Coffee
         private void dgvDotkhuyenmai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;        
-            cbbMadotkm.Text = dgvDotkhuyenmai.Rows[e.RowIndex].Cells[0].Value + "";
             cbbMadouong.Text = dgvDotkhuyenmai.Rows[e.RowIndex].Cells[1].Value + "";
             txtTilegiam.Text = dgvDotkhuyenmai.Rows[e.RowIndex].Cells[2].Value + "";
         }
@@ -95,7 +96,7 @@ namespace WinFormsApp_Coffee
             }
             try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
             {
-                int madotkm = Int32.Parse(cbbMadotkm.SelectedValue.ToString());
+                int madotkm = Int32.Parse(txtKM.Text);
                 int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
                 double tlgiamgia = double.Parse(txtTilegiam.Text);
                 if (tlgiamgia < 0 || tlgiamgia > 100)
@@ -134,7 +135,7 @@ namespace WinFormsApp_Coffee
             }
             else
             {
-                int madotkm = Int32.Parse(cbbMadotkm.SelectedValue.ToString());
+                int madotkm = Int32.Parse(txtKM.Text);
                 int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
                 try
                 {
@@ -160,6 +161,11 @@ namespace WinFormsApp_Coffee
         private void bntLammoi_Click(object sender, EventArgs e)
         {
             loadXoadulieu();
+        }
+
+        private void frmDotkhuyenmai_Load(object sender, EventArgs e)
+        {
+            loadDanhSachKM();
         }
     }
 }

@@ -17,10 +17,10 @@ namespace WinFormsApp_Coffee.DAO
         }
 
         private ChiTietDotGiaDAO() { }
-        public List<ChiTietDotGia> loadChiTietDotGia()
+        public List<ChiTietDotGia> loadChiTietDotGia(int madotgia)
         {
             List<ChiTietDotGia> danhSachChiTietDoUong = new List<ChiTietDotGia>();
-            DataTable data = clsDB.Instance.execQuery("USP_LayChiTietDoUong");//Lấy thủ tục từ SQL server
+            DataTable data = clsDB.Instance.execQuery("USP_LayChiTietDoUong @madotgia",new object[] { madotgia });//Lấy thủ tục từ SQL server
             foreach (DataRow item in data.Rows)
             {
                 ChiTietDotGia ctdouong = new ChiTietDotGia(item);

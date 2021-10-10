@@ -44,7 +44,7 @@ namespace WinFormsApp_Coffee
             this.btnXoadouong = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbMadotgia = new System.Windows.Forms.ComboBox();
+            this.cbMadotgia = new System.Windows.Forms.TextBox();
             this.cbTenmon = new System.Windows.Forms.ComboBox();
             this.txtGiaban = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -204,10 +204,10 @@ namespace WinFormsApp_Coffee
             // 
             // cbMadotgia
             // 
-            this.cbMadotgia.FormattingEnabled = true;
             this.cbMadotgia.Location = new System.Drawing.Point(140, 18);
             this.cbMadotgia.Name = "cbMadotgia";
-            this.cbMadotgia.Size = new System.Drawing.Size(237, 33);
+            this.cbMadotgia.ReadOnly = true;
+            this.cbMadotgia.Size = new System.Drawing.Size(240, 31);
             this.cbMadotgia.TabIndex = 11;
             // 
             // cbTenmon
@@ -215,7 +215,7 @@ namespace WinFormsApp_Coffee
             this.cbTenmon.FormattingEnabled = true;
             this.cbTenmon.Location = new System.Drawing.Point(140, 85);
             this.cbTenmon.Name = "cbTenmon";
-            this.cbTenmon.Size = new System.Drawing.Size(237, 33);
+            this.cbTenmon.Size = new System.Drawing.Size(240, 33);
             this.cbTenmon.TabIndex = 10;
             // 
             // txtGiaban
@@ -268,6 +268,7 @@ namespace WinFormsApp_Coffee
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmChiTietDotGia";
             this.Text = "Chi tiết đợt giá";
+            this.Load += new System.EventHandler(this.frmChiTietDotGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitietdotgia)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -296,9 +297,9 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDotgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoUong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
-        private System.Windows.Forms.ComboBox cbMadotgia;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox cbMadotgia;
     }
 }

@@ -58,10 +58,10 @@ namespace WinFormsApp_Coffee
             this.cbDouong = new System.Windows.Forms.ComboBox();
             this.cbDMDouong = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lvBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -73,6 +73,7 @@ namespace WinFormsApp_Coffee
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).BeginInit();
@@ -319,7 +320,6 @@ namespace WinFormsApp_Coffee
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
@@ -328,17 +328,6 @@ namespace WinFormsApp_Coffee
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(691, 103);
             this.panel3.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Location = new System.Drawing.Point(377, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(312, 31);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbChuyenBan
             // 
@@ -362,14 +351,25 @@ namespace WinFormsApp_Coffee
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(377, 46);
+            this.button1.Location = new System.Drawing.Point(377, 6);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 52);
+            this.button1.Size = new System.Drawing.Size(312, 92);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(1005, 166);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(227, 31);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lvBill
             // 
@@ -421,7 +421,7 @@ namespace WinFormsApp_Coffee
             this.flpBan.Location = new System.Drawing.Point(5, 29);
             this.flpBan.Margin = new System.Windows.Forms.Padding(2);
             this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(704, 756);
+            this.flpBan.Size = new System.Drawing.Size(704, 791);
             this.flpBan.TabIndex = 9;
             this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBan_Paint);
             // 
@@ -430,10 +430,11 @@ namespace WinFormsApp_Coffee
             this.groupBox1.Controls.Add(this.flpBan);
             this.groupBox1.Location = new System.Drawing.Point(13, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(714, 798);
+            this.groupBox1.Size = new System.Drawing.Size(714, 833);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bàn";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -443,14 +444,14 @@ namespace WinFormsApp_Coffee
             this.groupBox2.Size = new System.Drawing.Size(708, 112);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
+            this.groupBox2.Text = "Gọi món";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lvBill);
-            this.groupBox3.Location = new System.Drawing.Point(733, 158);
+            this.groupBox3.Location = new System.Drawing.Point(733, 202);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(704, 527);
+            this.groupBox3.Size = new System.Drawing.Size(704, 525);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin hóa đơn";
@@ -458,19 +459,30 @@ namespace WinFormsApp_Coffee
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Location = new System.Drawing.Point(732, 691);
+            this.groupBox4.Location = new System.Drawing.Point(733, 726);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(701, 147);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Chức năng";
+            this.groupBox4.Text = "Chuyển bàn";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(923, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tên bàn:";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1448, 852);
+            this.ClientSize = new System.Drawing.Size(1448, 883);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -490,7 +502,6 @@ namespace WinFormsApp_Coffee
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -545,5 +556,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label1;
     }
 }

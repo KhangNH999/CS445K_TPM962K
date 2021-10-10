@@ -74,6 +74,12 @@ namespace WinFormsApp_Coffee
         private void btnXemdotkm_Click(object sender, EventArgs e)
         {
             frmDotkhuyenmai f = new frmDotkhuyenmai();
+            if (txtMadot.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            f.Madotkm = Int32.Parse(txtMadot.Text);
             f.ShowDialog();
         }
         //Phương thức xử lý khi kích chuột vào datagridview tự động dữ liệu sẽ hiện lên textbox

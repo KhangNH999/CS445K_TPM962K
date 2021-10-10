@@ -222,7 +222,7 @@ namespace WinFormsApp_Coffee
         {
             int id = 0;
             cbDouong.Text = "";
-           
+            
             ComboBox cb = sender as ComboBox;           
             if (cb.SelectedItem == null)
                 return;
@@ -234,31 +234,31 @@ namespace WinFormsApp_Coffee
         }
         //Tạo sự kiện đặt đồ uống
         private void btndatdouong_Click(object sender, EventArgs e)
-        {
-            Ban table = lvBill.Tag as Ban;
+        {           
+                Ban table = lvBill.Tag as Ban;
             if (table == null)
             {
                 MessageBox.Show("Vui lòng chọn bàn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            }
-            if (cbDouong.SelectedItem == null)
+            }          
+                if (cbDouong.SelectedItem == null)
                 return;
-            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
-            int foodID = (cbDouong.SelectedItem as Food).Madouong;
-            int count = (int)numupSL.Value;
+          
+                int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.MaBan);
+                int foodID = (cbDouong.SelectedItem as Food).Madouong;
+                int count = (int)numupSL.Value;
 
-            if (idBill == -1) //Không có bill thì nó sẽ tạo bill mới, còn nếu có thì nó chỉ thêm món
-            {
-                BillDAO.Instance.InsertBill(dntaikhoan.MaTaiKhoan,table.MaBan);
-                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
-            }
-            else
-            {
-                BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
-            }
-
-            ShowBill(table.MaBan);
-            LoadBan();
+                if (idBill == -1) //Không có bill thì nó sẽ tạo bill mới, còn nếu có thì nó chỉ thêm món
+                {
+                    BillDAO.Instance.InsertBill(dntaikhoan.MaTaiKhoan, table.MaBan);
+                    BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
+                }
+                else
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
+                }
+                ShowBill(table.MaBan);
+                LoadBan();                
         }
         //Tạo sự kiện xóa đồ uống
         private void button3_Click(object sender, EventArgs e)
@@ -313,6 +313,11 @@ namespace WinFormsApp_Coffee
         }
 
         private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

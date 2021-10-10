@@ -83,6 +83,12 @@ namespace WinFormsApp_Coffee
         private void btnXemdotgia_Click(object sender, EventArgs e)
         {
             frmChiTietDotGia f = new frmChiTietDotGia();
+            if (txtMadotgia.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhấp chuột vào mã !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            f.Madotgia = Int32.Parse(txtMadotgia.Text);
             f.ShowDialog();
         }
 

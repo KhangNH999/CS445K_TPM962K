@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDotkhuyenmai));
             this.btnXoasanpham = new System.Windows.Forms.Button();
             this.btnSuasanpham = new System.Windows.Forms.Button();
             this.btnThemsanpham = new System.Windows.Forms.Button();
@@ -39,8 +40,8 @@ namespace WinFormsApp_Coffee
             this.panel1 = new System.Windows.Forms.Panel();
             this.bntLammoi = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtKM = new System.Windows.Forms.TextBox();
             this.cbbMadouong = new System.Windows.Forms.ComboBox();
-            this.cbbMadotkm = new System.Windows.Forms.ComboBox();
             this.txtTilegiam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -155,8 +156,8 @@ namespace WinFormsApp_Coffee
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtKM);
             this.panel3.Controls.Add(this.cbbMadouong);
-            this.panel3.Controls.Add(this.cbbMadotkm);
             this.panel3.Controls.Add(this.txtTilegiam);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -167,6 +168,14 @@ namespace WinFormsApp_Coffee
             this.panel3.Size = new System.Drawing.Size(446, 365);
             this.panel3.TabIndex = 7;
             // 
+            // txtKM
+            // 
+            this.txtKM.Location = new System.Drawing.Point(186, 18);
+            this.txtKM.Name = "txtKM";
+            this.txtKM.ReadOnly = true;
+            this.txtKM.Size = new System.Drawing.Size(241, 31);
+            this.txtKM.TabIndex = 8;
+            // 
             // cbbMadouong
             // 
             this.cbbMadouong.FormattingEnabled = true;
@@ -175,15 +184,6 @@ namespace WinFormsApp_Coffee
             this.cbbMadouong.Name = "cbbMadouong";
             this.cbbMadouong.Size = new System.Drawing.Size(241, 33);
             this.cbbMadouong.TabIndex = 7;
-            // 
-            // cbbMadotkm
-            // 
-            this.cbbMadotkm.FormattingEnabled = true;
-            this.cbbMadotkm.Location = new System.Drawing.Point(186, 15);
-            this.cbbMadotkm.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbMadotkm.Name = "cbbMadotkm";
-            this.cbbMadotkm.Size = new System.Drawing.Size(241, 33);
-            this.cbbMadotkm.TabIndex = 6;
             // 
             // txtTilegiam
             // 
@@ -219,9 +219,9 @@ namespace WinFormsApp_Coffee
             this.label2.Location = new System.Drawing.Point(5, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tên đợt km:";
+            this.label2.Text = "Mã đợt km:";
             // 
             // groupBox1
             // 
@@ -262,11 +262,13 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDotkhuyenmai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đợt khuyến mãi";
+            this.Load += new System.EventHandler(this.frmDotkhuyenmai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDotkhuyenmai)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -287,7 +289,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbbMadouong;
-        private System.Windows.Forms.ComboBox cbbMadotkm;
         private System.Windows.Forms.TextBox txtTilegiam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -299,5 +300,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtKM;
     }
 }
