@@ -73,5 +73,9 @@ namespace WinFormsApp_Coffee
                 return;
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

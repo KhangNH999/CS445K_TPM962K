@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýDanhMụcBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTàiKhoảnCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,23 +62,30 @@ namespace WinFormsApp_Coffee
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lvBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýDanhMụcBànToolStripMenuItem,
@@ -85,7 +93,7 @@ namespace WinFormsApp_Coffee
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1325, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(1448, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,6 +103,8 @@ namespace WinFormsApp_Coffee
             this.quảnLýTàiKhoảnCáNhânToolStripMenuItem,
             this.toolStripSeparator2,
             this.quảnLýHóaĐơnToolStripMenuItem});
+            this.quảnLýDanhMụcBànToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quảnLýDanhMụcBànToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quảnLýDanhMụcBànToolStripMenuItem.Name = "quảnLýDanhMụcBànToolStripMenuItem";
             this.quảnLýDanhMụcBànToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
             this.quảnLýDanhMụcBànToolStripMenuItem.Text = "Nhân viên";
@@ -136,6 +146,8 @@ namespace WinFormsApp_Coffee
             this.quảnLýHóaĐơnToolStripMenuItem1,
             this.toolStripSeparator1,
             this.quảnLýĐợtGiáToolStripMenuItem});
+            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.adminToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.adminToolStripMenuItem.Text = "Admin";
@@ -238,18 +250,18 @@ namespace WinFormsApp_Coffee
             this.panel4.Controls.Add(this.btndatdouong);
             this.panel4.Controls.Add(this.cbDouong);
             this.panel4.Controls.Add(this.cbDMDouong);
-            this.panel4.Location = new System.Drawing.Point(732, 50);
+            this.panel4.Location = new System.Drawing.Point(5, 24);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(580, 91);
+            this.panel4.Size = new System.Drawing.Size(698, 80);
             this.panel4.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(468, 2);
+            this.button3.Location = new System.Drawing.Point(562, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 72);
+            this.button3.Size = new System.Drawing.Size(134, 72);
             this.button3.TabIndex = 4;
             this.button3.Text = "Xóa đồ uống";
             this.button3.UseVisualStyleBackColor = true;
@@ -258,7 +270,7 @@ namespace WinFormsApp_Coffee
             // numupSL
             // 
             this.numupSL.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.numupSL.Location = new System.Drawing.Point(306, 45);
+            this.numupSL.Location = new System.Drawing.Point(350, 46);
             this.numupSL.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.numupSL.Minimum = new decimal(new int[] {
             1,
@@ -267,7 +279,7 @@ namespace WinFormsApp_Coffee
             0});
             this.numupSL.Name = "numupSL";
             this.numupSL.ReadOnly = true;
-            this.numupSL.Size = new System.Drawing.Size(156, 31);
+            this.numupSL.Size = new System.Drawing.Size(208, 31);
             this.numupSL.TabIndex = 3;
             this.numupSL.Value = new decimal(new int[] {
             1,
@@ -277,10 +289,10 @@ namespace WinFormsApp_Coffee
             // 
             // btndatdouong
             // 
-            this.btndatdouong.Location = new System.Drawing.Point(306, 4);
+            this.btndatdouong.Location = new System.Drawing.Point(350, 4);
             this.btndatdouong.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btndatdouong.Name = "btndatdouong";
-            this.btndatdouong.Size = new System.Drawing.Size(158, 34);
+            this.btndatdouong.Size = new System.Drawing.Size(208, 34);
             this.btndatdouong.TabIndex = 2;
             this.btndatdouong.Text = "Đặt đồ uống";
             this.btndatdouong.UseVisualStyleBackColor = true;
@@ -292,7 +304,7 @@ namespace WinFormsApp_Coffee
             this.cbDouong.Location = new System.Drawing.Point(4, 44);
             this.cbDouong.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cbDouong.Name = "cbDouong";
-            this.cbDouong.Size = new System.Drawing.Size(295, 33);
+            this.cbDouong.Size = new System.Drawing.Size(342, 33);
             this.cbDouong.TabIndex = 1;
             // 
             // cbDMDouong
@@ -301,7 +313,7 @@ namespace WinFormsApp_Coffee
             this.cbDMDouong.Location = new System.Drawing.Point(4, 4);
             this.cbDMDouong.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cbDMDouong.Name = "cbDMDouong";
-            this.cbDMDouong.Size = new System.Drawing.Size(295, 33);
+            this.cbDMDouong.Size = new System.Drawing.Size(342, 33);
             this.cbDMDouong.TabIndex = 0;
             this.cbDMDouong.SelectedIndexChanged += new System.EventHandler(this.cbDMDouong_SelectedIndexChanged);
             // 
@@ -311,20 +323,20 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(732, 652);
+            this.panel3.Location = new System.Drawing.Point(5, 31);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(580, 108);
+            this.panel3.Size = new System.Drawing.Size(691, 103);
             this.panel3.TabIndex = 7;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Location = new System.Drawing.Point(306, 6);
+            this.textBox1.Location = new System.Drawing.Point(377, 6);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(268, 31);
+            this.textBox1.Size = new System.Drawing.Size(312, 31);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -334,7 +346,7 @@ namespace WinFormsApp_Coffee
             this.cbChuyenBan.Location = new System.Drawing.Point(4, 6);
             this.cbChuyenBan.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cbChuyenBan.Name = "cbChuyenBan";
-            this.cbChuyenBan.Size = new System.Drawing.Size(283, 33);
+            this.cbChuyenBan.Size = new System.Drawing.Size(354, 33);
             this.cbChuyenBan.TabIndex = 2;
             // 
             // button2
@@ -342,7 +354,7 @@ namespace WinFormsApp_Coffee
             this.button2.Location = new System.Drawing.Point(4, 46);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(282, 52);
+            this.button2.Size = new System.Drawing.Size(354, 52);
             this.button2.TabIndex = 1;
             this.button2.Text = "Chuyển bàn";
             this.button2.UseVisualStyleBackColor = true;
@@ -350,23 +362,14 @@ namespace WinFormsApp_Coffee
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(306, 46);
+            this.button1.Location = new System.Drawing.Point(377, 46);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 52);
+            this.button1.Size = new System.Drawing.Size(312, 52);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lvBill);
-            this.panel2.Location = new System.Drawing.Point(732, 148);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 498);
-            this.panel2.TabIndex = 6;
             // 
             // lvBill
             // 
@@ -378,10 +381,10 @@ namespace WinFormsApp_Coffee
             this.columnHeader4});
             this.lvBill.GridLines = true;
             this.lvBill.HideSelection = false;
-            this.lvBill.Location = new System.Drawing.Point(4, 4);
+            this.lvBill.Location = new System.Drawing.Point(5, 31);
             this.lvBill.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.lvBill.Name = "lvBill";
-            this.lvBill.Size = new System.Drawing.Size(574, 490);
+            this.lvBill.Size = new System.Drawing.Size(695, 490);
             this.lvBill.TabIndex = 0;
             this.lvBill.UseCompatibleStateImageBehavior = false;
             this.lvBill.View = System.Windows.Forms.View.Details;
@@ -394,57 +397,104 @@ namespace WinFormsApp_Coffee
             // columnHeader2
             // 
             this.columnHeader2.Text = "SL";
-            this.columnHeader2.Width = 50;
+            this.columnHeader2.Width = 70;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 140;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "T.Tiền";
-            this.columnHeader4.Width = 150;
-            // 
-            // flpBan
-            // 
-            this.flpBan.AutoScroll = true;
-            this.flpBan.Location = new System.Drawing.Point(28, 50);
-            this.flpBan.Margin = new System.Windows.Forms.Padding(2);
-            this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(700, 710);
-            this.flpBan.TabIndex = 9;
-            this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBan_Paint);
+            this.columnHeader3.Width = 180;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "KM";
-            this.columnHeader5.Width = 50;
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "T.Tiền";
+            this.columnHeader4.Width = 180;
+            // 
+            // flpBan
+            // 
+            this.flpBan.AutoScroll = true;
+            this.flpBan.BackColor = System.Drawing.SystemColors.Control;
+            this.flpBan.Location = new System.Drawing.Point(5, 29);
+            this.flpBan.Margin = new System.Windows.Forms.Padding(2);
+            this.flpBan.Name = "flpBan";
+            this.flpBan.Size = new System.Drawing.Size(704, 756);
+            this.flpBan.TabIndex = 9;
+            this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBan_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.flpBan);
+            this.groupBox1.Location = new System.Drawing.Point(13, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(714, 798);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách bàn";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel4);
+            this.groupBox2.Location = new System.Drawing.Point(732, 40);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(708, 112);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lvBill);
+            this.groupBox3.Location = new System.Drawing.Point(733, 158);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(704, 527);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin hóa đơn";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Location = new System.Drawing.Point(732, 691);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(701, 147);
+            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Chức năng";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 774);
-            this.Controls.Add(this.flpBan);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1448, 852);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numupSL)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +532,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView lvBill;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -492,5 +541,9 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýĐợtGiáToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

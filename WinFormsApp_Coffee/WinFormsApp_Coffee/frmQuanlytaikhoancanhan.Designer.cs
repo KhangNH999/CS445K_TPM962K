@@ -31,6 +31,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanlytaikhoancanhan));
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.btnDoimatkhau = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,6 +55,9 @@ namespace WinFormsApp_Coffee
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMatk = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -61,11 +65,13 @@ namespace WinFormsApp_Coffee
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCapnhat
             // 
-            this.btnCapnhat.Location = new System.Drawing.Point(15, 539);
+            this.btnCapnhat.Location = new System.Drawing.Point(7, 87);
             this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.Size = new System.Drawing.Size(661, 55);
@@ -76,7 +82,7 @@ namespace WinFormsApp_Coffee
             // 
             // btnDoimatkhau
             // 
-            this.btnDoimatkhau.Location = new System.Drawing.Point(15, 604);
+            this.btnDoimatkhau.Location = new System.Drawing.Point(7, 32);
             this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDoimatkhau.Name = "btnDoimatkhau";
             this.btnDoimatkhau.Size = new System.Drawing.Size(661, 51);
@@ -89,7 +95,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel4.Controls.Add(this.txtTen);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(15, 89);
+            this.panel4.Location = new System.Drawing.Point(7, 106);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(661, 64);
@@ -117,7 +123,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel5.Controls.Add(this.dtngaysinh);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(15, 162);
+            this.panel5.Location = new System.Drawing.Point(7, 178);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(661, 64);
@@ -149,7 +155,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel6.Controls.Add(this.txtGioitinh);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(15, 235);
+            this.panel6.Location = new System.Drawing.Point(7, 252);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(661, 64);
@@ -177,7 +183,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel7.Controls.Add(this.txtCmnd);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(15, 309);
+            this.panel7.Location = new System.Drawing.Point(7, 326);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(661, 64);
@@ -205,7 +211,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel8.Controls.Add(this.txtEmail);
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(15, 382);
+            this.panel8.Location = new System.Drawing.Point(7, 400);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(661, 64);
@@ -233,7 +239,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel9.Controls.Add(this.txtSodienthoai);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Location = new System.Drawing.Point(15, 456);
+            this.panel9.Location = new System.Drawing.Point(7, 474);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(661, 64);
@@ -261,7 +267,7 @@ namespace WinFormsApp_Coffee
             // 
             this.panel1.Controls.Add(this.txtMatk);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(15, 16);
+            this.panel1.Location = new System.Drawing.Point(7, 32);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(661, 64);
@@ -287,20 +293,52 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã tài khoản:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panel9);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.panel8);
+            this.groupBox1.Controls.Add(this.panel6);
+            this.groupBox1.Controls.Add(this.panel7);
+            this.groupBox1.Controls.Add(this.panel5);
+            this.groupBox1.Location = new System.Drawing.Point(36, 80);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(685, 564);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin cá nhân";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnDoimatkhau);
+            this.groupBox2.Controls.Add(this.btnCapnhat);
+            this.groupBox2.Location = new System.Drawing.Point(36, 650);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(685, 150);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(120, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(511, 54);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Quản lý tài khoản cá nhân";
+            // 
             // frmQuanlytaikhoancanhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 677);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.btnDoimatkhau);
-            this.Controls.Add(this.btnCapnhat);
+            this.ClientSize = new System.Drawing.Size(752, 824);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmQuanlytaikhoancanhan";
@@ -320,7 +358,10 @@ namespace WinFormsApp_Coffee
             this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,5 +392,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.TextBox txtMatk;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtngaysinh;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

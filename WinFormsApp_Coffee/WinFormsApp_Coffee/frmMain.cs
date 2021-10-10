@@ -312,6 +312,9 @@ namespace WinFormsApp_Coffee
 
         }
 
-       
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,13 +29,13 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDouong));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLammoi = new System.Windows.Forms.Button();
             this.btnKhoadouong = new System.Windows.Forms.Button();
             this.btnXoadouong = new System.Windows.Forms.Button();
             this.btnSuadouong = new System.Windows.Forms.Button();
             this.btnThemdouong = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDmdouong = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +50,15 @@ namespace WinFormsApp_Coffee
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).BeginInit();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,16 +68,16 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnXoadouong);
             this.panel1.Controls.Add(this.btnSuadouong);
             this.panel1.Controls.Add(this.btnThemdouong);
-            this.panel1.Location = new System.Drawing.Point(15, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(7, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1075, 88);
+            this.panel1.Size = new System.Drawing.Size(819, 88);
             this.panel1.TabIndex = 1;
             // 
             // btnLammoi
             // 
-            this.btnLammoi.Location = new System.Drawing.Point(914, 5);
-            this.btnLammoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLammoi.Location = new System.Drawing.Point(660, 5);
+            this.btnLammoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLammoi.Name = "btnLammoi";
             this.btnLammoi.Size = new System.Drawing.Size(154, 79);
             this.btnLammoi.TabIndex = 4;
@@ -83,7 +88,7 @@ namespace WinFormsApp_Coffee
             // btnKhoadouong
             // 
             this.btnKhoadouong.Location = new System.Drawing.Point(496, 5);
-            this.btnKhoadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhoadouong.Margin = new System.Windows.Forms.Padding(4);
             this.btnKhoadouong.Name = "btnKhoadouong";
             this.btnKhoadouong.Size = new System.Drawing.Size(156, 79);
             this.btnKhoadouong.TabIndex = 3;
@@ -94,7 +99,7 @@ namespace WinFormsApp_Coffee
             // btnXoadouong
             // 
             this.btnXoadouong.Location = new System.Drawing.Point(332, 5);
-            this.btnXoadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoadouong.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoadouong.Name = "btnXoadouong";
             this.btnXoadouong.Size = new System.Drawing.Size(156, 79);
             this.btnXoadouong.TabIndex = 2;
@@ -105,7 +110,7 @@ namespace WinFormsApp_Coffee
             // btnSuadouong
             // 
             this.btnSuadouong.Location = new System.Drawing.Point(169, 5);
-            this.btnSuadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuadouong.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuadouong.Name = "btnSuadouong";
             this.btnSuadouong.Size = new System.Drawing.Size(156, 79);
             this.btnSuadouong.TabIndex = 1;
@@ -116,22 +121,13 @@ namespace WinFormsApp_Coffee
             // btnThemdouong
             // 
             this.btnThemdouong.Location = new System.Drawing.Point(5, 5);
-            this.btnThemdouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemdouong.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemdouong.Name = "btnThemdouong";
             this.btnThemdouong.Size = new System.Drawing.Size(156, 79);
             this.btnThemdouong.TabIndex = 0;
             this.btnThemdouong.Text = "Thêm đồ uống";
             this.btnThemdouong.UseVisualStyleBackColor = true;
             this.btnThemdouong.Click += new System.EventHandler(this.btnThemdouong_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvDmdouong);
-            this.panel2.Location = new System.Drawing.Point(15, 112);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(674, 484);
-            this.panel2.TabIndex = 2;
             // 
             // dgvDmdouong
             // 
@@ -143,12 +139,12 @@ namespace WinFormsApp_Coffee
             this.Column2,
             this.Column4,
             this.Column5});
-            this.dgvDmdouong.Location = new System.Drawing.Point(4, 5);
-            this.dgvDmdouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDmdouong.Location = new System.Drawing.Point(6, 31);
+            this.dgvDmdouong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDmdouong.Name = "dgvDmdouong";
             this.dgvDmdouong.RowHeadersWidth = 51;
             this.dgvDmdouong.RowTemplate.Height = 29;
-            this.dgvDmdouong.Size = new System.Drawing.Size(665, 475);
+            this.dgvDmdouong.Size = new System.Drawing.Size(814, 469);
             this.dgvDmdouong.TabIndex = 0;
             this.dgvDmdouong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdouong_CellClick);
             // 
@@ -194,10 +190,10 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(696, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(7, 31);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 484);
+            this.panel3.Size = new System.Drawing.Size(427, 469);
             this.panel3.TabIndex = 3;
             // 
             // cbbTrangthai
@@ -208,18 +204,18 @@ namespace WinFormsApp_Coffee
             "Còn",
             "Đã khóa"});
             this.cbbTrangthai.Location = new System.Drawing.Point(139, 218);
-            this.cbbTrangthai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbTrangthai.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTrangthai.Name = "cbbTrangthai";
-            this.cbbTrangthai.Size = new System.Drawing.Size(246, 33);
+            this.cbbTrangthai.Size = new System.Drawing.Size(260, 33);
             this.cbbTrangthai.TabIndex = 20;
             // 
             // cbbMadanhmuc
             // 
             this.cbbMadanhmuc.FormattingEnabled = true;
             this.cbbMadanhmuc.Location = new System.Drawing.Point(139, 15);
-            this.cbbMadanhmuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMadanhmuc.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMadanhmuc.Name = "cbbMadanhmuc";
-            this.cbbMadanhmuc.Size = new System.Drawing.Size(246, 33);
+            this.cbbMadanhmuc.Size = new System.Drawing.Size(260, 33);
             this.cbbMadanhmuc.TabIndex = 4;
             // 
             // label4
@@ -236,17 +232,17 @@ namespace WinFormsApp_Coffee
             // 
             this.txtMadouong.Enabled = false;
             this.txtMadouong.Location = new System.Drawing.Point(139, 84);
-            this.txtMadouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMadouong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMadouong.Name = "txtMadouong";
-            this.txtMadouong.Size = new System.Drawing.Size(246, 31);
+            this.txtMadouong.Size = new System.Drawing.Size(260, 31);
             this.txtMadouong.TabIndex = 3;
             // 
             // txtTendouong
             // 
             this.txtTendouong.Location = new System.Drawing.Point(139, 151);
-            this.txtTendouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTendouong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTendouong.Name = "txtTendouong";
-            this.txtTendouong.Size = new System.Drawing.Size(246, 31);
+            this.txtTendouong.Size = new System.Drawing.Size(260, 31);
             this.txtTendouong.TabIndex = 11;
             // 
             // label3
@@ -279,25 +275,58 @@ namespace WinFormsApp_Coffee
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã danh mục:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Location = new System.Drawing.Point(15, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(833, 129);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvDmdouong);
+            this.groupBox2.Location = new System.Drawing.Point(15, 145);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(833, 511);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách đồ uống";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Location = new System.Drawing.Point(854, 145);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(446, 511);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin đồ uống";
+            // 
             // frmDouong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 615);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1308, 669);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDouong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đồ uống";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDmdouong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -308,7 +337,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnXoadouong;
         private System.Windows.Forms.Button btnSuadouong;
         private System.Windows.Forms.Button btnThemdouong;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvDmdouong;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMadouong;
@@ -325,5 +353,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btnLammoi;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

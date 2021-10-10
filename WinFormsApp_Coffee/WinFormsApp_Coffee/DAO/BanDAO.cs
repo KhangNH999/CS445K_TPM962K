@@ -16,8 +16,8 @@ namespace WinFormsApp_Coffee.DAO
             private set { BanDAO.instance = value; }
         }
 
-        public static int TableWidth = 163;
-        public static int TableHeight = 163;
+        public static int TableWidth = 170;
+        public static int TableHeight = 170;
 
         private BanDAO() { }
         public void SwitchTable(int id1, int id2)

@@ -30,6 +30,7 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanlytaikhoan));
             this.dgvQuanlytaikhoan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@ namespace WinFormsApp_Coffee
             this.btnXoatk = new System.Windows.Forms.Button();
             this.btnSuatk = new System.Windows.Forms.Button();
             this.btnThemtk = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLammoi = new System.Windows.Forms.Button();
             this.txtMataikhoan = new System.Windows.Forms.TextBox();
@@ -72,10 +72,15 @@ namespace WinFormsApp_Coffee
             this.label3 = new System.Windows.Forms.Label();
             this.txtTendangnhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanlytaikhoan)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvQuanlytaikhoan
@@ -93,115 +98,126 @@ namespace WinFormsApp_Coffee
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dgvQuanlytaikhoan.Location = new System.Drawing.Point(0, 2);
+            this.dgvQuanlytaikhoan.Location = new System.Drawing.Point(7, 29);
             this.dgvQuanlytaikhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQuanlytaikhoan.Name = "dgvQuanlytaikhoan";
             this.dgvQuanlytaikhoan.RowHeadersWidth = 62;
             this.dgvQuanlytaikhoan.RowTemplate.Height = 33;
-            this.dgvQuanlytaikhoan.Size = new System.Drawing.Size(1384, 800);
+            this.dgvQuanlytaikhoan.Size = new System.Drawing.Size(1433, 815);
             this.dgvQuanlytaikhoan.TabIndex = 0;
             this.dgvQuanlytaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanlytaikhoan_CellClick);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MaTaiKhoan";
+            this.Column1.FillWeight = 124.9054F;
             this.Column1.HeaderText = "Mã tài khoản";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.Column1.Width = 178;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "TenDangNhap";
+            this.Column2.FillWeight = 118.0415F;
             this.Column2.HeaderText = "Tên đăng nhập";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.Column2.Width = 200;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "MatKhau";
+            this.Column3.FillWeight = 111.9571F;
             this.Column3.HeaderText = "Mật khẩu";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
+            this.Column3.Width = 200;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "TenNV";
+            this.Column4.FillWeight = 106.5636F;
             this.Column4.HeaderText = "Tên nhân viên";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
+            this.Column4.Width = 200;
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "NgaySinh";
             dataGridViewCellStyle1.Format = "dd/MM/yyyy";
             this.Column5.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column5.FillWeight = 101.7825F;
             this.Column5.HeaderText = "Ngày sinh";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
+            this.Column5.Width = 200;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "GioiTinh";
+            this.Column6.FillWeight = 97.54433F;
             this.Column6.HeaderText = "Giới tính";
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
+            this.Column6.Width = 200;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "CMND";
+            this.Column7.FillWeight = 93.78736F;
             this.Column7.HeaderText = "CMND";
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 150;
+            this.Column7.Width = 200;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "Email";
+            this.Column8.FillWeight = 90.45702F;
             this.Column8.HeaderText = "Email";
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
+            this.Column8.Width = 200;
             // 
             // Column9
             // 
             this.Column9.DataPropertyName = "SDT";
+            this.Column9.FillWeight = 87.50485F;
             this.Column9.HeaderText = "Số đt";
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 150;
+            this.Column9.Width = 200;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "Loaitk";
+            this.Column10.FillWeight = 84.8879F;
             this.Column10.HeaderText = "Loại tk";
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 150;
+            this.Column10.Width = 200;
             // 
             // Column11
             // 
             this.Column11.DataPropertyName = "TrangThaiTK";
+            this.Column11.FillWeight = 82.5681F;
             this.Column11.HeaderText = "Trạng thái";
             this.Column11.MinimumWidth = 8;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 150;
+            this.Column11.Width = 200;
             // 
             // btnKhoatk
             // 
@@ -247,15 +263,6 @@ namespace WinFormsApp_Coffee
             this.btnThemtk.UseVisualStyleBackColor = true;
             this.btnThemtk.Click += new System.EventHandler(this.btnThemdouong_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvQuanlytaikhoan);
-            this.panel2.Location = new System.Drawing.Point(12, 112);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1381, 798);
-            this.panel2.TabIndex = 6;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLammoi);
@@ -263,10 +270,10 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnXoatk);
             this.panel1.Controls.Add(this.btnSuatk);
             this.panel1.Controls.Add(this.btnThemtk);
-            this.panel1.Location = new System.Drawing.Point(14, 18);
+            this.panel1.Location = new System.Drawing.Point(7, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1079, 88);
+            this.panel1.Size = new System.Drawing.Size(829, 88);
             this.panel1.TabIndex = 5;
             // 
             // btnLammoi
@@ -323,10 +330,10 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.txtTendangnhap);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(1401, 112);
+            this.panel3.Location = new System.Drawing.Point(7, 29);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(398, 798);
+            this.panel3.Size = new System.Drawing.Size(418, 865);
             this.panel3.TabIndex = 7;
             // 
             // cbGioiTinh
@@ -519,25 +526,58 @@ namespace WinFormsApp_Coffee
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên đăng nhập:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1445, 126);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvQuanlytaikhoan);
+            this.groupBox2.Location = new System.Drawing.Point(12, 139);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1445, 849);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách tài khoản";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Location = new System.Drawing.Point(1463, 139);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(449, 899);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin tài khoản";
+            // 
             // frmQuanlytaikhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1816, 1050);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1924, 997);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmQuanlytaikhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanlytaikhoan)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -549,7 +589,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnXoatk;
         private System.Windows.Forms.Button btnSuatk;
         private System.Windows.Forms.Button btnThemtk;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtMataikhoan;
         private System.Windows.Forms.Label label1;
@@ -573,6 +612,10 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker DateNgaysinh;
+        private System.Windows.Forms.Button btnLammoi;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -584,7 +627,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.Button btnLammoi;
-        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

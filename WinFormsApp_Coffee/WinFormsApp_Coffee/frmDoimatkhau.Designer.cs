@@ -29,6 +29,7 @@ namespace WinFormsApp_Coffee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoimatkhau));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtdn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,8 +42,13 @@ namespace WinFormsApp_Coffee
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacnhan = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,10 +61,10 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 13);
+            this.panel1.Location = new System.Drawing.Point(7, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 257);
+            this.panel1.Size = new System.Drawing.Size(618, 257);
             this.panel1.TabIndex = 0;
             // 
             // txtdn
@@ -67,7 +73,7 @@ namespace WinFormsApp_Coffee
             this.txtdn.Margin = new System.Windows.Forms.Padding(4);
             this.txtdn.Name = "txtdn";
             this.txtdn.ReadOnly = true;
-            this.txtdn.Size = new System.Drawing.Size(409, 31);
+            this.txtdn.Size = new System.Drawing.Size(407, 31);
             this.txtdn.TabIndex = 7;
             // 
             // label4
@@ -141,15 +147,15 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXacnhan);
-            this.panel2.Location = new System.Drawing.Point(16, 278);
+            this.panel2.Location = new System.Drawing.Point(7, 31);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(602, 60);
+            this.panel2.Size = new System.Drawing.Size(618, 60);
             this.panel2.TabIndex = 1;
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(481, 4);
+            this.btnHuy.Location = new System.Drawing.Point(479, 4);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(118, 52);
@@ -160,7 +166,7 @@ namespace WinFormsApp_Coffee
             // 
             // btnXacnhan
             // 
-            this.btnXacnhan.Location = new System.Drawing.Point(356, 4);
+            this.btnXacnhan.Location = new System.Drawing.Point(353, 4);
             this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4);
             this.btnXacnhan.Name = "btnXacnhan";
             this.btnXacnhan.Size = new System.Drawing.Size(118, 52);
@@ -169,13 +175,45 @@ namespace WinFormsApp_Coffee
             this.btnXacnhan.UseVisualStyleBackColor = true;
             this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Location = new System.Drawing.Point(58, 92);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(643, 297);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin đổi mật khẩu";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.Location = new System.Drawing.Point(58, 395);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(643, 108);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(275, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(277, 54);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Đổi mật khẩu";
+            // 
             // frmDoimatkhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 351);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(744, 527);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDoimatkhau";
@@ -184,7 +222,10 @@ namespace WinFormsApp_Coffee
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +243,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnXacnhan;
         private System.Windows.Forms.TextBox txtdn;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -30,13 +30,13 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanlyhoadon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKhoahd = new System.Windows.Forms.Button();
             this.btnXoahd = new System.Windows.Forms.Button();
             this.btnSuahd = new System.Windows.Forms.Button();
             this.btnThemhd = new System.Windows.Forms.Button();
             this.btnXemhd = new System.Windows.Forms.Button();
-            this.pnlDShd = new System.Windows.Forms.Panel();
             this.dgvQlhoadon = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +59,10 @@ namespace WinFormsApp_Coffee
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMahd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            this.pnlDShd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -68,6 +70,9 @@ namespace WinFormsApp_Coffee
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,10 +82,10 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.btnSuahd);
             this.panel1.Controls.Add(this.btnThemhd);
             this.panel1.Controls.Add(this.btnXemhd);
-            this.panel1.Location = new System.Drawing.Point(18, 19);
+            this.panel1.Location = new System.Drawing.Point(7, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(986, 89);
+            this.panel1.Size = new System.Drawing.Size(825, 89);
             this.panel1.TabIndex = 4;
             // 
             // btnKhoahd
@@ -138,18 +143,10 @@ namespace WinFormsApp_Coffee
             this.btnXemhd.UseVisualStyleBackColor = true;
             this.btnXemhd.Click += new System.EventHandler(this.btnXemhd_Click);
             // 
-            // pnlDShd
-            // 
-            this.pnlDShd.Controls.Add(this.dgvQlhoadon);
-            this.pnlDShd.Location = new System.Drawing.Point(18, 116);
-            this.pnlDShd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlDShd.Name = "pnlDShd";
-            this.pnlDShd.Size = new System.Drawing.Size(595, 431);
-            this.pnlDShd.TabIndex = 12;
-            // 
             // dgvQlhoadon
             // 
             this.dgvQlhoadon.AllowUserToAddRows = false;
+            this.dgvQlhoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQlhoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQlhoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -157,12 +154,12 @@ namespace WinFormsApp_Coffee
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvQlhoadon.Location = new System.Drawing.Point(0, 2);
+            this.dgvQlhoadon.Location = new System.Drawing.Point(7, 29);
             this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQlhoadon.Name = "dgvQlhoadon";
             this.dgvQlhoadon.RowHeadersWidth = 62;
             this.dgvQlhoadon.RowTemplate.Height = 25;
-            this.dgvQlhoadon.Size = new System.Drawing.Size(588, 421);
+            this.dgvQlhoadon.Size = new System.Drawing.Size(894, 421);
             this.dgvQlhoadon.TabIndex = 0;
             this.dgvQlhoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQlhoadon_CellClick);
             // 
@@ -173,7 +170,6 @@ namespace WinFormsApp_Coffee
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 107;
             // 
             // Column2
             // 
@@ -182,7 +178,6 @@ namespace WinFormsApp_Coffee
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
             // 
             // Column3
             // 
@@ -193,7 +188,6 @@ namespace WinFormsApp_Coffee
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 107;
             // 
             // Column4
             // 
@@ -202,7 +196,6 @@ namespace WinFormsApp_Coffee
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 107;
             // 
             // Column5
             // 
@@ -211,7 +204,6 @@ namespace WinFormsApp_Coffee
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 170;
             // 
             // panel2
             // 
@@ -220,10 +212,10 @@ namespace WinFormsApp_Coffee
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(616, 116);
+            this.panel2.Location = new System.Drawing.Point(7, 29);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(388, 431);
+            this.panel2.Size = new System.Drawing.Size(388, 421);
             this.panel2.TabIndex = 13;
             // 
             // panel7
@@ -373,21 +365,51 @@ namespace WinFormsApp_Coffee
             this.label3.TabIndex = 0;
             this.label3.Text = "Mã hóa đơn:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvQlhoadon);
+            this.groupBox1.Location = new System.Drawing.Point(12, 140);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(906, 459);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách hóa đơn";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(906, 130);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel2);
+            this.groupBox3.Location = new System.Drawing.Point(924, 140);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(402, 459);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin hóa đơn";
+            // 
             // frmQuanlyhoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 568);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlDShd);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1339, 614);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmQuanlyhoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hóa đơn";
             this.panel1.ResumeLayout(false);
-            this.pnlDShd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -400,6 +422,9 @@ namespace WinFormsApp_Coffee
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -412,7 +437,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnSuahd;
         private System.Windows.Forms.Button btnThemhd;
         private System.Windows.Forms.Button btnXemhd;
-        private System.Windows.Forms.Panel pnlDShd;
         private System.Windows.Forms.DataGridView dgvQlhoadon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
@@ -435,5 +459,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

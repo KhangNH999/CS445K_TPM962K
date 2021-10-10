@@ -30,12 +30,12 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChiTietDotGia));
             this.btnThemdouong = new System.Windows.Forms.Button();
             this.dgvChitietdotgia = new System.Windows.Forms.DataGridView();
             this.MaDotgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDoUong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSuadouong = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,16 +43,19 @@ namespace WinFormsApp_Coffee
             this.btnLammoi = new System.Windows.Forms.Button();
             this.btnXoadouong = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbMadotgia = new System.Windows.Forms.ComboBox();
             this.cbTenmon = new System.Windows.Forms.ComboBox();
             this.txtGiaban = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitietdotgia)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThemdouong
@@ -68,18 +71,19 @@ namespace WinFormsApp_Coffee
             // 
             // dgvChitietdotgia
             // 
+            this.dgvChitietdotgia.AllowUserToAddRows = false;
             this.dgvChitietdotgia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChitietdotgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChitietdotgia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDotgia,
             this.MaDoUong,
             this.GiaBan});
-            this.dgvChitietdotgia.Location = new System.Drawing.Point(5, 5);
+            this.dgvChitietdotgia.Location = new System.Drawing.Point(7, 31);
             this.dgvChitietdotgia.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChitietdotgia.Name = "dgvChitietdotgia";
             this.dgvChitietdotgia.RowHeadersWidth = 51;
             this.dgvChitietdotgia.RowTemplate.Height = 29;
-            this.dgvChitietdotgia.Size = new System.Drawing.Size(558, 430);
+            this.dgvChitietdotgia.Size = new System.Drawing.Size(659, 430);
             this.dgvChitietdotgia.TabIndex = 0;
             this.dgvChitietdotgia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitietdotgia_CellClick);
             // 
@@ -108,15 +112,6 @@ namespace WinFormsApp_Coffee
             this.GiaBan.MinimumWidth = 6;
             this.GiaBan.Name = "GiaBan";
             this.GiaBan.ReadOnly = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvChitietdotgia);
-            this.panel2.Location = new System.Drawing.Point(5, 89);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(566, 439);
-            this.panel2.TabIndex = 0;
             // 
             // btnSuadouong
             // 
@@ -161,10 +156,10 @@ namespace WinFormsApp_Coffee
             // 
             // btnLammoi
             // 
-            this.btnLammoi.Location = new System.Drawing.Point(796, 5);
+            this.btnLammoi.Location = new System.Drawing.Point(496, 5);
             this.btnLammoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(156, 68);
+            this.btnLammoi.Size = new System.Drawing.Size(156, 67);
             this.btnLammoi.TabIndex = 2;
             this.btnLammoi.Text = "Làm mới";
             this.btnLammoi.UseVisualStyleBackColor = true;
@@ -187,22 +182,11 @@ namespace WinFormsApp_Coffee
             this.panel4.Controls.Add(this.btnLammoi);
             this.panel4.Controls.Add(this.btnXoadouong);
             this.panel4.Controls.Add(this.btnSuadouong);
-            this.panel4.Location = new System.Drawing.Point(5, 5);
+            this.panel4.Location = new System.Drawing.Point(7, 23);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(956, 76);
+            this.panel4.Size = new System.Drawing.Size(659, 76);
             this.panel4.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(16, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(969, 531);
-            this.panel1.TabIndex = 1;
             // 
             // panel3
             // 
@@ -212,10 +196,10 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(580, 89);
+            this.panel3.Location = new System.Drawing.Point(7, 31);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(385, 439);
+            this.panel3.Size = new System.Drawing.Size(385, 430);
             this.panel3.TabIndex = 1;
             // 
             // cbMadotgia
@@ -242,21 +226,55 @@ namespace WinFormsApp_Coffee
             this.txtGiaban.Size = new System.Drawing.Size(240, 31);
             this.txtGiaban.TabIndex = 4;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(677, 109);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvChitietdotgia);
+            this.groupBox2.Location = new System.Drawing.Point(12, 118);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(677, 471);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách đồ uống được áp dụng giá";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Location = new System.Drawing.Point(695, 118);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(401, 471);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin đồ uống";
+            // 
             // frmChiTietDotGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1106, 594);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmChiTietDotGia";
-            this.Text = "frmChiTietDotGia";
+            this.Text = "Chi tiết đợt giá";
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitietdotgia)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,7 +283,6 @@ namespace WinFormsApp_Coffee
 
         private System.Windows.Forms.Button btnThemdouong;
         private System.Windows.Forms.DataGridView dgvChitietdotgia;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSuadouong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -273,7 +290,6 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.Button btnLammoi;
         private System.Windows.Forms.Button btnXoadouong;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtGiaban;
         private System.Windows.Forms.ComboBox cbTenmon;
@@ -281,5 +297,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoUong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.ComboBox cbMadotgia;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

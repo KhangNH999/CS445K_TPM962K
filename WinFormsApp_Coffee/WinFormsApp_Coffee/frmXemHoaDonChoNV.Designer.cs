@@ -30,17 +30,21 @@ namespace WinFormsApp_Coffee
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemHoaDonChoNV));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnXemhoadon = new System.Windows.Forms.Button();
-            this.txtTenban = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNV = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNgay = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenban = new System.Windows.Forms.TextBox();
+            this.txtNV = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvQlhoadon = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +52,9 @@ namespace WinFormsApp_Coffee
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +62,7 @@ namespace WinFormsApp_Coffee
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(373, 0);
+            this.label1.Location = new System.Drawing.Point(360, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(274, 54);
             this.label1.TabIndex = 0;
@@ -63,25 +70,28 @@ namespace WinFormsApp_Coffee
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnXemhoadon);
-            this.panel1.Controls.Add(this.txtTenban);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtMaHD);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNV);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtNgay);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dgvQlhoadon);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 490);
+            this.panel1.Size = new System.Drawing.Size(1023, 638);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnXemhoadon);
+            this.groupBox3.Location = new System.Drawing.Point(3, 197);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1017, 63);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chức năng";
             // 
             // btnXemhoadon
             // 
-            this.btnXemhoadon.Location = new System.Drawing.Point(335, 172);
+            this.btnXemhoadon.Location = new System.Drawing.Point(314, 18);
             this.btnXemhoadon.Name = "btnXemhoadon";
             this.btnXemhoadon.Size = new System.Drawing.Size(343, 40);
             this.btnXemhoadon.TabIndex = 10;
@@ -89,64 +99,27 @@ namespace WinFormsApp_Coffee
             this.btnXemhoadon.UseVisualStyleBackColor = true;
             this.btnXemhoadon.Click += new System.EventHandler(this.btnXemhoadon_Click);
             // 
-            // txtTenban
+            // groupBox2
             // 
-            this.txtTenban.BackColor = System.Drawing.Color.White;
-            this.txtTenban.Location = new System.Drawing.Point(641, 127);
-            this.txtTenban.Name = "txtTenban";
-            this.txtTenban.ReadOnly = true;
-            this.txtTenban.Size = new System.Drawing.Size(223, 31);
-            this.txtTenban.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(551, 127);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 25);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Tên bàn";
-            // 
-            // txtMaHD
-            // 
-            this.txtMaHD.BackColor = System.Drawing.Color.White;
-            this.txtMaHD.Location = new System.Drawing.Point(641, 77);
-            this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.ReadOnly = true;
-            this.txtMaHD.Size = new System.Drawing.Size(223, 31);
-            this.txtMaHD.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tên nhân viên";
-            // 
-            // txtNV
-            // 
-            this.txtNV.BackColor = System.Drawing.Color.White;
-            this.txtNV.Location = new System.Drawing.Point(214, 127);
-            this.txtNV.Name = "txtNV";
-            this.txtNV.ReadOnly = true;
-            this.txtNV.Size = new System.Drawing.Size(223, 31);
-            this.txtNV.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ngày lập";
+            this.groupBox2.Controls.Add(this.txtNgay);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtTenban);
+            this.groupBox2.Controls.Add(this.txtNV);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtMaHD);
+            this.groupBox2.Location = new System.Drawing.Point(3, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1017, 134);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin hóa đơn";
             // 
             // txtNgay
             // 
             this.txtNgay.BackColor = System.Drawing.Color.White;
-            this.txtNgay.Location = new System.Drawing.Point(214, 77);
+            this.txtNgay.Location = new System.Drawing.Point(203, 30);
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.ReadOnly = true;
             this.txtNgay.Size = new System.Drawing.Size(223, 31);
@@ -155,11 +128,75 @@ namespace WinFormsApp_Coffee
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(551, 80);
+            this.label2.Location = new System.Drawing.Point(540, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã HĐ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(93, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ngày lập";
+            // 
+            // txtTenban
+            // 
+            this.txtTenban.BackColor = System.Drawing.Color.White;
+            this.txtTenban.Location = new System.Drawing.Point(630, 80);
+            this.txtTenban.Name = "txtTenban";
+            this.txtTenban.ReadOnly = true;
+            this.txtTenban.Size = new System.Drawing.Size(223, 31);
+            this.txtTenban.TabIndex = 9;
+            // 
+            // txtNV
+            // 
+            this.txtNV.BackColor = System.Drawing.Color.White;
+            this.txtNV.Location = new System.Drawing.Point(203, 80);
+            this.txtNV.Name = "txtNV";
+            this.txtNV.ReadOnly = true;
+            this.txtNV.Size = new System.Drawing.Size(223, 31);
+            this.txtNV.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(540, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Tên bàn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(57, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tên nhân viên";
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.BackColor = System.Drawing.Color.White;
+            this.txtMaHD.Location = new System.Drawing.Point(630, 30);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.ReadOnly = true;
+            this.txtMaHD.Size = new System.Drawing.Size(223, 31);
+            this.txtMaHD.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvQlhoadon);
+            this.groupBox1.Location = new System.Drawing.Point(3, 266);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1017, 369);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách hóa đơn";
             // 
             // dgvQlhoadon
             // 
@@ -172,12 +209,12 @@ namespace WinFormsApp_Coffee
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvQlhoadon.Location = new System.Drawing.Point(2, 232);
+            this.dgvQlhoadon.Location = new System.Drawing.Point(5, 29);
             this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQlhoadon.Name = "dgvQlhoadon";
             this.dgvQlhoadon.RowHeadersWidth = 62;
             this.dgvQlhoadon.RowTemplate.Height = 25;
-            this.dgvQlhoadon.Size = new System.Drawing.Size(1019, 256);
+            this.dgvQlhoadon.Size = new System.Drawing.Size(1007, 335);
             this.dgvQlhoadon.TabIndex = 1;
             this.dgvQlhoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQlhoadon_CellClick);
             // 
@@ -227,13 +264,18 @@ namespace WinFormsApp_Coffee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 515);
+            this.ClientSize = new System.Drawing.Size(1047, 659);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXemHoaDonChoNV";
             this.Text = "Xem hóa đơn";
             this.Load += new System.EventHandler(this.frmXemHoaDonChoNV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQlhoadon)).EndInit();
             this.ResumeLayout(false);
 
@@ -258,5 +300,8 @@ namespace WinFormsApp_Coffee
         private System.Windows.Forms.TextBox txtNgay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnXemhoadon;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
