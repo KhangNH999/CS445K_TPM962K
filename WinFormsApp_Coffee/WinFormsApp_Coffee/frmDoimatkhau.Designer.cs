@@ -61,85 +61,76 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(7, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(6, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 257);
+            this.panel1.Size = new System.Drawing.Size(494, 206);
             this.panel1.TabIndex = 0;
             // 
             // txtdn
             // 
-            this.txtdn.Location = new System.Drawing.Point(190, 31);
-            this.txtdn.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdn.Location = new System.Drawing.Point(152, 25);
             this.txtdn.Name = "txtdn";
             this.txtdn.ReadOnly = true;
-            this.txtdn.Size = new System.Drawing.Size(407, 31);
-            this.txtdn.TabIndex = 7;
+            this.txtdn.Size = new System.Drawing.Size(326, 27);
+            this.txtdn.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 35);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(5, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 25);
+            this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Đăng nhập:";
             // 
             // txtnhaplaimk
             // 
-            this.txtnhaplaimk.Location = new System.Drawing.Point(188, 203);
-            this.txtnhaplaimk.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnhaplaimk.Location = new System.Drawing.Point(150, 162);
             this.txtnhaplaimk.Name = "txtnhaplaimk";
             this.txtnhaplaimk.PasswordChar = '*';
-            this.txtnhaplaimk.Size = new System.Drawing.Size(409, 31);
-            this.txtnhaplaimk.TabIndex = 5;
+            this.txtnhaplaimk.Size = new System.Drawing.Size(328, 27);
+            this.txtnhaplaimk.TabIndex = 3;
             // 
             // txtmatkhaumoi
             // 
-            this.txtmatkhaumoi.Location = new System.Drawing.Point(188, 146);
-            this.txtmatkhaumoi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmatkhaumoi.Location = new System.Drawing.Point(150, 117);
             this.txtmatkhaumoi.Name = "txtmatkhaumoi";
             this.txtmatkhaumoi.PasswordChar = '*';
-            this.txtmatkhaumoi.Size = new System.Drawing.Size(409, 31);
-            this.txtmatkhaumoi.TabIndex = 4;
+            this.txtmatkhaumoi.Size = new System.Drawing.Size(328, 27);
+            this.txtmatkhaumoi.TabIndex = 2;
             // 
             // txtmkhientai
             // 
-            this.txtmkhientai.Location = new System.Drawing.Point(188, 89);
-            this.txtmkhientai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmkhientai.Location = new System.Drawing.Point(150, 71);
             this.txtmkhientai.Name = "txtmkhientai";
             this.txtmkhientai.PasswordChar = '*';
-            this.txtmkhientai.Size = new System.Drawing.Size(409, 31);
-            this.txtmkhientai.TabIndex = 3;
+            this.txtmkhientai.Size = new System.Drawing.Size(328, 27);
+            this.txtmkhientai.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 209);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 25);
+            this.label3.Size = new System.Drawing.Size(133, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nhập lại mật khẩu:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 150);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 25);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu mới:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 93);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 25);
+            this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu hiện tại:";
             // 
@@ -147,30 +138,27 @@ namespace WinFormsApp_Coffee
             // 
             this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXacnhan);
-            this.panel2.Location = new System.Drawing.Point(7, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(6, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 60);
+            this.panel2.Size = new System.Drawing.Size(494, 48);
             this.panel2.TabIndex = 1;
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(479, 4);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Location = new System.Drawing.Point(383, 3);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(118, 52);
-            this.btnHuy.TabIndex = 1;
+            this.btnHuy.Size = new System.Drawing.Size(94, 42);
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacnhan
             // 
-            this.btnXacnhan.Location = new System.Drawing.Point(353, 4);
-            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXacnhan.Location = new System.Drawing.Point(282, 3);
             this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(118, 52);
-            this.btnXacnhan.TabIndex = 0;
+            this.btnXacnhan.Size = new System.Drawing.Size(94, 42);
+            this.btnXacnhan.TabIndex = 4;
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.UseVisualStyleBackColor = true;
             this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
@@ -178,9 +166,11 @@ namespace WinFormsApp_Coffee
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(58, 92);
+            this.groupBox1.Location = new System.Drawing.Point(46, 74);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(643, 297);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(514, 238);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đổi mật khẩu";
@@ -188,9 +178,11 @@ namespace WinFormsApp_Coffee
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel2);
-            this.groupBox2.Location = new System.Drawing.Point(58, 395);
+            this.groupBox2.Location = new System.Drawing.Point(46, 316);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(643, 108);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(514, 86);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -199,24 +191,26 @@ namespace WinFormsApp_Coffee
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(275, 18);
+            this.label5.Location = new System.Drawing.Point(220, 14);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(277, 54);
+            this.label5.Size = new System.Drawing.Size(234, 46);
             this.label5.TabIndex = 4;
             this.label5.Text = "Đổi mật khẩu";
             // 
             // frmDoimatkhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 527);
+            this.ClientSize = new System.Drawing.Size(595, 422);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDoimatkhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.frmDoimatkhau_Load);
             this.panel1.ResumeLayout(false);

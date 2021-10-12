@@ -82,19 +82,27 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhấp chuột vào hóa đơn bạn muốn sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int mahd = Int32.Parse(txtMahd.Text);
-            int matk = Int32.Parse(cbtennv.SelectedValue.ToString());
-            DateTime ngay = dtNgaylap.Value;
-            int maban = Int32.Parse(cbtenban.SelectedValue.ToString());
-            int trangthai = cbtrangthai.SelectedIndex;
-            if (QuanLyHoaDonDAO.Instance.suaHoaDon(mahd, matk, ngay, maban, trangthai))//Gọi phương thức thêm hóa đơn
+            if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                MessageBox.Show("Sửa thành công");
-                loadHD();
+                return;
             }
             else
             {
-                MessageBox.Show("Sửa thất bại");
+                int mahd = Int32.Parse(txtMahd.Text);
+                int matk = Int32.Parse(cbtennv.SelectedValue.ToString());
+                DateTime ngay = dtNgaylap.Value;
+                int maban = Int32.Parse(cbtenban.SelectedValue.ToString());
+                int trangthai = cbtrangthai.SelectedIndex;
+                if (QuanLyHoaDonDAO.Instance.suaHoaDon(mahd, matk, ngay, maban, trangthai))//Gọi phương thức thêm hóa đơn
+                {
+                    MessageBox.Show("Sửa thành công");
+                    loadHD();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
         }
 

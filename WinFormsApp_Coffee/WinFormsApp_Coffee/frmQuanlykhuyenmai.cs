@@ -101,28 +101,42 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng chọn khuyến mãi muốn sửa  !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa  ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                int ma = Int32.Parse(txtMadot.Text);
-                string tendot = txtTendot.Text;
-                DateTime ngaybd = dateNgaybd.Value;
-                DateTime ngaykt = dateNgaykt.Value;
-                int trangthai = cbbTrangthai.SelectedIndex;
-                if (QuanLyKhuyenMaiDAO.Instance.suaDotKhuyenMai(ma, tendot, ngaybd, ngaykt, trangthai))//Gọi phương thức sửa bàn từ QuanLyKhuyenMaiDAO
-                {
-                    MessageBox.Show("Sửa thông tin thành công");
-                    loadKm();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin không thành công");
-                }
-
+                return;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+                {
+                    int ma = Int32.Parse(txtMadot.Text);
+                    string tendot = txtTendot.Text;
+                    DateTime ngaybd = dateNgaybd.Value;
+                    DateTime ngaykt = dateNgaykt.Value;
+                    int trangthai = cbbTrangthai.SelectedIndex;
+                    if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(tendot)) //Kiểm tra tồn tại
+                    {
+                        MessageBox.Show("Đợt khuyến mãi đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if (QuanLyKhuyenMaiDAO.Instance.suaDotKhuyenMai(ma, tendot, ngaybd, ngaykt, trangthai))//Gọi phương thức sửa bàn từ QuanLyKhuyenMaiDAO
+                        {
+                            MessageBox.Show("Sửa thông tin thành công");
+                            loadKm();
+                            xoaDuLieu();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thông tin không thành công");
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

@@ -75,9 +75,10 @@ namespace WinFormsApp_Coffee
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(360, 0);
+            this.label1.Location = new System.Drawing.Point(288, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 54);
+            this.label1.Size = new System.Drawing.Size(232, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Xem hóa đơn";
             // 
@@ -88,9 +89,10 @@ namespace WinFormsApp_Coffee
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 13);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 813);
+            this.panel1.Size = new System.Drawing.Size(818, 650);
             this.panel1.TabIndex = 1;
             // 
             // groupBox4
@@ -100,9 +102,11 @@ namespace WinFormsApp_Coffee
             this.groupBox4.Controls.Add(this.dtngay1);
             this.groupBox4.Controls.Add(this.dtNgay);
             this.groupBox4.Controls.Add(this.btnTHongke);
-            this.groupBox4.Location = new System.Drawing.Point(3, 197);
+            this.groupBox4.Location = new System.Drawing.Point(2, 158);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1017, 89);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(814, 71);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thống kê hóa đơn theo ngày";
@@ -110,18 +114,20 @@ namespace WinFormsApp_Coffee
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(391, 38);
+            this.label7.Location = new System.Drawing.Point(313, 30);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 17;
             this.label7.Text = "Đến ngày:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 38);
+            this.label6.Location = new System.Drawing.Point(12, 30);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 25);
+            this.label6.Size = new System.Drawing.Size(65, 20);
             this.label6.TabIndex = 16;
             this.label6.Text = "Từ ngày:";
             // 
@@ -129,9 +135,10 @@ namespace WinFormsApp_Coffee
             // 
             this.dtngay1.CustomFormat = "dd/MM/yyyy";
             this.dtngay1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngay1.Location = new System.Drawing.Point(499, 32);
+            this.dtngay1.Location = new System.Drawing.Point(399, 26);
+            this.dtngay1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtngay1.Name = "dtngay1";
-            this.dtngay1.Size = new System.Drawing.Size(259, 31);
+            this.dtngay1.Size = new System.Drawing.Size(208, 27);
             this.dtngay1.TabIndex = 15;
             this.dtngay1.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
             // 
@@ -139,17 +146,19 @@ namespace WinFormsApp_Coffee
             // 
             this.dtNgay.CustomFormat = "dd/MM/yyyy";
             this.dtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgay.Location = new System.Drawing.Point(101, 33);
+            this.dtNgay.Location = new System.Drawing.Point(81, 26);
+            this.dtNgay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtNgay.Name = "dtNgay";
-            this.dtNgay.Size = new System.Drawing.Size(259, 31);
+            this.dtNgay.Size = new System.Drawing.Size(208, 27);
             this.dtNgay.TabIndex = 14;
             this.dtNgay.Value = new System.DateTime(2021, 10, 10, 0, 0, 0, 0);
             // 
             // btnTHongke
             // 
-            this.btnTHongke.Location = new System.Drawing.Point(780, 27);
+            this.btnTHongke.Location = new System.Drawing.Point(624, 22);
+            this.btnTHongke.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTHongke.Name = "btnTHongke";
-            this.btnTHongke.Size = new System.Drawing.Size(231, 44);
+            this.btnTHongke.Size = new System.Drawing.Size(185, 35);
             this.btnTHongke.TabIndex = 13;
             this.btnTHongke.Text = "Thống kê";
             this.btnTHongke.UseVisualStyleBackColor = true;
@@ -158,18 +167,21 @@ namespace WinFormsApp_Coffee
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnXemhoadon);
-            this.groupBox3.Location = new System.Drawing.Point(6, 292);
+            this.groupBox3.Location = new System.Drawing.Point(5, 234);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1017, 96);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(814, 77);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Xem chi tiết hóa đơn";
             // 
             // btnXemhoadon
             // 
-            this.btnXemhoadon.Location = new System.Drawing.Point(12, 30);
+            this.btnXemhoadon.Location = new System.Drawing.Point(10, 24);
+            this.btnXemhoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXemhoadon.Name = "btnXemhoadon";
-            this.btnXemhoadon.Size = new System.Drawing.Size(996, 50);
+            this.btnXemhoadon.Size = new System.Drawing.Size(797, 40);
             this.btnXemhoadon.TabIndex = 10;
             this.btnXemhoadon.Text = "Xem chi tiết hóa đơn";
             this.btnXemhoadon.UseVisualStyleBackColor = true;
@@ -185,9 +197,11 @@ namespace WinFormsApp_Coffee
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtMaHD);
-            this.groupBox2.Location = new System.Drawing.Point(3, 57);
+            this.groupBox2.Location = new System.Drawing.Point(2, 46);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1017, 134);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(814, 107);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin hóa đơn";
@@ -195,81 +209,91 @@ namespace WinFormsApp_Coffee
             // txtNgay
             // 
             this.txtNgay.BackColor = System.Drawing.Color.White;
-            this.txtNgay.Location = new System.Drawing.Point(203, 30);
+            this.txtNgay.Location = new System.Drawing.Point(162, 24);
+            this.txtNgay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.ReadOnly = true;
-            this.txtNgay.Size = new System.Drawing.Size(223, 31);
+            this.txtNgay.Size = new System.Drawing.Size(179, 27);
             this.txtNgay.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(540, 33);
+            this.label2.Location = new System.Drawing.Point(432, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã HĐ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 30);
+            this.label3.Location = new System.Drawing.Point(74, 24);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày lập";
             // 
             // txtTenban
             // 
             this.txtTenban.BackColor = System.Drawing.Color.White;
-            this.txtTenban.Location = new System.Drawing.Point(630, 80);
+            this.txtTenban.Location = new System.Drawing.Point(504, 64);
+            this.txtTenban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenban.Name = "txtTenban";
             this.txtTenban.ReadOnly = true;
-            this.txtTenban.Size = new System.Drawing.Size(223, 31);
+            this.txtTenban.Size = new System.Drawing.Size(179, 27);
             this.txtTenban.TabIndex = 9;
             // 
             // txtNV
             // 
             this.txtNV.BackColor = System.Drawing.Color.White;
-            this.txtNV.Location = new System.Drawing.Point(203, 80);
+            this.txtNV.Location = new System.Drawing.Point(162, 64);
+            this.txtNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNV.Name = "txtNV";
             this.txtNV.ReadOnly = true;
-            this.txtNV.Size = new System.Drawing.Size(223, 31);
+            this.txtNV.Size = new System.Drawing.Size(179, 27);
             this.txtNV.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(540, 80);
+            this.label5.Location = new System.Drawing.Point(432, 64);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 25);
+            this.label5.Size = new System.Drawing.Size(61, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Tên bàn";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 80);
+            this.label4.Location = new System.Drawing.Point(46, 64);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
+            this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tên nhân viên";
             // 
             // txtMaHD
             // 
             this.txtMaHD.BackColor = System.Drawing.Color.White;
-            this.txtMaHD.Location = new System.Drawing.Point(630, 30);
+            this.txtMaHD.Location = new System.Drawing.Point(504, 24);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.ReadOnly = true;
-            this.txtMaHD.Size = new System.Drawing.Size(223, 31);
+            this.txtMaHD.Size = new System.Drawing.Size(179, 27);
             this.txtMaHD.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvQlhoadon);
-            this.groupBox1.Location = new System.Drawing.Point(3, 394);
+            this.groupBox1.Location = new System.Drawing.Point(2, 315);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1017, 416);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(814, 333);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -286,12 +310,12 @@ namespace WinFormsApp_Coffee
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvQlhoadon.Location = new System.Drawing.Point(5, 29);
+            this.dgvQlhoadon.Location = new System.Drawing.Point(4, 23);
             this.dgvQlhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQlhoadon.Name = "dgvQlhoadon";
             this.dgvQlhoadon.RowHeadersWidth = 62;
             this.dgvQlhoadon.RowTemplate.Height = 25;
-            this.dgvQlhoadon.Size = new System.Drawing.Size(1007, 379);
+            this.dgvQlhoadon.Size = new System.Drawing.Size(806, 303);
             this.dgvQlhoadon.TabIndex = 1;
             this.dgvQlhoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQlhoadon_CellClick);
             // 
@@ -351,9 +375,11 @@ namespace WinFormsApp_Coffee
             // 
             this.groupBox5.Controls.Add(this.txtTong);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Location = new System.Drawing.Point(12, 833);
+            this.groupBox5.Location = new System.Drawing.Point(10, 666);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1023, 88);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(818, 70);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tổng doanh thu";
@@ -363,10 +389,11 @@ namespace WinFormsApp_Coffee
             this.txtTong.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtTong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTong.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txtTong.Location = new System.Drawing.Point(591, 30);
+            this.txtTong.Location = new System.Drawing.Point(473, 24);
+            this.txtTong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTong.Name = "txtTong";
             this.txtTong.ReadOnly = true;
-            this.txtTong.Size = new System.Drawing.Size(423, 45);
+            this.txtTong.Size = new System.Drawing.Size(339, 39);
             this.txtTong.TabIndex = 5;
             this.txtTong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -374,20 +401,23 @@ namespace WinFormsApp_Coffee
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(438, 30);
+            this.label8.Location = new System.Drawing.Point(350, 24);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 38);
+            this.label8.Size = new System.Drawing.Size(137, 32);
             this.label8.TabIndex = 4;
             this.label8.Text = "Tổng cộng";
             // 
             // frmXemHoaDonChoNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 932);
+            this.ClientSize = new System.Drawing.Size(838, 746);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frmXemHoaDonChoNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -79,26 +79,41 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            if (MessageBox.Show("Bạn có muốn sửa đồ uống không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa đồ uống ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button3) != System.Windows.Forms.DialogResult.Yes)
             {
-                int madouong = Int32.Parse(txtMadouong.Text);
-                string tendouong = txtTendouong.Text;
-                int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
-                int trangthai = cbbTrangthai.SelectedIndex;
-                if (QuanLyDoUongDAO.Instance.suaThongTinDoUong(madouong, tendouong, madanhmuc, trangthai))//Gọi phương thức sửa đồ uố từ QuanLyDoUongDAO
-                {
-                    MessageBox.Show("Sửa thông tin đồ uống thành công");
-                    loadDouong();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin đồ uống thất bại");
-                }
+                return;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+                {
+                    int madouong = Int32.Parse(txtMadouong.Text);
+                    string tendouong = txtTendouong.Text;
+                    int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
+                    int trangthai = cbbTrangthai.SelectedIndex;
+                    if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(tendouong)) //Kiểm tra đồ uống tồn tại
+                    {
+                        MessageBox.Show("Đồ uống này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if (QuanLyDoUongDAO.Instance.suaThongTinDoUong(madouong, tendouong, madanhmuc, trangthai))//Gọi phương thức sửa đồ uố từ QuanLyDoUongDAO
+                        {
+                            MessageBox.Show("Sửa thông tin đồ uống thành công");
+                            loadDouong();
+                            xoaDuLieu();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thông tin đồ uống thất bại");
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

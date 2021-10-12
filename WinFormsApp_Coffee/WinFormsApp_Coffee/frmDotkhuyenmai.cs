@@ -94,30 +94,39 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhấp chuột vào đồ uống muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa bàn ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                int madotkm = Int32.Parse(txtKM.Text);
-                int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
-                double tlgiamgia = double.Parse(txtTilegiam.Text);
-                if (tlgiamgia < 0 || tlgiamgia > 100)
-                {
-                    MessageBox.Show("Vui lòng nhập tỷ lệ giảm giá lớn hơn 0 và nhỏ hơn 100 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ChitietKMDAO.Instance.suaSanPhamKM(madotkm, madouong, tlgiamgia))//Gọi phương thức sửa đồ uống km
-                {
-                    MessageBox.Show("Sửa thông tin thành công");
-                    loadDanhSachKM();
-                    loadXoadulieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin thất bại");
-                }
+                return;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+                {
+                    int madotkm = Int32.Parse(txtKM.Text);
+                    int madouong = Int32.Parse(cbbMadouong.SelectedValue.ToString());
+                    double tlgiamgia = double.Parse(txtTilegiam.Text);
+                    if (tlgiamgia < 0 || tlgiamgia > 100)
+                    {
+                        MessageBox.Show("Vui lòng nhập tỷ lệ giảm giá lớn hơn 0 và nhỏ hơn 100 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    if (ChitietKMDAO.Instance.suaSanPhamKM(madotkm, madouong, tlgiamgia))//Gọi phương thức sửa đồ uống km
+                    {
+                        MessageBox.Show("Sửa thông tin thành công");
+                        loadDanhSachKM();
+                        loadXoadulieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa thông tin thất bại");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Tạo sự kiện xóa sản phẩm

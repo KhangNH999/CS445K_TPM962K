@@ -98,12 +98,11 @@ namespace WinFormsApp_Coffee
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvQuanlythongke.Location = new System.Drawing.Point(8, 31);
-            this.dgvQuanlythongke.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvQuanlythongke.Location = new System.Drawing.Point(6, 25);
             this.dgvQuanlythongke.Name = "dgvQuanlythongke";
             this.dgvQuanlythongke.RowHeadersWidth = 51;
             this.dgvQuanlythongke.RowTemplate.Height = 29;
-            this.dgvQuanlythongke.Size = new System.Drawing.Size(1098, 402);
+            this.dgvQuanlythongke.Size = new System.Drawing.Size(878, 322);
             this.dgvQuanlythongke.TabIndex = 0;
             // 
             // Column1
@@ -177,69 +176,62 @@ namespace WinFormsApp_Coffee
             // cbbtendouong
             // 
             this.cbbtendouong.FormattingEnabled = true;
-            this.cbbtendouong.Location = new System.Drawing.Point(214, 45);
-            this.cbbtendouong.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbtendouong.Location = new System.Drawing.Point(171, 36);
             this.cbbtendouong.Name = "cbbtendouong";
-            this.cbbtendouong.Size = new System.Drawing.Size(278, 33);
+            this.cbbtendouong.Size = new System.Drawing.Size(223, 28);
             this.cbbtendouong.TabIndex = 8;
             this.cbbtendouong.SelectedIndexChanged += new System.EventHandler(this.cbbtendouong_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 49);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(5, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 25);
+            this.label4.Size = new System.Drawing.Size(164, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tên danh mục đồ uống:";
             // 
             // cbbtennhanvien
             // 
             this.cbbtennhanvien.FormattingEnabled = true;
-            this.cbbtennhanvien.Location = new System.Drawing.Point(143, 45);
-            this.cbbtennhanvien.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbtennhanvien.Location = new System.Drawing.Point(114, 36);
             this.cbbtennhanvien.Name = "cbbtennhanvien";
-            this.cbbtennhanvien.Size = new System.Drawing.Size(312, 33);
+            this.cbbtennhanvien.Size = new System.Drawing.Size(250, 28);
             this.cbbtennhanvien.TabIndex = 6;
             this.cbbtennhanvien.SelectedIndexChanged += new System.EventHandler(this.cbbtennhanvien_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 49);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tên nhân viên:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(554, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(443, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 25);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Đến:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(61, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 25);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Từ:";
             // 
             // btnthongke
             // 
-            this.btnthongke.Location = new System.Drawing.Point(9, 90);
-            this.btnthongke.Margin = new System.Windows.Forms.Padding(4);
+            this.btnthongke.Location = new System.Drawing.Point(7, 72);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(1097, 45);
+            this.btnthongke.Size = new System.Drawing.Size(878, 36);
             this.btnthongke.TabIndex = 2;
             this.btnthongke.Text = "Thống kê";
             this.btnthongke.UseVisualStyleBackColor = true;
@@ -249,10 +241,9 @@ namespace WinFormsApp_Coffee
             // 
             this.dateTimePicker2.CustomFormat = "";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(610, 33);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(488, 26);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(430, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(345, 27);
             this.dateTimePicker2.TabIndex = 1;
             this.dateTimePicker2.Value = new System.DateTime(2021, 10, 8, 0, 0, 0, 0);
             // 
@@ -260,19 +251,17 @@ namespace WinFormsApp_Coffee
             // 
             this.dateTimePicker1.CustomFormat = "";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 33);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(102, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(404, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 27);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2021, 10, 8, 0, 0, 0, 0);
             // 
             // btnthongkebanchay
             // 
-            this.btnthongkebanchay.Location = new System.Drawing.Point(165, 31);
-            this.btnthongkebanchay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnthongkebanchay.Location = new System.Drawing.Point(132, 25);
             this.btnthongkebanchay.Name = "btnthongkebanchay";
-            this.btnthongkebanchay.Size = new System.Drawing.Size(458, 40);
+            this.btnthongkebanchay.Size = new System.Drawing.Size(366, 32);
             this.btnthongkebanchay.TabIndex = 9;
             this.btnthongkebanchay.Text = "Thống kê đồ uống bán chạy";
             this.btnthongkebanchay.UseVisualStyleBackColor = true;
@@ -283,17 +272,20 @@ namespace WinFormsApp_Coffee
             this.panel3.Controls.Add(this.groupBox8);
             this.panel3.Controls.Add(this.groupBox6);
             this.panel3.Controls.Add(this.btn);
-            this.panel3.Location = new System.Drawing.Point(1130, 12);
+            this.panel3.Location = new System.Drawing.Point(904, 10);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(756, 693);
+            this.panel3.Size = new System.Drawing.Size(605, 554);
             this.panel3.TabIndex = 2;
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.dgvdouongbanchay);
-            this.groupBox8.Location = new System.Drawing.Point(9, 179);
+            this.groupBox8.Location = new System.Drawing.Point(7, 143);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(739, 511);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Size = new System.Drawing.Size(591, 409);
             this.groupBox8.TabIndex = 15;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Danh sách đồ uống bán chạy";
@@ -308,11 +300,12 @@ namespace WinFormsApp_Coffee
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dgvdouongbanchay.Location = new System.Drawing.Point(0, 30);
+            this.dgvdouongbanchay.Location = new System.Drawing.Point(0, 24);
+            this.dgvdouongbanchay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvdouongbanchay.Name = "dgvdouongbanchay";
             this.dgvdouongbanchay.RowHeadersWidth = 62;
             this.dgvdouongbanchay.RowTemplate.Height = 33;
-            this.dgvdouongbanchay.Size = new System.Drawing.Size(729, 477);
+            this.dgvdouongbanchay.Size = new System.Drawing.Size(583, 382);
             this.dgvdouongbanchay.TabIndex = 1;
             // 
             // Column9
@@ -352,9 +345,11 @@ namespace WinFormsApp_Coffee
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.btnthongkebanchay);
-            this.groupBox6.Location = new System.Drawing.Point(9, 90);
+            this.groupBox6.Location = new System.Drawing.Point(7, 72);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(739, 83);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Size = new System.Drawing.Size(591, 66);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thống kê đồ uống bán chạy";
@@ -363,9 +358,10 @@ namespace WinFormsApp_Coffee
             // 
             this.btn.AutoSize = true;
             this.btn.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn.Location = new System.Drawing.Point(96, 15);
+            this.btn.Location = new System.Drawing.Point(43, 12);
+            this.btn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(642, 54);
+            this.btn.Size = new System.Drawing.Size(546, 46);
             this.btn.TabIndex = 0;
             this.btn.Text = "THỐNG KÊ ĐỒ UỐNG BÁN CHẠY";
             this.btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,10 +371,11 @@ namespace WinFormsApp_Coffee
             this.txtTong.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtTong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTong.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txtTong.Location = new System.Drawing.Point(684, 21);
+            this.txtTong.Location = new System.Drawing.Point(547, 17);
+            this.txtTong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTong.Name = "txtTong";
             this.txtTong.ReadOnly = true;
-            this.txtTong.Size = new System.Drawing.Size(423, 45);
+            this.txtTong.Size = new System.Drawing.Size(339, 39);
             this.txtTong.TabIndex = 1;
             this.txtTong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -386,9 +383,10 @@ namespace WinFormsApp_Coffee
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(531, 21);
+            this.label5.Location = new System.Drawing.Point(409, 17);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 38);
+            this.label5.Size = new System.Drawing.Size(137, 32);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng cộng";
             // 
@@ -397,10 +395,11 @@ namespace WinFormsApp_Coffee
             this.txtTongbanbc.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtTongbanbc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTongbanbc.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txtTongbanbc.Location = new System.Drawing.Point(343, 18);
+            this.txtTongbanbc.Location = new System.Drawing.Point(274, 14);
+            this.txtTongbanbc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTongbanbc.Name = "txtTongbanbc";
             this.txtTongbanbc.ReadOnly = true;
-            this.txtTongbanbc.Size = new System.Drawing.Size(395, 45);
+            this.txtTongbanbc.Size = new System.Drawing.Size(317, 39);
             this.txtTongbanbc.TabIndex = 13;
             this.txtTongbanbc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -408,18 +407,21 @@ namespace WinFormsApp_Coffee
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(181, 21);
+            this.label6.Location = new System.Drawing.Point(136, 17);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 38);
+            this.label6.Size = new System.Drawing.Size(137, 32);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng cộng";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvQuanlythongke);
-            this.groupBox1.Location = new System.Drawing.Point(12, 265);
+            this.groupBox1.Location = new System.Drawing.Point(10, 212);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1112, 440);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(890, 352);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -431,9 +433,11 @@ namespace WinFormsApp_Coffee
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnthongke);
-            this.groupBox2.Location = new System.Drawing.Point(11, 12);
+            this.groupBox2.Location = new System.Drawing.Point(9, 10);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1113, 142);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(890, 114);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thống kê theo ngày";
@@ -442,9 +446,11 @@ namespace WinFormsApp_Coffee
             // 
             this.groupBox3.Controls.Add(this.cbbtennhanvien);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(12, 160);
+            this.groupBox3.Location = new System.Drawing.Point(10, 128);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(540, 99);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(432, 79);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thống kê theo nhân viên";
@@ -453,9 +459,11 @@ namespace WinFormsApp_Coffee
             // 
             this.groupBox4.Controls.Add(this.cbbtendouong);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(560, 160);
+            this.groupBox4.Location = new System.Drawing.Point(448, 128);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(564, 99);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(451, 79);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thống kê theo danh mục đồ uống";
@@ -464,9 +472,11 @@ namespace WinFormsApp_Coffee
             // 
             this.groupBox5.Controls.Add(this.txtTong);
             this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Location = new System.Drawing.Point(11, 705);
+            this.groupBox5.Location = new System.Drawing.Point(9, 564);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1113, 78);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(890, 62);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tổng doanh thu";
@@ -475,18 +485,20 @@ namespace WinFormsApp_Coffee
             // 
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.txtTongbanbc);
-            this.groupBox7.Location = new System.Drawing.Point(1130, 705);
+            this.groupBox7.Location = new System.Drawing.Point(904, 564);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(748, 78);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Size = new System.Drawing.Size(598, 62);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Tổng doanh thu";
             // 
             // frmQuanlythongke
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1891, 798);
+            this.ClientSize = new System.Drawing.Size(1513, 638);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -496,7 +508,6 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmQuanlythongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

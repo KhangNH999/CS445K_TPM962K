@@ -79,25 +79,41 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhấp chuột vào danh mục muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            if (MessageBox.Show("Bạn có muốn sửa danh mục không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa bàn ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                int madm = Int32.Parse(txtMadanhmuc.Text);
-                string tendm = txtTendanhmuc.Text;
-                if (QuanLyDMDoUongDAO.Instance.suaDanhMuc(madm, tendm))//Gọi phương thức sửa danh mục từ QuanLyDMDoUongDAO
-                {
-                    MessageBox.Show("Sửa thông tin danh mục thành công");
-                    loadDanhMuc();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin danh mục thất bại");
-                }
-
+                return;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+                {
+                    int madm = Int32.Parse(txtMadanhmuc.Text);
+                    string tendm = txtTendanhmuc.Text;
+                    if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(tendm)) //Kiểm tra danh mục tồn tại
+                    {
+                        MessageBox.Show("Danh mục này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        if (QuanLyDMDoUongDAO.Instance.suaDanhMuc(madm, tendm))//Gọi phương thức sửa danh mục từ QuanLyDMDoUongDAO
+                        {
+                            MessageBox.Show("Sửa thông tin danh mục thành công");
+                            loadDanhMuc();
+                            xoaDuLieu();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thông tin danh mục thất bại");
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Tạo sự kiện xóa danh mục

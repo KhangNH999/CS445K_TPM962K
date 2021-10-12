@@ -88,33 +88,41 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try
+            if (MessageBox.Show("Bạn có muốn sửa tài khoản không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa tài khoản ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                int mataikhoan = Int32.Parse(txtMataikhoan.Text);
-                string tendangnhap = txtTendangnhap.Text;
-                string matkhau = txtMatkhau.Text;
-                string ten = txtTen.Text;
-                DateTime ngaysinh = DateNgaysinh.Value;
-                string gioitinh = cbGioiTinh.SelectedItem.ToString();
-                string cmnd = txtCmnd.Text;
-                string email = txtEmail.Text;
-                string sdt = txtSdt.Text;
-                int loaitk = ccbLoaitk.SelectedIndex;
-                int trangthai = ccbTrangthaitk.SelectedIndex;
-                if(QuanLyTaiKhoanDAO.Instance.suaThongTinTaiKhoan(mataikhoan, tendangnhap , matkhau , ten , ngaysinh , gioitinh , cmnd , email , sdt , loaitk , trangthai))
-                {
-                    MessageBox.Show("Sửa thông tin tài khoản thành công");
-                    loadTaiKhoan();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin thất bại!");
-                }
+                return;
             }
-            catch(Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    int mataikhoan = Int32.Parse(txtMataikhoan.Text);
+                    string tendangnhap = txtTendangnhap.Text;
+                    string matkhau = txtMatkhau.Text;
+                    string ten = txtTen.Text;
+                    DateTime ngaysinh = DateNgaysinh.Value;
+                    string gioitinh = cbGioiTinh.SelectedItem.ToString();
+                    string cmnd = txtCmnd.Text;
+                    string email = txtEmail.Text;
+                    string sdt = txtSdt.Text;
+                    int loaitk = ccbLoaitk.SelectedIndex;
+                    int trangthai = ccbTrangthaitk.SelectedIndex;
+                    if (QuanLyTaiKhoanDAO.Instance.suaThongTinTaiKhoan(mataikhoan, tendangnhap, matkhau, ten, ngaysinh, gioitinh, cmnd, email, sdt, loaitk, trangthai))
+                    {
+                        MessageBox.Show("Sửa thông tin tài khoản thành công");
+                        loadTaiKhoan();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa thông tin thất bại!");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Phương thức xử lý khi kích chuột vào datagridview tự động dữ liệu sẽ hiện lên textbox

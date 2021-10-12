@@ -93,30 +93,38 @@ namespace WinFormsApp_Coffee
                 MessageBox.Show("Vui lòng nhấp chuột vào mã muốn sửa thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+            if (MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo,//Hiển thị form xác nhận có muốn xóa bàn ?
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != System.Windows.Forms.DialogResult.Yes)
             {
-                int madotgia = Int32.Parse(cbMadotgia.Text);
-                int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
-                double giaban = double.Parse(txtGiaban.Text);
-                if (giaban < 0)
-                {
-                    MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ChiTietDotGiaDAO.Instance.suaChiTietDoUong(madotgia, madouong, giaban))//Gọi phương thức sửa bàn từ QuanLyBanDAO
-                {
-                    MessageBox.Show("Sửa giá thành công");
-                    loadDS();
-                    xoaDuLieu();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa giá thất bại");
-                }
+                return;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //try catch để bắt lỗi nếu nhập sai kiểu dữ liệu
+                {
+                    int madotgia = Int32.Parse(cbMadotgia.Text);
+                    int madouong = Int32.Parse(cbTenmon.SelectedValue.ToString());
+                    double giaban = double.Parse(txtGiaban.Text);
+                    if (giaban < 0)
+                    {
+                        MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    if (ChiTietDotGiaDAO.Instance.suaChiTietDoUong(madotgia, madouong, giaban))//Gọi phương thức sửa bàn từ QuanLyBanDAO
+                    {
+                        MessageBox.Show("Sửa giá thành công");
+                        loadDS();
+                        xoaDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa giá thất bại");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Bạn đã nhập sai kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
