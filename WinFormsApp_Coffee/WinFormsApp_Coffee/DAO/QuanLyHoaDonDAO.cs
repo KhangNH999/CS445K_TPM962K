@@ -74,10 +74,16 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
           create proc USP_XoaHoaDon
-         @mahd int
+        @mahd int
          as 
+         declare @isexistbill int = 0
             begin 
-	            delete from dbo.HOADON where mahoadon = @mahd
+             select @isexistbill=COUNT(*) from dbo.CHITIETHOADON where mahoadon = @mahd
+             if(@isexistbill>0)
+             begin
+             delete from dbo.CHITIETHOADON where mahoadon = @mahd
+             end
+	         delete from dbo.HOADON where mahoadon = @mahd
          end
          */
         public bool xoaHoaDon(int mahd)
