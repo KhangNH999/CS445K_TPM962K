@@ -24,7 +24,7 @@ namespace WinFormsApp_Coffee.DAO
         SELECT madotgia, ngaybdban, 
         case trangthaigia
         when 0 then N'Chưa áp dụng' 
-        when 1 then N'Đã áp dụng' end as trangthaigia FROM dbo.GIATHEODOT  
+        when 1 then N'Đang áp dụng' end as trangthaigia FROM dbo.GIATHEODOT  
          */
         public List<GiaAD> loadGiaAD()
         {

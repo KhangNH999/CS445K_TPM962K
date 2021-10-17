@@ -115,12 +115,12 @@ namespace WinFormsApp_Coffee
                     DateTime ngaybd = dateNgaybd.Value;
                     DateTime ngaykt = dateNgaykt.Value;
                     int trangthai = cbbTrangthai.SelectedIndex;
-                    if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(tendot)) //Kiểm tra tồn tại
-                    {
-                        MessageBox.Show("Đợt khuyến mãi đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
+                    //if (QuanLyKhuyenMaiDAO.Instance.kiemTraKmTonTai(tendot)) //Kiểm tra tồn tại
+                    //{
+                    //    MessageBox.Show("Đợt khuyến mãi đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
+                    //else
+                    //{
                         if (QuanLyKhuyenMaiDAO.Instance.suaDotKhuyenMai(ma, tendot, ngaybd, ngaykt, trangthai))//Gọi phương thức sửa bàn từ QuanLyKhuyenMaiDAO
                         {
                             MessageBox.Show("Sửa thông tin thành công");
@@ -131,7 +131,7 @@ namespace WinFormsApp_Coffee
                         {
                             MessageBox.Show("Sửa thông tin không thành công");
                         }
-                    }
+                    //}
                 }
                 catch (Exception)
                 {

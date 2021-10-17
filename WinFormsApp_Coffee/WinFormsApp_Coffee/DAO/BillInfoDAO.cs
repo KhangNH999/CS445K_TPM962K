@@ -54,9 +54,9 @@ namespace WinFormsApp_Coffee.DAO
         if(@price>0)
         begin
         if(@tlgiamgia>0)
-        update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon = @mahd
+        update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tlgiamgia=@tlgiamgia,tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon = @mahd
         else
-        update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tongtien = @newcount*@price where madouong = @madu and mahoadon = @mahd
+        update dbo.CHITIETHOADON set soluong = @foodCount +@sl, tlgiamgia=0, tongtien = @newcount*@price where madouong = @madu and mahoadon = @mahd
         end
         end
         end
@@ -82,7 +82,7 @@ namespace WinFormsApp_Coffee.DAO
         }
         /*
          create proc USP_DeleteFood
-    @mahd int, @madu int, @sl int
+     @mahd int, @madu int, @sl int
         as
         begin 
         declare @isExistBillInfo int
@@ -100,15 +100,19 @@ namespace WinFormsApp_Coffee.DAO
         declare @newcount int = @foodCount - @sl
         if(@newcount>0)
         begin
+        if(@price>0)
+        begin
         if (@tlgiamgia>0)
-        update dbo.CHITIETHOADON set soluong = @foodCount - @sl, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon =@mahd
+        update dbo.CHITIETHOADON set soluong = @foodCount - @sl,tlgiamgia=@tlgiamgia, tongtien = (@newcount*@price)-(((@newcount*@price)/100)*@tlgiamgia) where madouong = @madu and mahoadon =@mahd
         else
-        update dbo.CHITIETHOADON set soluong = @foodCount - @sl, tongtien = @newcount * @price where madouong = @madu and mahoadon =@mahd
+        update dbo.CHITIETHOADON set soluong = @foodCount - @sl,tlgiamgia=0 ,tongtien = @newcount * @price where madouong = @madu and mahoadon =@mahd
         end
         else
         delete dbo.CHITIETHOADON where mahoadon = @mahd and madouong = @madu
         end
         end
+        end
+
 
 
         go

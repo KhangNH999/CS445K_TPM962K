@@ -74,7 +74,7 @@ namespace WinFormsApp_Coffee.DAO
         /*
          Muốn tạo phương thức này trước hết cần phải vào SQl Server tạo thủ tục
             create proc USP_SuaDotKhuyenMai
-            @madotkm int,
+             @madotkm int,
             @tendotkm nvarchar(100),
             @ngaybatdau datetime,
             @ngayketthuc datetime,
@@ -82,7 +82,11 @@ namespace WinFormsApp_Coffee.DAO
             as 
                 begin 
                     update dbo.DOTKHUYENMAI set tendotkm = @tendotkm , ngaybatdau = @ngaybatdau , ngayketthuc = @ngayketthuc , trangthaidotkm = @trangthaidotkm where madotkm = @madotkm
-                end          
+                    if(@trangthaidotkm = 1)
+                    begin
+                    update dbo.DOTKHUYENMAI set trangthaidotkm = 0 where madotkm <> @madotkm
+                    end
+                end           
          sau đó tạo phương thức xác nhận sửa thông tin bàn  
          biến result dùng để trả số hàng khi thực thi câu lệnh truy vấn exec USP_SuaDotKhuyenMai
          */

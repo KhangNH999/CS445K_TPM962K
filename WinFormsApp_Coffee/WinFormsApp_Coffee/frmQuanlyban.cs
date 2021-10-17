@@ -103,13 +103,13 @@ namespace WinFormsApp_Coffee
                         MessageBox.Show("Vui lòng nhập giá trị lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                    if (QuanLyBanDAO.Instance.kiemTraBanTonTai(tenban)) //Kiểm tra bàn tồn tại
-                    {
-                        MessageBox.Show("Bàn này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                    else
-                    {
+                    //if (QuanLyBanDAO.Instance.kiemTraBanTonTai(tenban)) //Kiểm tra bàn tồn tại
+                    //{
+                    //    MessageBox.Show("Bàn này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    return;
+                    //}
+                    //else
+                    //{
                         if (QuanLyBanDAO.Instance.suaThongTinBan(ma, tenban, soghe, ngay, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
                         {
                             MessageBox.Show("Sửa thông tin bàn thành công");
@@ -120,7 +120,7 @@ namespace WinFormsApp_Coffee
                         {
                             MessageBox.Show("Sửa thông tin bàn thất bại");
                         }
-                    }
+                    //}
                 }
                 catch (Exception)
                 {

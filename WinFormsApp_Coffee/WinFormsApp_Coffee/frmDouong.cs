@@ -92,12 +92,12 @@ namespace WinFormsApp_Coffee
                     string tendouong = txtTendouong.Text;
                     int madanhmuc = Int32.Parse(cbbMadanhmuc.SelectedValue.ToString());
                     int trangthai = cbbTrangthai.SelectedIndex;
-                    if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(tendouong)) //Kiểm tra đồ uống tồn tại
-                    {
-                        MessageBox.Show("Đồ uống này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
+                    //if (QuanLyDoUongDAO.Instance.kiemTraBanTonTai(tendouong)) //Kiểm tra đồ uống tồn tại
+                    //{
+                    //    MessageBox.Show("Đồ uống này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
+                    //else
+                    //{
                         if (QuanLyDoUongDAO.Instance.suaThongTinDoUong(madouong, tendouong, madanhmuc, trangthai))//Gọi phương thức sửa đồ uố từ QuanLyDoUongDAO
                         {
                             MessageBox.Show("Sửa thông tin đồ uống thành công");
@@ -108,7 +108,7 @@ namespace WinFormsApp_Coffee
                         {
                             MessageBox.Show("Sửa thông tin đồ uống thất bại");
                         }
-                    }
+                    //}
                 }
                 catch (Exception)
                 {

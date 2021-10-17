@@ -90,13 +90,13 @@ namespace WinFormsApp_Coffee
                 {
                     int madm = Int32.Parse(txtMadanhmuc.Text);
                     string tendm = txtTendanhmuc.Text;
-                    if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(tendm)) //Kiểm tra danh mục tồn tại
-                    {
-                        MessageBox.Show("Danh mục này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                    else
-                    {
+                    //if (QuanLyDMDoUongDAO.Instance.kiemTraDanhMucTonTai(tendm)) //Kiểm tra danh mục tồn tại
+                    //{
+                    //    MessageBox.Show("Danh mục này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    return;
+                    //}
+                    //else
+                    //{
                         if (QuanLyDMDoUongDAO.Instance.suaDanhMuc(madm, tendm))//Gọi phương thức sửa danh mục từ QuanLyDMDoUongDAO
                         {
                             MessageBox.Show("Sửa thông tin danh mục thành công");
@@ -107,7 +107,7 @@ namespace WinFormsApp_Coffee
                         {
                             MessageBox.Show("Sửa thông tin danh mục thất bại");
                         }
-                    }
+                    //}
 
                 }
                 catch (Exception)

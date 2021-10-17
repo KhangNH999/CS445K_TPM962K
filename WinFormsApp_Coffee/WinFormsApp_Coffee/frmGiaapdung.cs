@@ -107,13 +107,13 @@ namespace WinFormsApp_Coffee
 
                 if (GiaApDungDAO.Instance.suaDotGia(madotgia, ngaybd, trangthai))//Gọi phương thức sửa bàn từ QuanLyBanDAO
                 {
-                    MessageBox.Show("Sửa thông tin bàn thành công");
+                    MessageBox.Show("Sửa thông tin thành công");
                     loadGia();
                     xoaDuLieu();
                 }
                 else
                 {
-                    MessageBox.Show("Sửa thông tin bàn thất bại");
+                    MessageBox.Show("Sửa thông tin thất bại");
                 }
             }
             catch (Exception)
