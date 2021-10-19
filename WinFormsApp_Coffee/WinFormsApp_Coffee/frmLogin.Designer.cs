@@ -51,7 +51,7 @@ namespace WinFormsApp_Coffee
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExit.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnExit.Location = new System.Drawing.Point(449, 344);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(219, 46);
             this.btnExit.TabIndex = 5;
@@ -65,7 +65,7 @@ namespace WinFormsApp_Coffee
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnLogin.Location = new System.Drawing.Point(178, 344);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(219, 46);
             this.btnLogin.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace WinFormsApp_Coffee
             this.txtPassWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassWord.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPassWord.Location = new System.Drawing.Point(248, 269);
-            this.txtPassWord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Size = new System.Drawing.Size(378, 31);
             this.txtPassWord.TabIndex = 2;
@@ -102,11 +102,11 @@ namespace WinFormsApp_Coffee
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUserName.Location = new System.Drawing.Point(248, 211);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(378, 31);
             this.txtUserName.TabIndex = 1;
-            this.txtUserName.Text = "ad";
+            this.txtUserName.Text = "dan";
             // 
             // label1
             // 
@@ -127,7 +127,7 @@ namespace WinFormsApp_Coffee
             this.ckbShow.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ckbShow.ForeColor = System.Drawing.Color.DarkOrange;
             this.ckbShow.Location = new System.Drawing.Point(658, 269);
-            this.ckbShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbShow.Margin = new System.Windows.Forms.Padding(4);
             this.ckbShow.Name = "ckbShow";
             this.ckbShow.Size = new System.Drawing.Size(78, 32);
             this.ckbShow.TabIndex = 3;
@@ -202,7 +202,7 @@ namespace WinFormsApp_Coffee
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

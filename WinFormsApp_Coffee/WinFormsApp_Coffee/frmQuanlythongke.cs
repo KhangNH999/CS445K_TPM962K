@@ -25,6 +25,8 @@ namespace WinFormsApp_Coffee
             cbbtennhanvien.DisplayMember = "tennv";
             cbbtennhanvien.ValueMember = "mataikhoan";
             cbbtennhanvien.SelectedIndex = 0;
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
         }
         //load dm
         void loadDMDoUong()
